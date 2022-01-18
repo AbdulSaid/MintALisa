@@ -1,10 +1,13 @@
-import './App.css';
-import Minter from './Minter'
+// import Minter from './Minter'
+import Home from './pages/Home';
+import Navbar from './components/Navbar';
 
 function App() {
   return (
     <div className="App">
-      <Minter></Minter>
+      <Navbar></Navbar>
+      <Home></Home>
+      {/* <Minter></Minter> */}
     </div>
   );
 }

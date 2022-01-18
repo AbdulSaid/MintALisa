@@ -1,16 +1,82 @@
-@import url('https://fonts.googleapis.com/css2?family=Rubik:wght@300&display=swap');
+@import url('https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700&family=Libre+Baskerville:wght@700&display=swap');
+@import './styles/variables.css';
+
+
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
 
 body {
+  background: var(--dark-bg);
+  width: 100vw;
+  height: 100vh;
   margin: 0;
-  font-family: 'Rubik';
-  color: #254cdd;
+  font-family: 'Inter', Arial, Helvetica, sans-serif;
+  color: #FFF;
   -webkit-font-smoothing: antialiased;
   -moz-osx-font-smoothing: grayscale;
 }
 
+.navBar {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  height: 56px;
+  padding: 0 2rem;
+}
+
+.logo {
+  font-family: 'Libre Baskerville', 'Times New Roman', Times, serif;
+  line-height: 22px;
+  font-weight: bold;
+  height: 22px;
+}
+
+.hamburger {
+  border: none;
+  background: none;
+  padding: 0;
+  color: var(--light-font-color);
+  font-size: 22px;
+}
+
+.home {
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+}
+
+.bg-img {
+  height: 485px;
+}
+
+.header {
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  position: absolute;
+  border: var(--dark-glass-border);
+  height: 220px;
+  min-width: 275px;
+  text-align: center;
+  background: var(--dark-glass-bg);
+  backdrop-filter: blur(19px);
+  font-family: "Libre Baskerville";
+  border-radius: 15px;
+  font-size: 48px;
+  bottom: 244px;
+}
+
+.primary-btn {
+  background: var(--primary-color);
+}
+
 code {
-  font-family: source-code-pro, Menlo, Monaco, Consolas, 'Courier New',
-    monospace;
+  font-family: source-code-pro, Menlo, Monaco, Consolas, 'Courier New', monospace;
 }
 
 .Minter {
