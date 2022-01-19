@@ -21,6 +21,7 @@ module.exports = function (db) {
                      price,
                      collections.name        as collection_name,
                      collections.description as collection_description,
+                     minted,
                      inventory.quantity      as quantity
               FROM characters
                        JOIN collections ON collection_id = collections.id
@@ -279,6 +280,7 @@ module.exports = function (db) {
                      price,
                      collections.name        as collection_name,
                      collections.description as collection_description,
+                     minted,
                      inventory.quantity      as quantity
               FROM characters
                        JOIN collections ON collection_id = collections.id
