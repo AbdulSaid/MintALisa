@@ -135,6 +135,31 @@ body {
   background: none;
 }
 
+
+/* Single Mona Lisa Page */
+.single-mona {
+  display: flex;
+  flex-direction: column;
+  justify-content: space-between;
+  align-items: center;
+  height: 90%;
+}
+
+.single-mona .top {
+  display: flex;
+  flex-direction: column;
+}
+
+.back-arrow {
+  align-self: flex-start;
+}
+
+.single-mona-img {
+  height: 357px;
+  border-radius: 15px;
+}
+
+
 code {
   font-family: source-code-pro, Menlo, Monaco, Consolas, 'Courier New', monospace;
 }
@@ -164,21 +189,6 @@ input:focus {
   border-color: rgba(4, 4, 5, 0.4);
 }
 
-/* button {
-  padding: 9px 16px;
-  max-height: 40px;
-  border-color: #254cdd;
-  color: #254cdd;
-  background-color: white;
-  border-radius: 8px;
-  align-items: center;
-  font-size: 16px;
-  font-weight: 500;
-  text-align: center;
-  font-weight: bold;
-  cursor:pointer;
-} */
-
 #title {
   padding-top: 32px;
 }
@@ -193,13 +203,6 @@ input:focus {
   text-align: center;
   padding: 32px 60px;
 }
-
-/* #walletButton {
-  text-align: right;
-  float:right;
-  margin-bottom: 50px;
-  line-height: 16px;
-} */
 
 #mintButton {
   margin-top: 40px;
