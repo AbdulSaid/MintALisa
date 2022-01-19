@@ -1,10 +1,10 @@
 {
-  "name": "Mona Lisa #2",
+  "name": "Mona Lisa #29",
   "description": "Why not Mint a Lisa",
-  "image": "https://gateway.pinata.cloud/ipfs/QmRn4pc8UgAVe7nRe4VxoGQ2m3Uvb7mH6DTcexrmi5wywo",
-  "dna": "c52a2c6ca9f32d5f9089d8c9c851699c0fd8c935",
-  "edition": 2,
-  "date": 1642445380251,
+  "image": "https://gateway.pinata.cloud/ipfs/QmTbvmr1XEZnMQKMTDkK8T8kwunMiSmB1D4JdWAhniCQET",
+  "dna": "07becdfb3830889bc60b157d8f6e149629a45aea",
+  "edition": 29,
+  "date": 1642445394708,
   "attributes": [
     {
       "trait_type": "Background",
@@ -16,11 +16,11 @@
     },
     {
       "trait_type": "Cap",
-      "value": "HardHat"
+      "value": "Fedora"
     },
     {
       "trait_type": "Glasses",
-      "value": "Cartoon"
+      "value": "3DGoggles"
     },
     {
       "trait_type": "Mouth",
@@ -28,7 +28,7 @@
     },
     {
       "trait_type": "Misc",
-      "value": "Book"
+      "value": "Pipe"
     }
   ],
   "compiler": "HashLips Art Engine"
