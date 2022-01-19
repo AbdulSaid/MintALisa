@@ -289,6 +289,31 @@ module.exports = function (db) {
     });
   });
 
+  characterRoutes.post("/characters/:id", function (req, res) {
+
+    if (!req.body.minted) {
+      res.status(400).json({error: 'invalid request: minted value not set in POST body'});
+      return;
+    }
+
+    if (!req.body.quantity) {
+      res.status(400).json({error: 'invalid request: quantity value not set in POST body'});
+      return;
+    }
+
+    db.query(`WITH character_update AS (UPDATE characters
+        SET minted = '${req.body.minted}'
+        WHERE dna = '${req.params.id}')
+              UPDATE inventory
+              SET quantity = '${req.body.quantity}'
+              WHERE dna = '${req.params.id}'
+              RETURNING *`
+    ).then(({rows: results}) => {
+      results.length === 0 ? res.send("Minting update was not successful.") :
+        res.send(`The character ${req.params.id} has been minted successfully.`);
+    });
+  });
+
 
   return characterRoutes;
 
