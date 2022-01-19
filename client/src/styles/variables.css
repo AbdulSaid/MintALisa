@@ -1,0 +1,15 @@
+:root {
+  /* Base */
+  --primary-color: linear-gradient(180deg, #B286EC 0%, #594DAD 100%);
+  --border: 1px solid var(--primary-color);
+  
+  /* Glass Effect */
+  --dark-glass-bg: rgba(255, 255, 255, 0.16);
+  --dark-glass-border:  1px solid rgba(255, 255, 255, 0.2);
+
+  /* Dark mode */
+  --dark-bg: linear-gradient(12.04deg, #361F43 0%, #181529 50%, #222F41 100%);
+  --light-font-color: #FFF;
+
+
+}
