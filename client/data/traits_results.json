@@ -1,0 +1,132 @@
+[
+  {
+    "trait": "AcidPinkBlue",
+    "weight": "40",
+    "occurrence": "18 in 50 editions (36.00 %)"
+  },
+  {
+    "trait": "Bed",
+    "weight": "30",
+    "occurrence": "9 in 50 editions (18.00 %)"
+  },
+  {
+    "trait": "LouvreWithMona",
+    "weight": "20",
+    "occurrence": "4 in 50 editions (8.00 %)"
+  },
+  {
+    "trait": "Monet",
+    "weight": "25",
+    "occurrence": "9 in 50 editions (18.00 %)"
+  },
+  {
+    "trait": "RustedMetal",
+    "weight": "35",
+    "occurrence": "10 in 50 editions (20.00 %)"
+  },
+  {
+    "trait": "Mona",
+    "weight": "90",
+    "occurrence": "50 in 50 editions (100.00 %)"
+  },
+  {
+    "trait": "Beret",
+    "weight": "40",
+    "occurrence": "16 in 50 editions (32.00 %)"
+  },
+  {
+    "trait": "Cowboy",
+    "weight": "30",
+    "occurrence": "10 in 50 editions (20.00 %)"
+  },
+  {
+    "trait": "Fedora",
+    "weight": "35",
+    "occurrence": "10 in 50 editions (20.00 %)"
+  },
+  {
+    "trait": "Graduation",
+    "weight": "20",
+    "occurrence": "8 in 50 editions (16.00 %)"
+  },
+  {
+    "trait": "HardHat",
+    "weight": "25",
+    "occurrence": "6 in 50 editions (12.00 %)"
+  },
+  {
+    "trait": "3DGoggles",
+    "weight": "35",
+    "occurrence": "10 in 50 editions (20.00 %)"
+  },
+  {
+    "trait": "Aviator",
+    "weight": "30",
+    "occurrence": "15 in 50 editions (30.00 %)"
+  },
+  {
+    "trait": "Cartoon",
+    "weight": "25",
+    "occurrence": "9 in 50 editions (18.00 %)"
+  },
+  {
+    "trait": "Round",
+    "weight": "40",
+    "occurrence": "11 in 50 editions (22.00 %)"
+  },
+  {
+    "trait": "YellowStriped",
+    "weight": "20",
+    "occurrence": "5 in 50 editions (10.00 %)"
+  },
+  {
+    "trait": "OpenSmile",
+    "weight": "20",
+    "occurrence": "11 in 50 editions (22.00 %)"
+  },
+  {
+    "trait": "OpenWithTeeth",
+    "weight": "35",
+    "occurrence": "12 in 50 editions (24.00 %)"
+  },
+  {
+    "trait": "RedLipsSmile",
+    "weight": "40",
+    "occurrence": "6 in 50 editions (12.00 %)"
+  },
+  {
+    "trait": "SideSmile",
+    "weight": "25",
+    "occurrence": "11 in 50 editions (22.00 %)"
+  },
+  {
+    "trait": "TongueOut",
+    "weight": "30",
+    "occurrence": "10 in 50 editions (20.00 %)"
+  },
+  {
+    "trait": "Book",
+    "weight": "30",
+    "occurrence": "9 in 50 editions (18.00 %)"
+  },
+  {
+    "trait": "Flowers",
+    "weight": "35",
+    "occurrence": "15 in 50 editions (30.00 %)"
+  },
+  {
+    "trait": "Money",
+    "weight": "20",
+    "occurrence": "7 in 50 editions (14.00 %)"
+  },
+  {
+    "trait": "Pipe",
+    "weight": "25",
+    "occurrence": "12 in 50 editions (24.00 %)"
+  },
+  {
+    "trait": "Tattoo",
+    "weight": "30",
+    "occurrence": "7 in 50 editions (14.00 %)"
+  }
+]

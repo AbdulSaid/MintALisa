@@ -1,0 +1,35 @@
+{
+  "name": "Mona Lisa #5",
+  "description": "Why not Mint a Lisa",
+  "image": "QmfRWZUsf8toSiHrFkjKqgKvLh4dSoq1JqdTaewfThHJXF",
+  "dna": "560615c308152b695e160a8586d97c3f34bd4364",
+  "edition": 5,
+  "date": 1642445381711,
+  "attributes": [
+    {
+      "trait_type": "Background",
+      "value": "Monet"
+    },
+    {
+      "trait_type": "Mona Lisa",
+      "value": "Mona"
+    },
+    {
+      "trait_type": "Cap",
+      "value": "Cowboy"
+    },
+    {
+      "trait_type": "Glasses",
+      "value": "Aviator"
+    },
+    {
+      "trait_type": "Mouth",
+      "value": "SideSmile"
+    },
+    {
+      "trait_type": "Misc",
+      "value": "Tattoo"
+    }
+  ],
+  "compiler": "HashLips Art Engine"
+}
