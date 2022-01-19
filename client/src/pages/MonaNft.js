@@ -1,9 +1,9 @@
 // import { axios } from 'axios'
 import { useEffect, useState } from 'react';
-import { useParams } from 'react-router-dom'
+import { useParams } from 'react-router-dom';
 import { FontAwesomeIcon } from '@fortawesome/react-fontawesome';
 import { faArrowLeft } from '@fortawesome/free-solid-svg-icons';
-import '../index.css'
+import '../index.css';
 
 export default function MonaNft() {
   let { id } = useParams();
@@ -13,7 +13,7 @@ export default function MonaNft() {
   const [ dna, setDna ] = useState('');
 
   const url = `http://localhost:8080/characters/${id}`;
-  const imgUrl = 'https://gateway.pinata.cloud/ipfs/'
+  const imgUrl = 'https://gateway.pinata.cloud/ipfs/';
 
   useEffect(() => {
     fetch(url)
