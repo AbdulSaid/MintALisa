@@ -1,14 +1,14 @@
 {
-  "name": "Mona Lisa #2",
+  "name": "Mona Lisa #46",
   "description": "Why not Mint a Lisa",
-  "image": "https://gateway.pinata.cloud/ipfs/QmRn4pc8UgAVe7nRe4VxoGQ2m3Uvb7mH6DTcexrmi5wywo",
-  "dna": "c52a2c6ca9f32d5f9089d8c9c851699c0fd8c935",
-  "edition": 2,
-  "date": 1642445380251,
+  "image": "https://gateway.pinata.cloud/ipfs/QmQmakktsL7LUjvgawZYviGmVppTQkNr3NSMM6QJaMc9mh",
+  "dna": "12e51c1418515b761df079eddc94023c1fbc9cc5",
+  "edition": 46,
+  "date": 1642445404287,
   "attributes": [
     {
       "trait_type": "Background",
-      "value": "Monet"
+      "value": "AcidPinkBlue"
     },
     {
       "trait_type": "Mona Lisa",
@@ -16,19 +16,19 @@
     },
     {
       "trait_type": "Cap",
-      "value": "HardHat"
+      "value": "Beret"
     },
     {
       "trait_type": "Glasses",
-      "value": "Cartoon"
+      "value": "Round"
     },
     {
       "trait_type": "Mouth",
-      "value": "OpenWithTeeth"
+      "value": "RedLipsSmile"
     },
     {
       "trait_type": "Misc",
-      "value": "Book"
+      "value": "Money"
     }
   ],
   "compiler": "HashLips Art Engine"

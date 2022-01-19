@@ -2,7 +2,7 @@ const fs = require('fs');
 const path = require("path");
 
 const readCharacterData = function () {
-  const CHARACTERS_NUMBER = 2;
+  const CHARACTERS_NUMBER = 10;
 
   const p = path.resolve(__dirname, `../../data/`);
   const characterData = []

@@ -1,14 +1,14 @@
 {
-  "name": "Mona Lisa #2",
+  "name": "Mona Lisa #11",
   "description": "Why not Mint a Lisa",
-  "image": "https://gateway.pinata.cloud/ipfs/QmRn4pc8UgAVe7nRe4VxoGQ2m3Uvb7mH6DTcexrmi5wywo",
-  "dna": "c52a2c6ca9f32d5f9089d8c9c851699c0fd8c935",
-  "edition": 2,
-  "date": 1642445380251,
+  "image": "https://gateway.pinata.cloud/ipfs/QmTLrhZ8thnnRe7TBRCFGT5TAyUFVLSjsxtPTXf4Mex5ac",
+  "dna": "65ed4a82a43b11c6906422252522994a33c81939",
+  "edition": 11,
+  "date": 1642445384841,
   "attributes": [
     {
       "trait_type": "Background",
-      "value": "Monet"
+      "value": "Bed"
     },
     {
       "trait_type": "Mona Lisa",
@@ -16,15 +16,15 @@
     },
     {
       "trait_type": "Cap",
-      "value": "HardHat"
+      "value": "Cowboy"
     },
     {
       "trait_type": "Glasses",
-      "value": "Cartoon"
+      "value": "3DGoggles"
     },
     {
       "trait_type": "Mouth",
-      "value": "OpenWithTeeth"
+      "value": "OpenSmile"
     },
     {
       "trait_type": "Misc",
