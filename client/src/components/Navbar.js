@@ -9,7 +9,10 @@ export default function Navbar() {
   return (
     <nav className='navBar'>
       <h3 className='logo'>MINT A LISA</h3>
-      <button className='hamburger' onClick={() => setNavbarOpen(!navbarOpen)}>{navbarOpen ? <FontAwesomeIcon icon={faTimes} /> : <FontAwesomeIcon icon={faBars} />}</button>
+      <button 
+        className='hamburger' 
+        onClick={() => setNavbarOpen(!navbarOpen)}>{navbarOpen ? <FontAwesomeIcon icon={faTimes} /> : <FontAwesomeIcon icon={faBars} />}
+      </button>
     </nav>
   );
 }
