@@ -40,30 +40,12 @@ module.exports = function (db) {
   });
 
   characterRoutes.get("/characters/insert", function (req, res) {
-    async function executeQuery(query) {
-      try {
-        let {rows} = await db.query(query);
-        //     console.log(rows);
-      } catch (e) {
-        console.error(e);
-      }
-    }
 
     const characterData = readCharacterData();
 
-    const data = [];
-
     for (let item of characterData) {
-      const details = [];
-      details.push(item.dna);
-      details.push(item.name);
-      details.push(item.description);
-      details.push(item.image);
-      details.push(1.1);
-      details.push(1);
-      details.push(1);
-      data.push(details);
       const itemAttributes = {};
+
       for (let attribute of item.attributes) {
         if (attribute.trait_type === 'Background') {
           itemAttributes.background = attribute.value;
@@ -80,75 +62,42 @@ module.exports = function (db) {
         if (attribute.trait_type === 'Misc') {
           itemAttributes.accessories = attribute.value;
         }
+        item.attributes = itemAttributes;
       }
+
+      db.query(`select price
+                from hats
+                where name = '${item.attributes.hat}';
+      select price
+      from mouths
+      where name = '${item.attributes.mouth}';
+      select price
+      from glasses
+      where name = '${item.attributes.glasses}';
+      select price
+      from backgrounds
+      where name = '${item.attributes.background}';
+      select price
+      from accessories
+      where name = '${item.attributes.accessories}';`)
+        .then(([{rows: hat}, {rows: mouth}, {rows: glasses}, {rows: background}, {rows: accessories}]) => {
+
+          const totalPrice = Number(hat[0].price)
+            + Number(mouth[0].price)
+            + Number(glasses[0].price)
+            + Number(background[0].price)
+            + Number(accessories[0].price);
+
+          db.query(`INSERT INTO characters (dna, name, description, image, price, collection_id, inventory_id)
+                    VALUES ('${item.dna}', '${item.name}', '${item.description}', '${item.image}', '${totalPrice}', 1,
+                            1)`)
+            .then(({rows: characters}) => {
+              console.log(characters);
+            })
+            .then(() => console.log("done"));
+        });
     }
-
-
-    // console.log(data);
-    const query = format('INSERT INTO characters (dna, name, description, image, price, collection_id, inventory_id) VALUES %L', data);
-    executeQuery(query).then(() => {
-      res.send('Done inserting the characters!');
-    })
-
-    //   ----------------
-
-
-    // for (let item of characterData) {
-    //   const itemAttributes = {};
-    //   for (let attribute of item.attributes) {
-    //     if (attribute.trait_type === 'Background') {
-    //       itemAttributes.background = attribute.value;
-    //     }
-    //     if (attribute.trait_type === 'Cap') {
-    //       itemAttributes.hat = attribute.value;
-    //     }
-    //     if (attribute.trait_type === 'Glasses') {
-    //       itemAttributes.glasses = attribute.value;
-    //     }
-    //     if (attribute.trait_type === 'Mouth') {
-    //       itemAttributes.mouth = attribute.value;
-    //     }
-    //     if (attribute.trait_type === 'Misc') {
-    //       itemAttributes.accessories = attribute.value;
-    //     }
-    //   }
-    //
-    //
-    //   db.query(`select id
-    //             from hats
-    //             where name = ${itemAttributes.hat};
-    //   select id
-    //   from mouths
-    //   where name = ${itemAttributes.mouth};
-    //   select id
-    //   from glasses
-    //   where name = ${itemAttributes.glasses};
-    //   select id
-    //   from backgrounds
-    //   where name = ${itemAttributes.background};
-    //   select id
-    //   from accessories
-    //   where name = ${itemAttributes.accessories};`)
-    //     .then(([{rows: hatId}, {rows: mouthId}, {rows: glassesId}, {rows: backgroundId}, {rows: accessoriesId}]) => {
-    //       db.query(`INSERT INTO character_attributes (character_id, hat_id, mouth_id, glasses_id, background_id,
-    //                                                   accessory_id)
-    //                 VALUES (${item.dna},
-    //                         (SELECT id from hats WHERE name = ${hatId}),
-    //                         (SELECT id from mouths WHERE name = ${mouthId}),
-    //                         (SELECT id from glasses WHERE name = ${glassesId}),
-    //                         (SELECT id from backgrounds WHERE name = ${backgroundId}),
-    //                         (SELECT id from accessories WHERE name = ${accessoriesId}));`
-    //       ).then(({rows: characters}) => {
-    //         console.log(characters);
-    //       });
-    //     }).then(() => {
-    //     console.log("done")
-    //   })
-    // }
-    //
-    // //  console.log('itemAttributes -- ---- ', itemAttributes);
-    // res.send("Done!")
-
+    res.send('characters have been inserted!')
   });
 
   characterRoutes.get("/characters/attributes/insert", function (req, res) {
