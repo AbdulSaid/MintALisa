@@ -35,23 +35,22 @@ CREATE TABLE collections
     description VARCHAR(255)       NOT NULL
 );
 
-CREATE TABLE inventory
-(
-    id       SERIAL PRIMARY KEY NOT NULL,
-    quantity INTEGER
-);
-
 CREATE TABLE characters
 (
     dna           VARCHAR(45) PRIMARY KEY NOT NULL,
-    name          VARCHAR(255)             NOT NULL,
-    description   VARCHAR(255)             NOT NULL,
-    image         VARCHAR(100)             NOT NULL,
-    price         NUMERIC(12, 6)           NOT NULL,
-    collection_id INTEGER REFERENCES collections (id) ON DELETE CASCADE,
-    inventory_id  INTEGER REFERENCES inventory (id) ON DELETE CASCADE
+    name          VARCHAR(255)            NOT NULL,
+    description   VARCHAR(255)            NOT NULL,
+    image         VARCHAR(100)            NOT NULL,
+    price         NUMERIC(12, 6)          NOT NULL,
+    collection_id INTEGER REFERENCES collections (id) ON DELETE CASCADE
 );
 
+CREATE TABLE inventory
+(
+    id       SERIAL PRIMARY KEY NOT NULL,
+    dna      VARCHAR(45) REFERENCES characters (dna) ON DELETE CASCADE,
+    quantity INTEGER
+);
 
 CREATE TABLE hats
 (

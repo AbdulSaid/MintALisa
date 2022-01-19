@@ -4,20 +4,20 @@ VALUES (1, 'special edition', 'The first monalisa special edition.');
 INSERT INTO collections (id, name, description)
 VALUES (2, 'regular edition', 'The monalisa regular edition.');
 
-INSERT INTO inventory (id, quantity)
-VALUES (1, 0);
+INSERT INTO characters (dna, name, description, image, price, collection_id)
+VALUES (1, 'monalisa_1', 'first monalisa', 'image_url', '0.91', 1);
 
-INSERT INTO inventory (id, quantity)
-VALUES (2, 5);
+INSERT INTO characters (dna, name, description, image, price, collection_id)
+VALUES (2, 'monalisa_2', 'second monalisa', 'image_url', '0.81', 2);
 
-INSERT INTO characters (dna, name, description, image, price, collection_id, inventory_id)
-VALUES (1, 'monalisa_1', 'first monalisa', 'image_url', '0.91', 1, 1);
+INSERT INTO characters (dna, name, description, image, price, collection_id)
+VALUES (3, 'monalisa_3', 'third monalisa', 'image_url', '0.81', 2);
 
-INSERT INTO characters (dna, name, description, image, price, collection_id, inventory_id)
-VALUES (2, 'monalisa_2', 'second monalisa', 'image_url', '0.81', 2, 2);
+INSERT INTO inventory (id, quantity, dna)
+VALUES (1, 1, 1);
 
-INSERT INTO characters (dna, name, description, image, price, collection_id, inventory_id)
-VALUES (3, 'monalisa_3', 'third monalisa', 'image_url', '0.81', 2, 2);
+INSERT INTO inventory (id, quantity, dna)
+VALUES (2, 5, 2);
 
 INSERT INTO hats (id, name, rarity, price)
 VALUES (1, 'Cowboy', 30, 0.0015),
