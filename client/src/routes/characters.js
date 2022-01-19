@@ -13,15 +13,8 @@ const {readCharacterData} = require("../helpers/character_reader");
 module.exports = function (db) {
 
   characterRoutes.get("/characters", function (req, res) {
-    // DataHelpers.getTweets((err, tweets) => {
-    //   if (err) {
-    //     res.status(500).json({ error: err.message });
-    //   } else {
-    //     res.json(tweets);
-    //   }
-    // });
 
-    db.query(`SELECT dna,
+    db.query(`SELECT characters.dna          as dna,
                      characters.name         as name,
                      characters.description  as description,
                      image,
@@ -29,14 +22,12 @@ module.exports = function (db) {
                      collections.name        as collection_name,
                      collections.description as collection_description,
                      inventory.quantity      as quantity
-
               FROM characters
                        JOIN collections ON collection_id = collections.id
-                       JOIN inventory ON inventory_id = inventory.id`
+                       JOIN inventory ON characters.dna = inventory.dna`
     ).then(({rows: characters}) => {
       res.json(characters);
     });
-
   });
 
   characterRoutes.get("/characters/insert", function (req, res) {
@@ -45,7 +36,6 @@ module.exports = function (db) {
 
     for (let item of characterData) {
       const itemAttributes = {};
-
       for (let attribute of item.attributes) {
         if (attribute.trait_type === 'Background') {
           itemAttributes.background = attribute.value;
@@ -64,7 +54,6 @@ module.exports = function (db) {
         }
         item.attributes = itemAttributes;
       }
-
       db.query(`select price
                 from hats
                 where name = '${item.attributes.hat}';
@@ -88,11 +77,11 @@ module.exports = function (db) {
             + Number(background[0].price)
             + Number(accessories[0].price);
 
-          db.query(`INSERT INTO characters (dna, name, description, image, price, collection_id, inventory_id)
-                    VALUES ('${item.dna}', '${item.name}', '${item.description}', '${item.image}', '${totalPrice}', 1,
-                            1)`)
-            .then(({rows: characters}) => {
-              console.log(characters);
+          db.query(`INSERT INTO characters (dna, name, description, image, price, collection_id)
+                    VALUES ('${item.dna}', '${item.name}', '${item.description}', '${item.image}', '${totalPrice}', 1)`)
+            .then(() => {
+              db.query(`INSERT INTO inventory (dna, quantity)
+                        VALUES ('${item.dna}', 1)`)
             })
             .then(() => console.log("done"));
         });
@@ -283,7 +272,7 @@ module.exports = function (db) {
   });
 
   characterRoutes.get("/characters/:id", function (req, res) {
-    db.query(`SELECT dna,
+    db.query(`SELECT characters.dna          as dna,
                      characters.name         as name,
                      characters.description  as description,
                      image,
@@ -291,16 +280,13 @@ module.exports = function (db) {
                      collections.name        as collection_name,
                      collections.description as collection_description,
                      inventory.quantity      as quantity
-
               FROM characters
                        JOIN collections ON collection_id = collections.id
-                       JOIN inventory ON inventory_id = inventory.id
-              WHERE dna = '${req.params.id}'`
+                       JOIN inventory ON characters.dna = inventory.dna
+              WHERE characters.dna = '${req.params.id}'`
     ).then(({rows: characters}) => {
       res.json(characters);
     });
-
-
   });
 
   characterRoutes.get("/pricing", function (req, res) {
