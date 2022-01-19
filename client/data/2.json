@@ -1,0 +1,35 @@
+{
+  "name": "Mona Lisa #2",
+  "description": "Why not Mint a Lisa",
+  "image": "QmRn4pc8UgAVe7nRe4VxoGQ2m3Uvb7mH6DTcexrmi5wywo",
+  "dna": "c52a2c6ca9f32d5f9089d8c9c851699c0fd8c935",
+  "edition": 2,
+  "date": 1642445380251,
+  "attributes": [
+    {
+      "trait_type": "Background",
+      "value": "Monet"
+    },
+    {
+      "trait_type": "Mona Lisa",
+      "value": "Mona"
+    },
+    {
+      "trait_type": "Cap",
+      "value": "HardHat"
+    },
+    {
+      "trait_type": "Glasses",
+      "value": "Cartoon"
+    },
+    {
+      "trait_type": "Mouth",
+      "value": "OpenWithTeeth"
+    },
+    {
+      "trait_type": "Misc",
+      "value": "Book"
+    }
+  ],
+  "compiler": "HashLips Art Engine"
+}
