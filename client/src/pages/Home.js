@@ -5,10 +5,9 @@ import { faArrowRight } from '@fortawesome/free-solid-svg-icons';
 
 export default function Home() {
   const [walletAddress, setWallet] = useState("");
-  const [status, setStatus] = useState("");
 
   useEffect(async () => { //TODO: implement
-    const {address, status} = await getCurrentWalletConnected();
+    const { address } = await getCurrentWalletConnected();
     setWallet(address);
 
     addWalletListener(); 
@@ -17,7 +16,6 @@ export default function Home() {
   const connectWalletPressed = async () => { //TODO: implement
     const walletResponse = await connectWallet();
     setWallet(walletResponse.address);
-    
   };
 
   function addWalletListener() {
@@ -34,6 +32,7 @@ export default function Home() {
 
   return (
     <div className='home'>
+      
       <section className='header-container'>
         <img src='images/background-img.png' className='bg-img' />
         <header className='header'>
