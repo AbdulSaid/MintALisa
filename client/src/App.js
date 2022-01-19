@@ -1,13 +1,22 @@
-// import Minter from './Minter'
-import Home from './pages/Home';
+import { BrowserRouter as Router, Routes, Route } from 'react-router-dom';
 import Navbar from './components/Navbar';
+import Home from './pages/Home';
+import Gallery from './pages/Gallery';
+import MonaNft from './pages/MonaNft';
 
 function App() {
   return (
     <div className="App">
-      <Navbar></Navbar>
-      <Home></Home>
-      {/* <Minter></Minter> */}
+      <Navbar />
+
+      <Router>
+        <Routes>
+          <Route path="/" element={<Home />} />
+          <Route path="/gallery" element={<Gallery />} />
+          <Route path="/mona/:id" element={<MonaNft />} />
+        </Routes>
+      </Router>
+      
     </div>
   );
 }
