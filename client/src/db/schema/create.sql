@@ -42,6 +42,7 @@ CREATE TABLE characters
     description   VARCHAR(255)            NOT NULL,
     image         VARCHAR(100)            NOT NULL,
     price         NUMERIC(12, 6)          NOT NULL,
+    minted        BOOLEAN                 NOT NULL DEFAULT FALSE,
     collection_id INTEGER REFERENCES collections (id) ON DELETE CASCADE
 );
 
