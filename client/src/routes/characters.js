@@ -8,96 +8,19 @@ let traitsData = require('../../data/traits_results.json');
 const fs = require("fs");
 const path = require("path");
 const {readCharacterData} = require("../helpers/character_reader");
+const charactersController = require("../controllers/charactersController");
 
 
 module.exports = function (db) {
 
   characterRoutes.get("/characters", function (req, res) {
-    // DataHelpers.getTweets((err, tweets) => {
-    //   if (err) {
-    //     res.status(500).json({ error: err.message });
-    //   } else {
-    //     res.json(tweets);
-    //   }
-    // });
-
-    db.query(`SELECT dna,
-                     characters.name         as name,
-                     characters.description  as description,
-                     image,
-                     price,
-                     collections.name        as collection_name,
-                     collections.description as collection_description,
-                     inventory.quantity      as quantity
-
-              FROM characters
-                       JOIN collections ON collection_id = collections.id
-                       JOIN inventory ON inventory_id = inventory.id`
-    ).then(({rows: characters}) => {
-      res.json(characters);
-    });
-
+    charactersController.getAll()
+      .then(({rows: characters}) => res.json(characters));
   });
 
   characterRoutes.get("/characters/insert", function (req, res) {
-
-    const characterData = readCharacterData();
-
-    for (let item of characterData) {
-      const itemAttributes = {};
-
-      for (let attribute of item.attributes) {
-        if (attribute.trait_type === 'Background') {
-          itemAttributes.background = attribute.value;
-        }
-        if (attribute.trait_type === 'Cap') {
-          itemAttributes.hat = attribute.value;
-        }
-        if (attribute.trait_type === 'Glasses') {
-          itemAttributes.glasses = attribute.value;
-        }
-        if (attribute.trait_type === 'Mouth') {
-          itemAttributes.mouth = attribute.value;
-        }
-        if (attribute.trait_type === 'Misc') {
-          itemAttributes.accessories = attribute.value;
-        }
-        item.attributes = itemAttributes;
-      }
-
-      db.query(`select price
-                from hats
-                where name = '${item.attributes.hat}';
-      select price
-      from mouths
-      where name = '${item.attributes.mouth}';
-      select price
-      from glasses
-      where name = '${item.attributes.glasses}';
-      select price
-      from backgrounds
-      where name = '${item.attributes.background}';
-      select price
-      from accessories
-      where name = '${item.attributes.accessories}';`)
-        .then(([{rows: hat}, {rows: mouth}, {rows: glasses}, {rows: background}, {rows: accessories}]) => {
-
-          const totalPrice = Number(hat[0].price)
-            + Number(mouth[0].price)
-            + Number(glasses[0].price)
-            + Number(background[0].price)
-            + Number(accessories[0].price);
-
-          db.query(`INSERT INTO characters (dna, name, description, image, price, collection_id, inventory_id)
-                    VALUES ('${item.dna}', '${item.name}', '${item.description}', '${item.image}', '${totalPrice}', 1,
-                            1)`)
-            .then(({rows: characters}) => {
-              console.log(characters);
-            })
-            .then(() => console.log("done"));
-        });
-    }
-    res.send('characters have been inserted!')
+    charactersController.addAllCharacters()
+    res.send('Characters have been added!');
   });
 
   characterRoutes.get("/characters/attributes/insert", function (req, res) {
@@ -283,57 +206,49 @@ module.exports = function (db) {
   });
 
   characterRoutes.get("/characters/:id", function (req, res) {
-    db.query(`SELECT dna,
+    db.query(`SELECT characters.dna          as dna,
                      characters.name         as name,
                      characters.description  as description,
                      image,
                      price,
                      collections.name        as collection_name,
                      collections.description as collection_description,
+                     minted,
                      inventory.quantity      as quantity
-
               FROM characters
                        JOIN collections ON collection_id = collections.id
-                       JOIN inventory ON inventory_id = inventory.id
-              WHERE dna = '${req.params.id}'`
+                       JOIN inventory ON characters.dna = inventory.dna
+              WHERE characters.dna = '${req.params.id}'`
     ).then(({rows: characters}) => {
       res.json(characters);
     });
-
-
   });
 
-  characterRoutes.get("/pricing", function (req, res) {
+  characterRoutes.post("/characters/:id", function (req, res) {
 
+    if (!req.body.minted) {
+      res.status(400).json({error: 'invalid request: minted value not set in POST body'});
+      return;
+    }
+
+    if (!req.body.quantity) {
+      res.status(400).json({error: 'invalid request: quantity value not set in POST body'});
+      return;
+    }
+
+    db.query(`WITH character_update AS (UPDATE characters
+        SET minted = '${req.body.minted}'
+        WHERE dna = '${req.params.id}')
+              UPDATE inventory
+              SET quantity = '${req.body.quantity}'
+              WHERE dna = '${req.params.id}'
+              RETURNING *`
+    ).then(({rows: results}) => {
+      results.length === 0 ? res.send("Minting update was not successful.") :
+        res.send(`The character ${req.params.id} has been minted successfully.`);
+    });
   });
 
-// characterRoutes.post("/", function(req, res) {
-//   if (!req.body.text) {
-//     res.status(400).json({ error: 'invalid request: no data in POST body'});
-//     return;
-//   }
-//
-//   const user = req.body.user ? req.body.user : userHelper.generateRandomUser();
-//   const tweet = {
-//     user: user,
-//     content: {
-//       text: req.body.text
-//     },
-//     created_at: Date.now()
-//   };
-//
-//   // DataHelpers.saveTweet(tweet, (err) => {
-//   //   if (err) {
-//   //     res.status(500).json({ error: err.message });
-//   //   } else {
-//   //     res.status(201).send();
-//   //   }
-//   // });
-//
-//
-//
-//
-// });
 
   return characterRoutes;
 
