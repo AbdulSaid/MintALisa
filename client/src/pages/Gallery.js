@@ -12,6 +12,16 @@ export default function Gallery() {
       });
   }, []);
 
+  let char = characters.map(char => {
+    return (
+      <SingleGalleryDisplay
+        key={char.dna}
+        imgUrl={char.image}
+        name={char.name}
+        price={char.price}
+      />
+    );
+  })
 
   return (
     <div className="gallery">
@@ -21,16 +31,7 @@ export default function Gallery() {
       </header>
 
       <section className='gallery-display-container'>
-        {characters.map(char => {
-          return (
-            <SingleGalleryDisplay
-              key={char.dna}
-              imgUrl={char.image}
-              name={char.name}
-              price={char.price}
-            />
-          );
-        })}
+        {char}
       </section>
     </div>
   );
