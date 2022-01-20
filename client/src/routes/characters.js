@@ -8,86 +8,19 @@ let traitsData = require('../../data/traits_results.json');
 const fs = require("fs");
 const path = require("path");
 const {readCharacterData} = require("../helpers/character_reader");
+const charactersController = require("../controllers/charactersController");
 
 
 module.exports = function (db) {
 
   characterRoutes.get("/characters", function (req, res) {
-
-    db.query(`SELECT characters.dna          as dna,
-                     characters.name         as name,
-                     characters.description  as description,
-                     image,
-                     price,
-                     collections.name        as collection_name,
-                     collections.description as collection_description,
-                     minted,
-                     inventory.quantity      as quantity
-              FROM characters
-                       JOIN collections ON collection_id = collections.id
-                       JOIN inventory ON characters.dna = inventory.dna`
-    ).then(({rows: characters}) => {
-      res.json(characters);
-    });
+    charactersController.getAll()
+      .then(({rows: characters}) => res.json(characters));
   });
 
   characterRoutes.get("/characters/insert", function (req, res) {
-
-    const characterData = readCharacterData();
-
-    for (let item of characterData) {
-      const itemAttributes = {};
-      for (let attribute of item.attributes) {
-        if (attribute.trait_type === 'Background') {
-          itemAttributes.background = attribute.value;
-        }
-        if (attribute.trait_type === 'Cap') {
-          itemAttributes.hat = attribute.value;
-        }
-        if (attribute.trait_type === 'Glasses') {
-          itemAttributes.glasses = attribute.value;
-        }
-        if (attribute.trait_type === 'Mouth') {
-          itemAttributes.mouth = attribute.value;
-        }
-        if (attribute.trait_type === 'Misc') {
-          itemAttributes.accessories = attribute.value;
-        }
-        item.attributes = itemAttributes;
-      }
-      db.query(`select price
-                from hats
-                where name = '${item.attributes.hat}';
-      select price
-      from mouths
-      where name = '${item.attributes.mouth}';
-      select price
-      from glasses
-      where name = '${item.attributes.glasses}';
-      select price
-      from backgrounds
-      where name = '${item.attributes.background}';
-      select price
-      from accessories
-      where name = '${item.attributes.accessories}';`)
-        .then(([{rows: hat}, {rows: mouth}, {rows: glasses}, {rows: background}, {rows: accessories}]) => {
-
-          const totalPrice = Number(hat[0].price)
-            + Number(mouth[0].price)
-            + Number(glasses[0].price)
-            + Number(background[0].price)
-            + Number(accessories[0].price);
-
-          db.query(`INSERT INTO characters (dna, name, description, image, price, collection_id)
-                    VALUES ('${item.dna}', '${item.name}', '${item.description}', '${item.image}', '${totalPrice}', 1)`)
-            .then(() => {
-              db.query(`INSERT INTO inventory (dna, quantity)
-                        VALUES ('${item.dna}', 1)`)
-            })
-            .then(() => console.log("done"));
-        });
-    }
-    res.send('characters have been inserted!')
+    charactersController.addAllCharacters()
+    res.send('Characters have been added!');
   });
 
   characterRoutes.get("/characters/attributes/insert", function (req, res) {
