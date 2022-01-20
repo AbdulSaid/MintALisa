@@ -1,13 +1,12 @@
 @import url('https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700&family=Libre+Baskerville:wght@700&display=swap');
 @import './styles/variables.css';
 
+/* Base styles */
 .App {
   width: 100%;
-  height: 100%;
-  position: fixed;
+  height: 100vh;
 }
 
-/* Base styles */
 * {
   margin: 0;
   padding: 0;
@@ -16,6 +15,8 @@
 
 body {
   background: var(--dark-bg);
+  background-repeat: no-repeat;
+  background-attachment: fixed;
   width: 100vw;
   height: 100vh;
   margin: 0;
@@ -24,6 +25,7 @@ body {
   -webkit-font-smoothing: antialiased;
   -moz-osx-font-smoothing: grayscale;
 }
+
 
 /* Navbar */
 .navBar {
@@ -50,6 +52,7 @@ body {
   cursor: pointer;
 }
 
+
 /* Home page */
 .home {
   display: flex;
@@ -57,6 +60,7 @@ body {
   justify-content: space-around;
   align-items: center;
   height: 85%;
+  overflow: hidden;
 }
 
 .header-container {
@@ -69,7 +73,7 @@ body {
   height: 485px;
 }
 
-.header {
+.home .header {
   display: flex;
   flex-direction: column;
   justify-content: center;
@@ -94,7 +98,6 @@ body {
   justify-content: center;
   align-items: center;
   margin-top: 0.5rem;
-  bottom: 10%;
 }
 
 .mm-link-container {
@@ -111,6 +114,7 @@ body {
 .mm-link:hover {
   text-decoration: underline;
 }
+
 
 /* Buttons */
 .btn {
@@ -160,52 +164,14 @@ body {
 }
 
 
-code {
-  font-family: source-code-pro, Menlo, Monaco, Consolas, 'Courier New', monospace;
+/* Gallery Page */
+.gallery-display-container {
+  display: grid;
+  grid-template-columns: 1fr 1fr;
 }
 
-.Minter {
-  max-width: 80vh;
-  max-height: 80vh;
-  padding: 60px 100px;
-  margin: 0 auto;
-  text-align: left;
-
-}
-
-input {
-  border-top-style: hidden;
-  border-right-style: hidden;
-  border-left-style: hidden;
-  border-bottom-style: groove;
-  font-size: 16px;
-  width: 100%;
-  border-color: rgba(4, 4, 5, 0.1);
-  line-height: 32px;
-}
-
-input:focus {
-  outline: none;
-  border-color: rgba(4, 4, 5, 0.4);
-}
-
-#title {
-  padding-top: 32px;
-}
-
-#status {
-  color:red;
-}
-
-.uploadFile {
-  border: 4px dashed rgba(4, 4, 5, 0.1);
-  border-radius: 16px;
-  text-align: center;
-  padding: 32px 60px;
-}
-
-#mintButton {
-  margin-top: 40px;
-  background-color: #254cdd;
-  color:white;
+/* Single Gallery display component */
+.gal-img {
+  height: 165px;
+  max-width: 200px;
 }

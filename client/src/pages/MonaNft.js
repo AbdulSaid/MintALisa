@@ -1,9 +1,9 @@
 // import { axios } from 'axios'
 import { useEffect, useState } from 'react';
-import { useParams } from 'react-router-dom'
+import { useParams, Link } from 'react-router-dom';
 import { FontAwesomeIcon } from '@fortawesome/react-fontawesome';
 import { faArrowLeft } from '@fortawesome/free-solid-svg-icons';
-import '../index.css'
+import '../index.css';
 
 export default function MonaNft() {
   let { id } = useParams();
@@ -22,23 +22,16 @@ export default function MonaNft() {
         setName(json[0].name)
         setImgID(json[0].image);
         setDna(json[0].dna);
-        // console.log(json[0]);
+        console.log(json[0]);
         });
-  }, []);
-
-  // useEffect(() => {
-  //   axios.get('http://localhost:8080/characters/0412f9915477eee85b677f5ff83bdc6ed17fa1b8')
-  // .then(response => {
-  //   console.log(response.data);
-  // }, error => {
-  //   console.log(error);
-  // });
-  // }, []);
+  }, [url]);
 
   return (
     <div className='single-mona'>
       <section className='top'>
-        <i className='back-arrow'><FontAwesomeIcon icon={ faArrowLeft } /></i>
+        <Link to={'/gallery'}>
+          <i className='back-arrow'><FontAwesomeIcon icon={ faArrowLeft } /></i>
+        </Link>
         <img className='single-mona-img' src={`${imgID}`} alt='' />
       </section>
 
