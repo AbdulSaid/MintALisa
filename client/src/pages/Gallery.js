@@ -3,8 +3,8 @@ import SingleGalleryDisplay from "../components/SingleGalleryDisplay";
 
 export default function Gallery() {
   const [characters, setCharacters] = useState([]);
-  const [ direction, setDirection ] = useState('');
-  
+  const [direction, setDirection] = useState('');
+
   useEffect(() => {
     fetch('http://localhost:8080/characters')
       .then(res => res.json())
@@ -14,18 +14,18 @@ export default function Gallery() {
   }, []);
 
   useEffect(() => {
-    setCharacters(characters.sort(sortHandler))
+    setCharacters(characters.sort(sortHandler));
   }, [characters, direction])
 
   const sortByPrice = (dir) => {
     setDirection(dir);
   }
 
-  const sortHandler = (a,b) =>  {
+  const sortHandler = (a, b) => {
     if (direction === 'incr') {
-          return parseFloat(b.price) - parseFloat(a.price);
-        }
-        return parseFloat(a.price) - parseFloat(b.price);
+      return parseFloat(b.price) - parseFloat(a.price);
+    }
+    return parseFloat(a.price) - parseFloat(b.price);
   }
 
   return (
@@ -67,4 +67,4 @@ export default function Gallery() {
   // }
 
 
- 
+
