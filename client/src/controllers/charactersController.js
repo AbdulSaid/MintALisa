@@ -1,4 +1,4 @@
-const charactersModel = require("../model/charactersModel");
+const charactersModel = require("../models/charactersModel");
 const {computeOccurrences} = require("../helpers/computeOccurrences");
 const {readCharacterData} = require("../helpers/character_reader");
 const {getCharacterAttributes} = require("../helpers/getCharacterAttributes");
