@@ -43,6 +43,7 @@ export default function Gallery() {
       <section className='gallery-display-container'>
         {characters.map((char, index) => <SingleGalleryDisplay
           key={index}
+          id={char.dna}
           imgUrl={char.image}
           name={char.name}
           price={char.price}
