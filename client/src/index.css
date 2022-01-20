@@ -4,7 +4,7 @@
 /* Base styles */
 .App {
   width: 100%;
-  height: 100%;
+  height: 100vh;
 }
 
 * {
@@ -60,6 +60,7 @@ body {
   justify-content: space-around;
   align-items: center;
   height: 85%;
+  overflow: hidden;
 }
 
 .header-container {
@@ -97,7 +98,6 @@ body {
   justify-content: center;
   align-items: center;
   margin-top: 0.5rem;
-  bottom: 10%;
 }
 
 .mm-link-container {

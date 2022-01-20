@@ -56,7 +56,7 @@ export default function Home() {
             <span>Connect Wallet</span>
           )}
         </button>}
-        {!window.ethereum && <p className='mm-link-container'><a className='mm-link' target="_blank" href={`https://metamask.io/download.html`}>
+        {!window.ethereum && <p className='mm-link-container'><a className='mm-link' target="_blank" rel="noreferrer" href={`https://metamask.io/download.html`}>
           You must install Metamask, a virtual Ethereum wallet, in your browser <FontAwesomeIcon icon={ faArrowRight } />
           </a></p>}
       </section>
