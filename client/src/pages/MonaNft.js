@@ -13,7 +13,6 @@ export default function MonaNft() {
   const [ dna, setDna ] = useState('');
 
   const url = `http://localhost:8080/characters/${id}`;
-  const imgUrl = 'https://gateway.pinata.cloud/ipfs/';
 
   useEffect(() => {
     fetch(url)
@@ -25,7 +24,7 @@ export default function MonaNft() {
         setDna(json[0].dna);
         // console.log(json[0]);
         });
-  }, []);
+  }, [url]);
 
   // useEffect(() => {
   //   axios.get('http://localhost:8080/characters/0412f9915477eee85b677f5ff83bdc6ed17fa1b8')
@@ -40,7 +39,7 @@ export default function MonaNft() {
     <div className='single-mona'>
       <section className='top'>
         <i className='back-arrow'><FontAwesomeIcon icon={ faArrowLeft } /></i>
-        <img className='single-mona-img' src={`${imgUrl}${imgID}`} alt='' />
+        <img className='single-mona-img' src={`${imgID}`} alt='' />
       </section>
 
       <section className='info'>
