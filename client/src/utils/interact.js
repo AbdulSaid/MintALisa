@@ -86,19 +86,12 @@ export const getCurrentWalletConnected = async () => {
 };
 
 // This is where we can set our own meta data so the user can mint the NFT they choose
-export const mintNFT = async (url, name, description) => {
-  //error handling
-  if (url.trim() == "" || name.trim() == "" || description.trim() == "") {
-    return {
-      success: false,
-      status: "❗Please make sure all fields are completed before minting.",
-    };
-  }
+export const mintNFT = async (imgID, name, description) => {
 
   //make metadata
   const metadata = new Object();
   metadata.name = name;
-  metadata.image = url;
+  metadata.image = imgID;
   metadata.description = description;
 
   //make pinata call
