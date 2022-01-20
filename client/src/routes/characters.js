@@ -23,68 +23,14 @@ module.exports = function (db) {
     res.send('Characters have been added!');
   });
 
-  characterRoutes.get("/characters/attributes/insert", function (req, res) {
-    const characterData = readCharacterData();
-
-    for (let item of characterData) {
-      const itemAttributes = {};
-      for (let attribute of item.attributes) {
-        if (attribute.trait_type === 'Background') {
-          itemAttributes.background = attribute.value;
-        }
-        if (attribute.trait_type === 'Cap') {
-          itemAttributes.hat = attribute.value;
-        }
-        if (attribute.trait_type === 'Glasses') {
-          itemAttributes.glasses = attribute.value;
-        }
-        if (attribute.trait_type === 'Mouth') {
-          itemAttributes.mouth = attribute.value;
-        }
-        if (attribute.trait_type === 'Misc') {
-          itemAttributes.accessories = attribute.value;
-        }
-      }
-      item.attributes = itemAttributes;
-    }
-
-    for (let item of characterData) {
-      db.query(`INSERT INTO character_attributes (dna, hat_id, mouth_id, glasses_id, background_id, accessory_id)
-                VALUES ('${item.dna}',
-                        (SELECT id from hats WHERE name = '${item.attributes.hat}'),
-                        (SELECT id from mouths WHERE name = '${item.attributes.mouth}'),
-                        (SELECT id from glasses WHERE name = '${item.attributes.glasses}'),
-                        (SELECT id from backgrounds WHERE name = '${item.attributes.background}'),
-                        (SELECT id from accessories WHERE name = '${item.attributes.accessories}'))`)
-        .then(({rows: characters}) => {
-          console.log(characters);
-        })
-        .then(() => {
-          console.log("done")
-        })
-    }
-    res.send("Done!")
+  characterRoutes.get("/characters/attributes", function (req, res) {
+    charactersController.getAllAttributes()
+      .then(({rows: characters}) => res.json(characters));
   });
 
-  characterRoutes.get("/characters/attributes", function (req, res) {
-    db.query(`SELECT characters.dna         as dna,
-                     characters.name        as name,
-                     characters.description as description,
-                     hats.name              as hat,
-                     mouths.name            as mouth,
-                     backgrounds.name       as background,
-                     glasses.name           as glasses,
-                     accessories.name       as accessories
-              FROM character_attributes
-                       JOIN characters ON character_attributes.dna = characters.dna
-                       JOIN hats ON hat_id = hats.id
-                       JOIN mouths ON mouth_id = mouths.id
-                       JOIN backgrounds ON background_id = backgrounds.id
-                       JOIN glasses ON glasses_id = glasses.id
-                       JOIN accessories ON accessory_id = accessories.id`
-    ).then(({rows: characters}) => {
-      res.json(characters);
-    });
+  characterRoutes.get("/characters/attributes/insert", function (req, res) {
+    charactersController.addAllAttributes();
+    res.send("Attributes have been added!");
   });
 
   characterRoutes.get("/characters/attributes/occurrence", function (req, res) {
