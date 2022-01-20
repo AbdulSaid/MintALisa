@@ -17,8 +17,6 @@ export default function Gallery() {
     setCharacters(characters.sort(sortHandler))
   }, [characters, direction])
 
-
-  // Sort by price -- should only accept incr or decr
   const sortByPrice = (dir) => {
     setDirection(dir);
   }

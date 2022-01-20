@@ -26,15 +26,6 @@ export default function MonaNft() {
         });
   }, [url]);
 
-  // useEffect(() => {
-  //   axios.get('http://localhost:8080/characters/0412f9915477eee85b677f5ff83bdc6ed17fa1b8')
-  // .then(response => {
-  //   console.log(response.data);
-  // }, error => {
-  //   console.log(error);
-  // });
-  // }, []);
-
   return (
     <div className='single-mona'>
       <section className='top'>

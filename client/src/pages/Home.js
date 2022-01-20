@@ -34,7 +34,6 @@ export default function Home() {
 
   return (
     <div className='home'>
-      
       <section className='header-container'>
         <img src='images/background-img.png' className='bg-img' />
         <header className='header'>
