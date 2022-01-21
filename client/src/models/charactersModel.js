@@ -92,6 +92,24 @@ exports.getAllOccurrences = async () => {
   );
 };
 
+exports.getPriceByItem = async (item) => {
+  return await db.query(`select price
+                         from hats
+                         where name = '${item.attributes.hat}';
+  select price
+  from mouths
+  where name = '${item.attributes.mouth}';
+  select price
+  from glasses
+  where name = '${item.attributes.glasses}';
+  select price
+  from backgrounds
+  where name = '${item.attributes.background}';
+  select price
+  from accessories
+  where name = '${item.attributes.accessories}';`);
+};
+
 exports.addCharacter = async (item) => {
   return await db.query(`INSERT INTO characters (dna, name, description, image, price, collection_id)
                          VALUES ('${item.dna}', '${item.name}', '${item.description}',
