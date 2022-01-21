@@ -4,12 +4,12 @@ const {readCharacterData} = require("../helpers/character_reader");
 const {getCharacterAttributes} = require("../helpers/getCharacterAttributes");
 const traitsData = require("../../data/traits_results.json");
 
-exports.getAll = () => {
-  return charactersModel.getAll();
+exports.getAllCharacters = () => {
+  return charactersModel.getAllCharacters();
 };
 
-exports.getById = (id) => {
-  return charactersModel.getById(id);
+exports.getCharacterById = (id) => {
+  return charactersModel.getCharacterById(id);
 };
 
 exports.getAllAttributes = () => {
@@ -74,6 +74,23 @@ exports.getAllOccurrences = () => {
         character.accessories_occurance = occurrences['accessories'][character.accessories];
       }
       return characters;
+    });
+};
+
+exports.getOccurrenceById = (id) => {
+  return charactersModel.getAllOccurrences()
+    .then(({rows: characters}) => {
+
+      const occurrences = computeOccurrences(characters);
+
+      for (let character of characters) {
+        character.hat_occurance = occurrences['hats'][character.hat];
+        character.mouth_occurance = occurrences['mouths'][character.mouth];
+        character.background_occurance = occurrences['backgrounds'][character.background];
+        character.glasses_occurance = occurrences['glasses'][character.glasses];
+        character.accessories_occurance = occurrences['accessories'][character.accessories];
+      }
+      return characters.filter(item => item.dna === id);
     });
 };
 

@@ -2,7 +2,7 @@ const db = require("../db");
 const format = require("pg-format");
 
 
-exports.getAll = async () => {
+exports.getAllCharacters = async () => {
   return await db.query(`SELECT characters.dna          as dna,
                                 characters.name         as name,
                                 characters.description  as description,
@@ -18,7 +18,7 @@ exports.getAll = async () => {
   );
 };
 
-exports.getById = async (id) => {
+exports.getCharacterById = async (id) => {
   return await db.query(`SELECT characters.dna          as dna,
                                 characters.name         as name,
                                 characters.description  as description,
@@ -113,24 +113,6 @@ exports.addInventory = async (item) => {
                          VALUES ('${item.dna}', 1)
                          RETURNING *`);
 
-};
-
-exports.getPriceByItem = async (item) => {
-  return await db.query(`select price
-                         from hats
-                         where name = '${item.attributes.hat}';
-  select price
-  from mouths
-  where name = '${item.attributes.mouth}';
-  select price
-  from glasses
-  where name = '${item.attributes.glasses}';
-  select price
-  from backgrounds
-  where name = '${item.attributes.background}';
-  select price
-  from accessories
-  where name = '${item.attributes.accessories}';`);
 };
 
 exports.addOccurrences = async (data) => {

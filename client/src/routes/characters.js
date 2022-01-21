@@ -4,10 +4,10 @@ const characterRoutes = express.Router();
 const charactersController = require("../controllers/charactersController");
 
 
-module.exports = function (db) {
+module.exports = function () {
 
   characterRoutes.get("/characters", function (req, res) {
-    charactersController.getAll()
+    charactersController.getAllCharacters()
       .then(({rows: characters}) => res.json(characters));
   });
 
@@ -41,7 +41,7 @@ module.exports = function (db) {
   });
 
   characterRoutes.get("/characters/:id", function (req, res) {
-    charactersController.getById(req.params.id)
+    charactersController.getCharacterById(req.params.id)
       .then(({rows: characters}) => res.json(characters));
   });
 
@@ -56,6 +56,9 @@ module.exports = function (db) {
     })
   });
 
+  characterRoutes.get("/characters/attributes/occurrence/:id", function (req, res) {
+    charactersController.getOccurrenceById(req.params.id).then(characters => res.json(characters));
+  });
 
   return characterRoutes;
 
