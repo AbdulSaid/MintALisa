@@ -34,98 +34,12 @@ module.exports = function (db) {
   });
 
   characterRoutes.get("/characters/attributes/occurrence", function (req, res) {
-    db.query(`SELECT characters.dna   as dna,
-                     characters.name  as name,
-                     hats.name        as hat,
-                     mouths.name      as mouth,
-                     backgrounds.name as background,
-                     glasses.name     as glasses,
-                     accessories.name as accessories
-              FROM character_attributes
-                       JOIN characters ON character_attributes.dna = characters.dna
-                       JOIN hats ON hat_id = hats.id
-                       JOIN mouths ON mouth_id = mouths.id
-                       JOIN backgrounds ON background_id = backgrounds.id
-                       JOIN glasses ON glasses_id = glasses.id
-                       JOIN accessories ON accessory_id = accessories.id`
-    ).then(({rows: characters}) => {
-
-      const occurrences = {hats: {}, mouths: {}, backgrounds: {}, glasses: {}, accessories: {}}
-      for (let character of characters) {
-        if (occurrences['hats'][character.hat] === undefined) {
-          occurrences['hats'][character.hat] = 1;
-        } else {
-          occurrences['hats'][character.hat] = occurrences['hats'][character.hat] + 1;
-        }
-
-        if (occurrences['mouths'][character.mouth] === undefined) {
-          occurrences['mouths'][character.mouth] = 1;
-        } else {
-          occurrences['mouths'][character.mouth] = occurrences['mouths'][character.mouth] + 1;
-        }
-
-        if (occurrences['backgrounds'][character.background] === undefined) {
-          occurrences['backgrounds'][character.background] = 1;
-        } else {
-          occurrences['backgrounds'][character.background] = occurrences['backgrounds'][character.background] + 1;
-        }
-
-        if (occurrences['glasses'][character.glasses] === undefined) {
-          occurrences['glasses'][character.glasses] = 1;
-        } else {
-          occurrences['glasses'][character.glasses] = occurrences['glasses'][character.glasses] + 1;
-        }
-
-        if (occurrences['accessories'][character.accessories] === undefined) {
-          occurrences['accessories'][character.accessories] = 1;
-        } else {
-          occurrences['accessories'][character.accessories] = occurrences['accessories'][character.accessories] + 1;
-        }
-      }
-
-      for (let character of characters) {
-        character.hat_occurance = occurrences['hats'][character.hat];
-        character.mouth_occurance = occurrences['mouths'][character.mouth];
-        character.background_occurance = occurrences['backgrounds'][character.background];
-        character.glasses_occurance = occurrences['glasses'][character.glasses];
-        character.accessories_occurance = occurrences['accessories'][character.accessories];
-      }
-      console.log(occurrences);
-      console.log(characters);
-      console.log("total: ", characters.length)
-
-      res.json(characters);
-    });
+    charactersController.getAllOccurrences().then(characters => res.json(characters));
   });
 
   characterRoutes.get("/characters/attributes/occurrence/insert", function (req, res) {
-    async function executeQuery(query) {
-      try {
-        let {rows} = await db.query(query);
-        console.log(rows);
-      } catch (e) {
-        console.error(e);
-      }
-      // finally {
-      //   db.end();
-      // }
-    }
-
-    const data = [];
-
-    for (let item of traitsData) {
-      const details = [];
-      const weight = Number(item.weight)
-      const occurrence = item.occurrence.replace(/(^\d+)(.+$)/i, '$1');
-
-      details.push(item.trait);
-      details.push(weight);
-      details.push(occurrence);
-      data.push(details);
-    }
-    console.log(data);
-    const query = format('INSERT INTO traits (name, weight, occurrence) VALUES %L returning id', data);
-    executeQuery(query).then(() => res.send("query has been executed!"));
+    charactersController.addOccurrences()
+      .then(() => res.send("Occurrences have been added!"));
   });
 
   characterRoutes.get("/characters/attributes/:id", function (req, res) {
