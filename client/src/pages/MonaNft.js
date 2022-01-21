@@ -98,7 +98,7 @@ export default function MonaNft() {
       });
   };
 
-  console.log("Occujhbjbjkjjhrance", occurance.hat);
+  console.log("Occubrance", occurance.hat);
 
   return (
     <div className="single-mona">
