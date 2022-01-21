@@ -11,7 +11,6 @@ const readCharacterData = function () {
       const data = fs.readFileSync(`${p}/${i}.json`, 'utf8');
       const character = JSON.parse(data);
       characterData.push(character);
-   //   console.log(characterData);
     } catch (err) {
       console.log(`Error reading file from disk: ${err}`);
     }
