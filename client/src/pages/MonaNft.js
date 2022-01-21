@@ -1,6 +1,7 @@
 // import { axios } from 'axios'
+
 import { useEffect, useState } from "react";
-import { useParams } from "react-router-dom";
+import { useParams, Link } from 'react-router-dom';
 import { FontAwesomeIcon } from "@fortawesome/react-fontawesome";
 import { faArrowLeft } from "@fortawesome/free-solid-svg-icons";
 import {
@@ -73,6 +74,7 @@ export default function MonaNft() {
   // });
   // }, []);
 
+
   const onMintPressed = async () => {
     const { status } = await mintNFT(
       character.imgId,
@@ -103,9 +105,9 @@ export default function MonaNft() {
   return (
     <div className="single-mona">
       <section className="top">
-        <i className="back-arrow">
-          <FontAwesomeIcon icon={faArrowLeft} />
-        </i>
+       <Link to={'/gallery'}>
+          <i className='back-arrow'><FontAwesomeIcon icon={ faArrowLeft } /></i>
+        </Link>
         <img
           className="single-mona-img"
           src={`${character.imgId}`}

@@ -1,10 +1,12 @@
 import { useEffect, useState } from 'react';
+import { useNavigate } from 'react-router-dom';
 import { connectWallet, getCurrentWalletConnected } from "../utils/interact";
 import { FontAwesomeIcon } from '@fortawesome/react-fontawesome';
 import { faArrowRight } from '@fortawesome/free-solid-svg-icons';
 
 export default function Home() {
   const [walletAddress, setWallet] = useState("");
+  let navigate = useNavigate();
 
   useEffect(async () => { //TODO: implement
     const { address } = await getCurrentWalletConnected();
@@ -32,7 +34,6 @@ export default function Home() {
 
   return (
     <div className='home'>
-      
       <section className='header-container'>
         <img src='images/background-img.png' className='bg-img' />
         <header className='header'>
@@ -43,7 +44,7 @@ export default function Home() {
       </section>
 
       <section className='btn-container'>
-        <button className='primary btn'>Explore gallery</button>
+        <button className='primary btn' onClick={() => navigate('/gallery')}>Explore gallery</button>
           {window.ethereum && <button id="walletButton" className='btn secondary' onClick={connectWalletPressed}>
           {walletAddress.length > 0 ? (
             "Connected: " +
@@ -54,7 +55,7 @@ export default function Home() {
             <span>Connect Wallet</span>
           )}
         </button>}
-        {!window.ethereum && <p className='mm-link-container'><a className='mm-link' target="_blank" href={`https://metamask.io/download.html`}>
+        {!window.ethereum && <p className='mm-link-container'><a className='mm-link' target="_blank" rel="noreferrer" href={`https://metamask.io/download.html`}>
           You must install Metamask, a virtual Ethereum wallet, in your browser <FontAwesomeIcon icon={ faArrowRight } />
           </a></p>}
       </section>
