@@ -1,13 +1,6 @@
 "use strict";
-const format = require('pg-format');
-const pgp = require('pg-promise')();
 const express = require('express');
 const characterRoutes = express.Router();
-
-let traitsData = require('../../data/traits_results.json');
-const fs = require("fs");
-const path = require("path");
-const {readCharacterData} = require("../helpers/character_reader");
 const charactersController = require("../controllers/charactersController");
 
 
