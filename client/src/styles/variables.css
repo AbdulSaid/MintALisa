@@ -2,6 +2,8 @@
   /* Base */
   --primary-color: linear-gradient(180deg, #B286EC 0%, #594DAD 100%);
   --border: 1px solid var(--primary-color);
+  --inter-font: 'Inter', Arial, Helvetica, sans-serif;
+  --libre-font: 'Libre Baskerville', 'Times New Roman', Times, serif;
   
   /* Glass Effect */
   --dark-glass-bg: rgba(255, 255, 255, 0.16);

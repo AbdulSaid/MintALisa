@@ -3,7 +3,7 @@
 
 /* Base styles */
 .App {
-  width: 100%;
+  width: 100vw;
   height: 100vh;
 }
 
@@ -20,8 +20,8 @@ body {
   width: 100vw;
   height: 100vh;
   margin: 0;
-  font-family: 'Inter', Arial, Helvetica, sans-serif;
-  color: #FFF;
+  font-family: var(--inter-font);
+  color: var(--light-font-color);
   -webkit-font-smoothing: antialiased;
   -moz-osx-font-smoothing: grayscale;
 }
@@ -33,7 +33,7 @@ body {
   justify-content: space-between;
   align-items: center;
   height: 56px;
-  padding: 0 2rem;
+  padding: 0 1rem;
 }
 
 .logo {
@@ -41,7 +41,14 @@ body {
   line-height: 22px;
   font-weight: bold;
   height: 22px;
+  text-decoration: none;
+  font-size: 0.8rem;
 }
+
+.logo:visited, .logo:active {
+  color: var(--light-font-color);
+}
+
 
 .hamburger {
   border: none;
@@ -106,7 +113,7 @@ body {
 }
 
 .mm-link {
-  color: white;
+  color: var(--light-font-color);
   text-align: center;
   text-decoration: none;
 }
@@ -139,6 +146,97 @@ body {
   background: none;
 }
 
+ /* Gallery Page  */
+.gallery {
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+}
+
+.gallery-display-container {
+  display: grid;
+  grid-template-columns: 1fr 1fr;
+  grid-gap: 0.5rem;
+}
+
+.gallery .header {
+  font-family: var(--inter-font);
+  align-self: flex-start;
+  margin: 0 0 2rem 1rem;
+}
+
+.gallery .header h1 {
+  font-size: 2rem;
+  letter-spacing: -0.02rem;
+  font-weight: 600;
+}
+
+.gallery .header p {
+  font-size: 0.9rem;
+  margin: 0 0 2rem 0;
+}
+
+.single-gallery-display:visited, .single-container:active {
+  color: var(--light-font-color);
+}
+
+/* Single Gallery display component */
+.single-container {
+  background: white;
+  height: 210px;
+  width: 170px;
+  border-radius: 15px;
+  background-color: var(--dark-glass-bg);
+  text-decoration: none;
+  color: var(--light-font-color);
+  margin-bottom: 1rem;
+}
+
+.single-container:nth-child(2n) {
+  margin-left: .5rem;
+}
+
+.gallery-img {
+  position: relative;
+  height: inherit;
+  width: inherit;
+  border-radius: 15px;
+  object-fit: cover;
+}
+
+.gallery-info-container {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  position: absolute;
+  background: var(--dark-glass-bg);
+  backdrop-filter: blur(19px);
+  transform: translateY(-44px);
+  height: 2.5rem;
+  width: inherit;
+  border-radius: 0px 0px 15px 15px;
+}
+
+.gallery-name {
+  font-size: 1rem;
+  font-weight: 700;
+  margin-left: 1rem;
+}
+
+.gallery-price {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  font-size: 0.8rem;
+  margin-right: 1rem;
+  letter-spacing: -0.02rem;
+}
+
+.gallery-price p {
+  padding-left: 0.2rem;
+}
+
 
 /* Single Mona Lisa Page */
 .single-mona {
@@ -161,17 +259,4 @@ body {
 .single-mona-img {
   height: 357px;
   border-radius: 15px;
-}
-
-
-/* Gallery Page */
-.gallery-display-container {
-  display: grid;
-  grid-template-columns: 1fr 1fr;
-}
-
-/* Single Gallery display component */
-.gal-img {
-  height: 165px;
-  max-width: 200px;
 }

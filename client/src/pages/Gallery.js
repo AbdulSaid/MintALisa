@@ -15,14 +15,14 @@ export default function Gallery() {
 
   useEffect(() => {
     setCharacters(characters.sort(sortHandler));
-  }, [characters, direction])
+  }, [characters, direction]);
 
   const sortByPrice = (dir) => {
     setDirection(dir);
   }
 
   const sortHandler = (a, b) => {
-    if (direction === 'incr') {
+    if (direction === 'ascending') {
       return parseFloat(b.price) - parseFloat(a.price);
     }
     return parseFloat(a.price) - parseFloat(b.price);
@@ -31,12 +31,11 @@ export default function Gallery() {
   return (
     <div className="gallery">
       <header className="header">
-        <h1>GALLERY</h1>
-        <p>1/50 Minted Lisas</p>
+        <h1>Gallery</h1>
       </header>
 
-      <button onClick={() => sortByPrice('incr')}>Sort low to high</button>
-      <button onClick={() => sortByPrice('decr')}>Sort high to low</button>
+      {/* <button onClick={() => sortByPrice('ascending')}>Sort low to high</button>
+      <button onClick={() => sortByPrice('decr')}>Sort high to low</button> */}
 
       <section className='gallery-display-container'>
         {characters.map((char, index) => <SingleGalleryDisplay
@@ -50,21 +49,3 @@ export default function Gallery() {
     </div>
   );
 }
-
-
-// const getRarity = () => {
-  //   fetch('http://localhost:8080/characters/attributes/occurrence')
-  //     .then(res => res.json())
-  //     .then(json => {
-  //       // console.log(json);
-  //       const occurences = [];
-  //       json.forEach(val => {
-  //         let occurSum = val.accessories_occurance + val.background_occurance + val.glasses_occurance + val.hat_occurance + val.mouth_occurance;
-  //         occurences.push(occurSum);
-  //       });
-  //       console.log(occurences.sort().reverse())
-  //     });
-  // }
-
-
-
