@@ -41,7 +41,7 @@ CREATE TABLE characters
     name          VARCHAR(255)            NOT NULL,
     description   VARCHAR(255)            NOT NULL,
     image         VARCHAR(100)            NOT NULL,
-    price         NUMERIC(12, 6)          NOT NULL,
+    price         NUMERIC(10, 5)          NOT NULL,
     minted        BOOLEAN                 NOT NULL DEFAULT FALSE,
     collection_id INTEGER REFERENCES collections (id) ON DELETE CASCADE
 );
@@ -57,40 +57,40 @@ CREATE TABLE hats
 (
     id     SERIAL PRIMARY KEY NOT NULL,
     name   VARCHAR(125)       NOT NULL,
-    rarity NUMERIC(12, 6)     NOT NULL,
-    price  NUMERIC(12, 6)     NOT NULL
+    rarity NUMERIC(10, 5)     NOT NULL,
+    price  NUMERIC(10, 5)     NOT NULL
 );
 
 CREATE TABLE mouths
 (
     id     SERIAL PRIMARY KEY NOT NULL,
     name   VARCHAR(125)       NOT NULL,
-    rarity NUMERIC(12, 6)     NOT NULL,
-    price  NUMERIC(12, 6)     NOT NULL
+    rarity NUMERIC(10, 5)     NOT NULL,
+    price  NUMERIC(10, 5)     NOT NULL
 );
 
 CREATE TABLE backgrounds
 (
     id     SERIAL PRIMARY KEY NOT NULL,
     name   VARCHAR(125)       NOT NULL,
-    rarity NUMERIC(12, 6)     NOT NULL,
-    price  NUMERIC(12, 6)     NOT NULL
+    rarity NUMERIC(10, 5)     NOT NULL,
+    price  NUMERIC(10, 5)     NOT NULL
 );
 
 CREATE TABLE glasses
 (
     id     SERIAL PRIMARY KEY NOT NULL,
     name   VARCHAR(125)       NOT NULL,
-    rarity NUMERIC(12, 6)     NOT NULL,
-    price  NUMERIC(12, 6)     NOT NULL
+    rarity NUMERIC(10, 5)     NOT NULL,
+    price  NUMERIC(10, 5)     NOT NULL
 );
 
 CREATE TABLE accessories
 (
     id     SERIAL PRIMARY KEY NOT NULL,
     name   VARCHAR(125)       NOT NULL,
-    rarity NUMERIC(12, 6)     NOT NULL,
-    price  NUMERIC(12, 6)     NOT NULL
+    rarity NUMERIC(10, 5)     NOT NULL,
+    price  NUMERIC(10, 5)     NOT NULL
 );
 
 CREATE TABLE traits
