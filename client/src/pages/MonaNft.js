@@ -20,7 +20,7 @@ export default function MonaNft() {
 
   const urlForCharacter = `http://localhost:8080/characters/${id}`;
   const urlForAttributes = `http://localhost:8080/characters/attributes/${id}`;
-  const urlForOccurence = `http://localhost:8080/characters/attributes/occurrence`;
+  const urlForOccurence = `http://localhost:8080/characters/attributes/occurrence/${id}`;
 
   useEffect(() => {
     Promise.all([axios.get(urlForCharacter), axios.get(urlForOccurence)]).then(
@@ -35,35 +35,31 @@ export default function MonaNft() {
         setCharacter((prev) => ({ ...prev, name: api1.name }));
         setCharacter((prev) => ({ ...prev, imgId: api1.image }));
 
-        const api2 = res[1].data;
+        const api2 = res[1].data[0];
+        console.log('api2',api2)
+        setCharacter((prev) => ({ ...prev, glasses: api2.glasses }));
+        setCharacter((prev) => ({ ...prev, hat: api2.hat }));
+        setCharacter((prev) => ({ ...prev, mouth: api2.mouth }));
+        setCharacter((prev) => ({
+          ...prev,
+          accessories: api2.accessories,
+        }));
+        setCharacter((prev) => ({ ...prev, background: api2.background }));
 
-        for (let mona of api2) {
-          if (mona.dna === character.dna) {
-            setCharacter((prev) => ({ ...prev, glasses: mona.glasses }));
-            setCharacter((prev) => ({ ...prev, hat: mona.hat }));
-            setCharacter((prev) => ({ ...prev, mouth: mona.mouth }));
-            setCharacter((prev) => ({
-              ...prev,
-              accessories: mona.accessories,
-            }));
-            setCharacter((prev) => ({ ...prev, background: mona.background }));
-
-            setOccurance((prev) => ({ ...prev, hat: mona.hat_occurance }));
-            setOccurance((prev) => ({ ...prev, mouth: mona.mouth_occurance }));
-            setOccurance((prev) => ({
-              ...prev,
-              background: mona.background_occurance,
-            }));
-            setOccurance((prev) => ({
-              ...prev,
-              glasses: mona.glasses_occurance,
-            }));
-            setOccurance((prev) => ({
-              ...prev,
-              accessories: mona.accessories_occurance,
-            }));
-          }
-        }
+        setOccurance((prev) => ({ ...prev, hat: api2.hat_occurance }));
+        setOccurance((prev) => ({ ...prev, mouth: api2.mouth_occurance }));
+        setOccurance((prev) => ({
+          ...prev,
+          background: api2.background_occurance,
+        }));
+        setOccurance((prev) => ({
+          ...prev,
+          glasses: api2.glasses_occurance,
+        }));
+        setOccurance((prev) => ({
+          ...prev,
+          accessories: api2.accessories_occurance,
+        }));
       }
     );
   }, []);
@@ -115,7 +111,7 @@ export default function MonaNft() {
       character.name,
       character.description
     );
-    console.log("What is Stsaatus", status);
+    console.log("What is Stsasatus", status);
     setStatus(status);
     changeMonaStatus();
   };
@@ -128,10 +124,9 @@ export default function MonaNft() {
         minted: "true",
         quantity: "0",
       },
-    })
-      .then((json) => {
-        console.log("Got it t0 work", json);
-      });
+    }).then((json) => {
+      console.log("Got it t0 work", json);
+    });
   };
 
   // console.log("Occubrhgagnce", occurance.hat);
@@ -186,9 +181,7 @@ export default function MonaNft() {
       <button className="btn primary" onClick={onMintPressed}>
         Buy
       </button>
-      <p id="status">
-        {status}
-      </p>
+      <p id="status">{status}</p>
     </div>
   );
 }
