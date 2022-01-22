@@ -21,29 +21,25 @@ export default function Gallery() {
       (res) => {
         const api1 = res[0].data;
         const api2 = res[1].data;
+        const unavailable = [];
+        const availableTemp = [];
         setCharacters(api1);
         setOccurance(api2);
+
+        for (let val of api1) {
+          (val.minted) ? unavailable.push(val) : available.push(val);
+        }
+        setAvailable(availableTemp);
+        setMinted(unavailable);
       },
     );
   }, []);
 
-  const countMintedLisas = () => {
-    const unavailable = [];
-    const availableTemp = [];
-    for (let val of characters) {
-      (val.minted) ? unavailable.push(val) : available.push(val);
-    }
-    setMinted(unavailable);
-    setAvailable(availableTemp);
-    console.log('minted:', minted)
-    console.log('available: ', available)
-    console.log('characters: ', characters)
-  }
 
   const sortHandler = val => {
     const charactersSort = [...characters];
     const sortedOccurence = [...occurance];
-
+    setSortOpen(false);
     if (val === 'price-up') {
       return setCharacters(charactersSort.sort((firstEl, secondEl) => parseFloat(firstEl.price) - parseFloat(secondEl.price)));
     } else if (val === 'price-down') {
@@ -68,14 +64,15 @@ export default function Gallery() {
     const unavailable = [];
     const availableTemp = [];
     fetch('http://localhost:8080/characters/')
-    .then(res => res.json())
-    .then(json => {
-      for (let val of json) {
-        (val.minted) ? unavailable.push(val) : available.push(val);
-      }
-      setAvailable(availableTemp);
-      setMinted(unavailable);
-    });
+      .then(res => res.json())
+      .then(json => {
+        for (let val of json) {
+          (val.minted) ? unavailable.push(val) : available.push(val);
+        }
+        setAvailable(availableTemp);
+        setMinted(unavailable);
+      });
+    setFilterOpen(false);
     if (val === 'available') {
       return setCharacters(available);
     } else if (val === 'unavailable') {

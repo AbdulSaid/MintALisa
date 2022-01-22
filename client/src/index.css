@@ -195,6 +195,7 @@ body {
   justify-content: space-evenly;
   align-self: flex-end;
   margin-right: 1rem;
+  padding-bottom: 1rem;
   width: 30%;
 }
 
@@ -300,7 +301,7 @@ body {
 }
 
 .none-minted-container {
-  margin-top: 30%;
+  margin-top: 10%;
 }
 
 .none-minted-msg {
