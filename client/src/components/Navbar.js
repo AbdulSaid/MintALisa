@@ -9,8 +9,8 @@ export default function Navbar() {
 
   return (
     <nav className='navBar'>
-      <Link to={'/'}>
-      <h3 className='logo'>MINT A LISA</h3>
+      <Link to={'/'}  className='logo'>
+      <h3>MINT A LISA</h3>
       </Link>
       <button 
         className='hamburger' 

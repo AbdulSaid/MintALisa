@@ -1,9 +1,13 @@
 import { useState, useEffect } from 'react';
+import { FontAwesomeIcon } from '@fortawesome/react-fontawesome';
+import { faFilter, faSort } from '@fortawesome/free-solid-svg-icons';
 import SingleGalleryDisplay from "../components/SingleGalleryDisplay";
 
 export default function Gallery() {
   const [characters, setCharacters] = useState([]);
-  const [direction, setDirection] = useState('');
+  // const [direction, setDirection] = useState('');
+  const [sortOpen, setSortOpen] = useState(false);
+  const [filterOpen, setFilterOpen] = useState(false);
 
   useEffect(() => {
     fetch('http://localhost:8080/characters')
@@ -13,30 +17,57 @@ export default function Gallery() {
       });
   }, []);
 
-  useEffect(() => {
-    setCharacters(characters.sort(sortHandler));
-  }, [characters, direction])
-
-  const sortByPrice = (dir) => {
-    setDirection(dir);
-  }
-
-  const sortHandler = (a, b) => {
-    if (direction === 'incr') {
-      return parseFloat(b.price) - parseFloat(a.price);
+  const sortHandler = (val) => {
+    const charactersSort = [...characters];
+    if (val === 'price-up') {
+      return setCharacters(charactersSort.sort((firstEl, secondEl) => parseFloat(firstEl.price) - parseFloat(secondEl.price)));
+    } else if (val === 'price-down') {
+      return setCharacters(charactersSort.sort((firstEl, secondEl) => parseFloat(secondEl.price) - parseFloat(firstEl.price)));
     }
-    return parseFloat(a.price) - parseFloat(b.price);
   }
+
+
 
   return (
     <div className="gallery">
       <header className="header">
-        <h1>GALLERY</h1>
-        <p>1/50 Minted Lisas</p>
+        <p>10/50 MINTED <img className='diamond' src='images/diamond.svg' alt='gem'/></p>
+        <h1>Gallery</h1>
       </header>
 
-      <button onClick={() => sortByPrice('incr')}>Sort low to high</button>
-      <button onClick={() => sortByPrice('decr')}>Sort high to low</button>
+      <section className='options-container'>
+        <button
+          className='filter-btn'
+          onClick={(e) => {
+            setFilterOpen(!filterOpen)
+            e.stopPropagation();
+            setSortOpen(false);
+          }}><FontAwesomeIcon className='filter-icon' icon={ faFilter } /> Filter</button>
+
+        {filterOpen &&
+            <ul className='filter-list'>
+              <li className='filter-option'>Available</li>
+              <li className='filter-option'>Minted</li>
+            </ul>
+        }
+
+        <button
+          className='sort-btn'
+          onClick={(e) => {
+            e.stopPropagation();
+            setSortOpen(!sortOpen);
+            setFilterOpen(false);
+          }}><FontAwesomeIcon className='sort-icon' icon={ faSort } /> Sort</button>
+
+        {sortOpen &&
+          <ul className='sort-list'>
+            <li className='sort-option' onClick={() => sortHandler('price-up')}>Price: low to high</li>
+            <li className='sort-option' onClick={() => sortHandler('price-down')}>Price: high to low</li>
+            <li className='sort-option'>Rarity: high to low</li>
+            <li className='sort-option'>Rarity: high to low</li>
+          </ul>
+        }
+      </section>
 
       <section className='gallery-display-container'>
         {characters.map((char, index) => <SingleGalleryDisplay
@@ -45,26 +76,8 @@ export default function Gallery() {
           imgUrl={char.image}
           name={char.name}
           price={char.price}
-        />)}
+          />)}
       </section>
     </div>
   );
 }
-
-
-// const getRarity = () => {
-  //   fetch('http://localhost:8080/characters/attributes/occurrence')
-  //     .then(res => res.json())
-  //     .then(json => {
-  //       // console.log(json);
-  //       const occurences = [];
-  //       json.forEach(val => {
-  //         let occurSum = val.accessories_occurance + val.background_occurance + val.glasses_occurance + val.hat_occurance + val.mouth_occurance;
-  //         occurences.push(occurSum);
-  //       });
-  //       console.log(occurences.sort().reverse())
-  //     });
-  // }
-
-
-
