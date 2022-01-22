@@ -1,21 +1,31 @@
 import { useState, useEffect } from 'react';
+import axios from 'axios';
 import { FontAwesomeIcon } from '@fortawesome/react-fontawesome';
 import { faFilter, faSort } from '@fortawesome/free-solid-svg-icons';
 import SingleGalleryDisplay from "../components/SingleGalleryDisplay";
 
 export default function Gallery() {
   const [characters, setCharacters] = useState([]);
-  // const [direction, setDirection] = useState('');
+  const [occurance, setOccurance] = useState([]);
   const [sortOpen, setSortOpen] = useState(false);
   const [filterOpen, setFilterOpen] = useState(false);
 
+  const urlForCharacters = `http://localhost:8080/characters/`;
+  const urlForOccurence = `http://localhost:8080/characters/attributes/occurrence/`;
+
   useEffect(() => {
-    fetch('http://localhost:8080/characters')
-      .then(res => res.json())
-      .then(chars => {
-        setCharacters(chars);
-      });
+    Promise.all([axios.get(urlForCharacters), axios.get(urlForOccurence)]).then(
+      (res) => {
+        const api1 = res[0].data;
+        const api2 = res[1].data;
+        console.log('api1', api1);
+        console.log('api2',api2);
+        setCharacters(api1);
+        setOccurance(api2);
+      }
+    );
   }, []);
+
 
   const sortHandler = (val) => {
     const charactersSort = [...characters];
@@ -26,8 +36,7 @@ export default function Gallery() {
     }
   }
 
-
-
+  
   return (
     <div className="gallery">
       <header className="header">
@@ -63,7 +72,7 @@ export default function Gallery() {
           <ul className='sort-list'>
             <li className='sort-option' onClick={() => sortHandler('price-up')}>Price: low to high</li>
             <li className='sort-option' onClick={() => sortHandler('price-down')}>Price: high to low</li>
-            <li className='sort-option'>Rarity: high to low</li>
+            <li className='sort-option'>Rarity: low to high</li>
             <li className='sort-option'>Rarity: high to low</li>
           </ul>
         }
