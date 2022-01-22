@@ -28,6 +28,11 @@ body {
 
 
 /* Navbar */
+.navbar-container {
+  display: flex;
+  flex-direction: column;
+}
+
 .navBar {
   display: flex;
   justify-content: space-between;
@@ -56,6 +61,42 @@ body {
   color: var(--light-font-color);
   font-size: 22px;
   cursor: pointer;
+}
+
+.nav-list {
+  list-style: none;
+  align-self: flex-end;
+  position: absolute;
+  margin: 3rem 0.5rem 0 0;
+  background: var(--dark-glass-bg);
+  backdrop-filter: blur(19px);
+  color: var(--light-font-color);
+  height: 15%;
+  width: 150px;
+  border-radius: 15px;
+  padding: .5rem;
+  display: flex;
+  flex-direction: column;
+  justify-content: space-around;
+  z-index: 101;
+}
+
+.nav-link {
+  font-weight: bold;
+  color: white;
+  height: 33%;
+  text-decoration: none;
+}
+
+.nav-link:visited {
+  text-decoration: none;
+  color: white;
+}
+
+.nav-connect {
+  background: none;
+  border: none;
+  color: black;
 }
 
 
