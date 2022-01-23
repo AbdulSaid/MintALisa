@@ -41,6 +41,7 @@ CREATE TABLE characters
     name          VARCHAR(255)            NOT NULL,
     description   VARCHAR(255)            NOT NULL,
     image         VARCHAR(100)            NOT NULL,
+    local_image   VARCHAR(100)            NOT NULL,
     price         NUMERIC(10, 5)          NOT NULL,
     minted        BOOLEAN                 NOT NULL DEFAULT FALSE,
     collection_id INTEGER REFERENCES collections (id) ON DELETE CASCADE

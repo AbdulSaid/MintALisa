@@ -7,6 +7,7 @@ exports.getAllCharacters = async () => {
                                 characters.name         as name,
                                 characters.description  as description,
                                 image,
+                                local_image,
                                 price,
                                 collections.name        as collection_name,
                                 collections.description as collection_description,
@@ -23,6 +24,7 @@ exports.getCharacterById = async (id) => {
                                 characters.name         as name,
                                 characters.description  as description,
                                 image,
+                                local_image,
                                 price,
                                 collections.name        as collection_name,
                                 collections.description as collection_description,
@@ -111,9 +113,9 @@ exports.getPriceByItem = async (item) => {
 };
 
 exports.addCharacter = async (item) => {
-  return await db.query(`INSERT INTO characters (dna, name, description, image, price, collection_id)
-                         VALUES ('${item.dna}', '${item.name}', '${item.description}',
-                                 '${item.image}', '${item.price}', 1)`);
+  return await db.query(`INSERT INTO characters (dna, name, description, image, local_image, price, collection_id)
+                         VALUES ('${item.dna}', '${item.name}', '${item.description}', '${item.image}',
+                                 '${item.localImage}', '${item.price}', 1)`);
 };
 
 exports.addAttribute = async (item) => {

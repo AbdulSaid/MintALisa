@@ -1,35 +1,36 @@
 {
-  "name": "Mona Lisa #10",
-  "description": "Why not Mint a Lisa",
-  "image": "https://gateway.pinata.cloud/ipfs/QmYK7hkHwh7LQnEjnkZB4p5pg9hFV9WktYKwRt8YDdT6kk",
-  "dna": "e9ce24f3043e0da7326618f0791554847353b328",
-  "edition": 10,
-  "date": 1642445384284,
-  "attributes": [
-    {
-      "trait_type": "Background",
-      "value": "Monet"
-    },
-    {
-      "trait_type": "Mona Lisa",
-      "value": "Mona"
-    },
-    {
-      "trait_type": "Cap",
-      "value": "Beret"
-    },
-    {
-      "trait_type": "Glasses",
-      "value": "Round"
-    },
-    {
-      "trait_type": "Mouth",
-      "value": "TongueOut"
-    },
-    {
-      "trait_type": "Misc",
-      "value": "Flowers"
-    }
-  ],
-  "compiler": "HashLips Art Engine"
+    "name": "Mona Lisa #10",
+    "description": "Why not Mint a Lisa",
+    "image": "https://gateway.pinata.cloud/ipfs/QmYK7hkHwh7LQnEjnkZB4p5pg9hFV9WktYKwRt8YDdT6kk",
+    "dna": "e9ce24f3043e0da7326618f0791554847353b328",
+    "edition": 10,
+    "date": 1642445384284,
+    "attributes": [
+        {
+            "trait_type": "Background",
+            "value": "Monet"
+        },
+        {
+            "trait_type": "Mona Lisa",
+            "value": "Mona"
+        },
+        {
+            "trait_type": "Cap",
+            "value": "Beret"
+        },
+        {
+            "trait_type": "Glasses",
+            "value": "Round"
+        },
+        {
+            "trait_type": "Mouth",
+            "value": "TongueOut"
+        },
+        {
+            "trait_type": "Misc",
+            "value": "Flowers"
+        }
+    ],
+    "compiler": "HashLips Art Engine",
+    "localImage": "/public/images/10.png"
 }
