@@ -9,6 +9,7 @@ const cors = require("cors");
 const app = express();
 
 const db = require("./db");
+const {updateCharacterImages} = require("./helpers/updateCharacterImages");
 
 function read(file) {
   return new Promise((resolve, reject) => {
@@ -36,6 +37,7 @@ module.exports = function application(ENV) {
       read(path.resolve(__dirname, `db/schema/${ENV}.sql`))
     ])
       .then(([create, seed]) => {
+          updateCharacterImages();
           console.log("connected to the db");
           app.get("/debug/reset", (req, res) => {
             db.query(create)

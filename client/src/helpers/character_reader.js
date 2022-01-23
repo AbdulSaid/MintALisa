@@ -3,9 +3,9 @@ const path = require("path");
 
 const readCharacterData = function () {
   const CHARACTERS_NUMBER = 50;
+  const p = path.resolve(__dirname, `../../data/updated`);
+  const characterData = [];
 
-  const p = path.resolve(__dirname, `../../data/`);
-  const characterData = []
   for (let i = 1; i <= CHARACTERS_NUMBER; i++) {
     try {
       const data = fs.readFileSync(`${p}/${i}.json`, 'utf8');

@@ -1,35 +1,36 @@
 {
-  "name": "Mona Lisa #21",
-  "description": "Why not Mint a Lisa",
-  "image": "https://gateway.pinata.cloud/ipfs/Qme4syQQUK4aMBpCviCi3RBkbkJNArXHbvRkxVthWQXHzk",
-  "dna": "04c32ec597fd422be363c547cc1a6ca4dec7e72f",
-  "edition": 21,
-  "date": 1642445390507,
-  "attributes": [
-    {
-      "trait_type": "Background",
-      "value": "Monet"
-    },
-    {
-      "trait_type": "Mona Lisa",
-      "value": "Mona"
-    },
-    {
-      "trait_type": "Cap",
-      "value": "Fedora"
-    },
-    {
-      "trait_type": "Glasses",
-      "value": "YellowStriped"
-    },
-    {
-      "trait_type": "Mouth",
-      "value": "TongueOut"
-    },
-    {
-      "trait_type": "Misc",
-      "value": "Book"
-    }
-  ],
-  "compiler": "HashLips Art Engine"
+    "name": "Mona Lisa #21",
+    "description": "Why not Mint a Lisa",
+    "image": "https://gateway.pinata.cloud/ipfs/Qme4syQQUK4aMBpCviCi3RBkbkJNArXHbvRkxVthWQXHzk",
+    "dna": "04c32ec597fd422be363c547cc1a6ca4dec7e72f",
+    "edition": 21,
+    "date": 1642445390507,
+    "attributes": [
+        {
+            "trait_type": "Background",
+            "value": "Monet"
+        },
+        {
+            "trait_type": "Mona Lisa",
+            "value": "Mona"
+        },
+        {
+            "trait_type": "Cap",
+            "value": "Fedora"
+        },
+        {
+            "trait_type": "Glasses",
+            "value": "YellowStriped"
+        },
+        {
+            "trait_type": "Mouth",
+            "value": "TongueOut"
+        },
+        {
+            "trait_type": "Misc",
+            "value": "Book"
+        }
+    ],
+    "compiler": "HashLips Art Engine",
+    "localImage": "/public/images/21.png"
 }

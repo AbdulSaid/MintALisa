@@ -1,35 +1,36 @@
 {
-  "name": "Mona Lisa #42",
-  "description": "Why not Mint a Lisa",
-  "image": "https://gateway.pinata.cloud/ipfs/QmR8zoXmR2crRjcheCLWhopFQuMYsGrrHDtiei6jrnSLwe",
-  "dna": "49fa15cffacb00c0ddc9eb23aa506e01f20d0c82",
-  "edition": 42,
-  "date": 1642445401888,
-  "attributes": [
-    {
-      "trait_type": "Background",
-      "value": "LouvreWithMona"
-    },
-    {
-      "trait_type": "Mona Lisa",
-      "value": "Mona"
-    },
-    {
-      "trait_type": "Cap",
-      "value": "Cowboy"
-    },
-    {
-      "trait_type": "Glasses",
-      "value": "Aviator"
-    },
-    {
-      "trait_type": "Mouth",
-      "value": "SideSmile"
-    },
-    {
-      "trait_type": "Misc",
-      "value": "Pipe"
-    }
-  ],
-  "compiler": "HashLips Art Engine"
+    "name": "Mona Lisa #42",
+    "description": "Why not Mint a Lisa",
+    "image": "https://gateway.pinata.cloud/ipfs/QmR8zoXmR2crRjcheCLWhopFQuMYsGrrHDtiei6jrnSLwe",
+    "dna": "49fa15cffacb00c0ddc9eb23aa506e01f20d0c82",
+    "edition": 42,
+    "date": 1642445401888,
+    "attributes": [
+        {
+            "trait_type": "Background",
+            "value": "LouvreWithMona"
+        },
+        {
+            "trait_type": "Mona Lisa",
+            "value": "Mona"
+        },
+        {
+            "trait_type": "Cap",
+            "value": "Cowboy"
+        },
+        {
+            "trait_type": "Glasses",
+            "value": "Aviator"
+        },
+        {
+            "trait_type": "Mouth",
+            "value": "SideSmile"
+        },
+        {
+            "trait_type": "Misc",
+            "value": "Pipe"
+        }
+    ],
+    "compiler": "HashLips Art Engine",
+    "localImage": "/public/images/42.png"
 }

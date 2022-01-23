@@ -1,35 +1,36 @@
 {
-  "name": "Mona Lisa #11",
-  "description": "Why not Mint a Lisa",
-  "image": "https://gateway.pinata.cloud/ipfs/QmTLrhZ8thnnRe7TBRCFGT5TAyUFVLSjsxtPTXf4Mex5ac",
-  "dna": "65ed4a82a43b11c6906422252522994a33c81939",
-  "edition": 11,
-  "date": 1642445384841,
-  "attributes": [
-    {
-      "trait_type": "Background",
-      "value": "Bed"
-    },
-    {
-      "trait_type": "Mona Lisa",
-      "value": "Mona"
-    },
-    {
-      "trait_type": "Cap",
-      "value": "Cowboy"
-    },
-    {
-      "trait_type": "Glasses",
-      "value": "3DGoggles"
-    },
-    {
-      "trait_type": "Mouth",
-      "value": "OpenSmile"
-    },
-    {
-      "trait_type": "Misc",
-      "value": "Book"
-    }
-  ],
-  "compiler": "HashLips Art Engine"
+    "name": "Mona Lisa #11",
+    "description": "Why not Mint a Lisa",
+    "image": "https://gateway.pinata.cloud/ipfs/QmTLrhZ8thnnRe7TBRCFGT5TAyUFVLSjsxtPTXf4Mex5ac",
+    "dna": "65ed4a82a43b11c6906422252522994a33c81939",
+    "edition": 11,
+    "date": 1642445384841,
+    "attributes": [
+        {
+            "trait_type": "Background",
+            "value": "Bed"
+        },
+        {
+            "trait_type": "Mona Lisa",
+            "value": "Mona"
+        },
+        {
+            "trait_type": "Cap",
+            "value": "Cowboy"
+        },
+        {
+            "trait_type": "Glasses",
+            "value": "3DGoggles"
+        },
+        {
+            "trait_type": "Mouth",
+            "value": "OpenSmile"
+        },
+        {
+            "trait_type": "Misc",
+            "value": "Book"
+        }
+    ],
+    "compiler": "HashLips Art Engine",
+    "localImage": "/public/images/11.png"
 }
