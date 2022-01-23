@@ -1,0 +1,36 @@
+{
+    "name": "Mona Lisa #17",
+    "description": "Why not Mint a Lisa",
+    "image": "https://gateway.pinata.cloud/ipfs/QmNngh4Yp8qWf1Dxgvknb3zpinYU73aUza2WV9VbpbhU6y",
+    "dna": "8812d187febc750b0234c7ba13c6fb24552bf8b4",
+    "edition": 17,
+    "date": 1642445388372,
+    "attributes": [
+        {
+            "trait_type": "Background",
+            "value": "AcidPinkBlue"
+        },
+        {
+            "trait_type": "Mona Lisa",
+            "value": "Mona"
+        },
+        {
+            "trait_type": "Cap",
+            "value": "Fedora"
+        },
+        {
+            "trait_type": "Glasses",
+            "value": "YellowStriped"
+        },
+        {
+            "trait_type": "Mouth",
+            "value": "SideSmile"
+        },
+        {
+            "trait_type": "Misc",
+            "value": "Tattoo"
+        }
+    ],
+    "compiler": "HashLips Art Engine",
+    "localImage": "/public/images/17.png"
+}

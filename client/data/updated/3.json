@@ -1,0 +1,36 @@
+{
+    "name": "Mona Lisa #3",
+    "description": "Why not Mint a Lisa",
+    "image": "https://gateway.pinata.cloud/ipfs/QmQrN9vn7nU66gudPVTckCMdj9tzGcKezdNVoVZw4AwhKg",
+    "dna": "7ba1570ba6ebc618134e03c6ae67262ed75dc255",
+    "edition": 3,
+    "date": 1642445380730,
+    "attributes": [
+        {
+            "trait_type": "Background",
+            "value": "AcidPinkBlue"
+        },
+        {
+            "trait_type": "Mona Lisa",
+            "value": "Mona"
+        },
+        {
+            "trait_type": "Cap",
+            "value": "Beret"
+        },
+        {
+            "trait_type": "Glasses",
+            "value": "Round"
+        },
+        {
+            "trait_type": "Mouth",
+            "value": "TongueOut"
+        },
+        {
+            "trait_type": "Misc",
+            "value": "Book"
+        }
+    ],
+    "compiler": "HashLips Art Engine",
+    "localImage": "/public/images/3.png"
+}

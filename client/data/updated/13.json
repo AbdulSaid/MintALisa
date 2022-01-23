@@ -1,0 +1,36 @@
+{
+    "name": "Mona Lisa #13",
+    "description": "Why not Mint a Lisa",
+    "image": "https://gateway.pinata.cloud/ipfs/QmSDVtgsDtKBvX3M3PysAvoZYdscK5axgB7jUyqJ82ePG7",
+    "dna": "c815177ae09d3c217089cf5b380cf74e3336c6f3",
+    "edition": 13,
+    "date": 1642445386059,
+    "attributes": [
+        {
+            "trait_type": "Background",
+            "value": "AcidPinkBlue"
+        },
+        {
+            "trait_type": "Mona Lisa",
+            "value": "Mona"
+        },
+        {
+            "trait_type": "Cap",
+            "value": "Cowboy"
+        },
+        {
+            "trait_type": "Glasses",
+            "value": "Aviator"
+        },
+        {
+            "trait_type": "Mouth",
+            "value": "OpenSmile"
+        },
+        {
+            "trait_type": "Misc",
+            "value": "Tattoo"
+        }
+    ],
+    "compiler": "HashLips Art Engine",
+    "localImage": "/public/images/13.png"
+}

@@ -1,0 +1,36 @@
+{
+    "name": "Mona Lisa #28",
+    "description": "Why not Mint a Lisa",
+    "image": "https://gateway.pinata.cloud/ipfs/QmTs9rvczoMGcy66wRUDYt9LNTRZxEtNuiTWg7BAUcC9JR",
+    "dna": "1664b761e8f6d5806d3694cca11771eff3711fe2",
+    "edition": 28,
+    "date": 1642445394219,
+    "attributes": [
+        {
+            "trait_type": "Background",
+            "value": "RustedMetal"
+        },
+        {
+            "trait_type": "Mona Lisa",
+            "value": "Mona"
+        },
+        {
+            "trait_type": "Cap",
+            "value": "Graduation"
+        },
+        {
+            "trait_type": "Glasses",
+            "value": "3DGoggles"
+        },
+        {
+            "trait_type": "Mouth",
+            "value": "OpenSmile"
+        },
+        {
+            "trait_type": "Misc",
+            "value": "Flowers"
+        }
+    ],
+    "compiler": "HashLips Art Engine",
+    "localImage": "/public/images/28.png"
+}

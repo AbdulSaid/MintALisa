@@ -80,12 +80,13 @@ export default function Gallery() {
       return setCharacters(minted);
     }
   }
+
   
 
   return (
     <div className="gallery">
       <header className="header">
-        <p>{minted.length}/50 MINTED <img className='diamond' src='images/diamond.svg' alt='gem' /></p>
+        <p>{minted.length}/50 MINTED <img className='diamond' src='images/diamond.svg' alt='diamond' /></p>
         <h1>Gallery</h1>
       </header>
 
@@ -127,7 +128,7 @@ export default function Gallery() {
         {characters && characters.map((char, index) => <SingleGalleryDisplay
           key={index}
           id={char.dna}
-          imgUrl={char.image}
+          imgUrl={char.local_image}
           name={char.name}
           price={char.price}
           minted={char.minted}

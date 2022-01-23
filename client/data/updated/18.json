@@ -1,0 +1,36 @@
+{
+    "name": "Mona Lisa #18",
+    "description": "Why not Mint a Lisa",
+    "image": "https://gateway.pinata.cloud/ipfs/QmeFSuuePGQMBeHCzB9eaMHiFnuME46NsPuCRcEsQocun6",
+    "dna": "6f2b502069b548c40b61cbb9686c177317d09622",
+    "edition": 18,
+    "date": 1642445388972,
+    "attributes": [
+        {
+            "trait_type": "Background",
+            "value": "Bed"
+        },
+        {
+            "trait_type": "Mona Lisa",
+            "value": "Mona"
+        },
+        {
+            "trait_type": "Cap",
+            "value": "Cowboy"
+        },
+        {
+            "trait_type": "Glasses",
+            "value": "Aviator"
+        },
+        {
+            "trait_type": "Mouth",
+            "value": "OpenWithTeeth"
+        },
+        {
+            "trait_type": "Misc",
+            "value": "Tattoo"
+        }
+    ],
+    "compiler": "HashLips Art Engine",
+    "localImage": "/public/images/18.png"
+}

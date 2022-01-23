@@ -1,0 +1,36 @@
+{
+    "name": "Mona Lisa #15",
+    "description": "Why not Mint a Lisa",
+    "image": "https://gateway.pinata.cloud/ipfs/QmVCK3eyEMahHvZatW1vTgmo5KgTcZLYqmaiJrBQdt5DyZ",
+    "dna": "a0009fa21236535d2c4b0aab194cb42e02127e19",
+    "edition": 15,
+    "date": 1642445387247,
+    "attributes": [
+        {
+            "trait_type": "Background",
+            "value": "Monet"
+        },
+        {
+            "trait_type": "Mona Lisa",
+            "value": "Mona"
+        },
+        {
+            "trait_type": "Cap",
+            "value": "Beret"
+        },
+        {
+            "trait_type": "Glasses",
+            "value": "3DGoggles"
+        },
+        {
+            "trait_type": "Mouth",
+            "value": "TongueOut"
+        },
+        {
+            "trait_type": "Misc",
+            "value": "Pipe"
+        }
+    ],
+    "compiler": "HashLips Art Engine",
+    "localImage": "/public/images/15.png"
+}
