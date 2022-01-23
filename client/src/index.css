@@ -361,13 +361,86 @@ body {
 .single-mona .top {
   display: flex;
   flex-direction: column;
+  align-items: center;
+  height: 360px;
+  width: 90%;
 }
 
 .back-arrow {
   align-self: flex-start;
+  color: var(--light-font-color);
+  font-size: 2rem;
+  margin-bottom: 1.2rem;
 }
 
 .single-mona-img {
-  height: 357px;
+  height: 265px;
   border-radius: 15px;
+}
+
+.single-mona-name {
+  font-size: 20px;
+  margin-top: 1rem;
+}
+
+.rarity-view-container {
+  display: flex;
+  flex-direction: column;
+  height: 30%;
+  width: 90%;
+}
+
+.rarity-container {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  height: 20%;
+  border-bottom: var(--secondary-font-color) 1px solid
+}
+
+.rarity-container:last-child {
+  border-bottom: none;
+}
+
+.rarity-container .left {
+  display: flex;
+  align-items: center;
+}
+
+.rarity-icon {
+  height: 1.7rem;
+  margin-right: .5rem;
+}
+
+.attribute {
+  font-weight: normal;
+  font-size: 0.9rem;
+  color: var(--secondary-font-color);
+}
+
+.attribute-name {
+  font-size: 1.2rem;
+}
+
+.buy-container {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  width: 90%;
+}
+
+.single-price {
+  display: flex;
+  align-items: center;
+  font-size: var(--light-font-color);
+  font-size: 1.3rem;
+  font-weight: 600;
+}
+.eth-logo {
+  height: 2rem;
+  margin-right: 0.5rem;
+}
+
+.buy {
+  max-width: 11rem;
 }

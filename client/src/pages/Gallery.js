@@ -58,6 +58,7 @@ export default function Gallery() {
         return parseFloat(sumFirstEl) - parseFloat(sumSecondEl);
       }));
     }
+    console.log(occurance)
   }
 
   const filterHandler = val => {
@@ -79,7 +80,7 @@ export default function Gallery() {
       return setCharacters(minted);
     }
   }
-
+  
 
   return (
     <div className="gallery">
