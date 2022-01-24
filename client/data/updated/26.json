@@ -1,0 +1,36 @@
+{
+    "name": "Mona Lisa #26",
+    "description": "Why not Mint a Lisa",
+    "image": "https://gateway.pinata.cloud/ipfs/QmY5dNQ8C4wdo78CiwsoJvmeyRedxz2nhHraQ25fi7vrs1",
+    "dna": "e395928587209226e462fb2318b3bccaa28b5014",
+    "edition": 26,
+    "date": 1642445393229,
+    "attributes": [
+        {
+            "trait_type": "Background",
+            "value": "AcidPinkBlue"
+        },
+        {
+            "trait_type": "Mona Lisa",
+            "value": "Mona"
+        },
+        {
+            "trait_type": "Cap",
+            "value": "Fedora"
+        },
+        {
+            "trait_type": "Glasses",
+            "value": "Cartoon"
+        },
+        {
+            "trait_type": "Mouth",
+            "value": "OpenWithTeeth"
+        },
+        {
+            "trait_type": "Misc",
+            "value": "Tattoo"
+        }
+    ],
+    "compiler": "HashLips Art Engine",
+    "localImage": "/public/images/26.png"
+}

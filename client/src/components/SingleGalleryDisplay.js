@@ -7,7 +7,7 @@ export default function SingleGalleryDisplay(props) {
   return (
     <Link to={`/mona/${id}`}>
       <article className='single-container'>
-        <img className='gallery-img' src={imgUrl} alt='' />
+        <img className='gallery-img' src={`..${imgUrl.slice(7)}`} alt='' />
 
         <section className='gallery-info-container'>
         <p className='gallery-name'>{name.slice(9)}</p>

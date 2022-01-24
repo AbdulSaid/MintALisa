@@ -1,0 +1,36 @@
+{
+    "name": "Mona Lisa #20",
+    "description": "Why not Mint a Lisa",
+    "image": "https://gateway.pinata.cloud/ipfs/QmXWoRBquML7DqxumJV33uZAmpUpd7XNGqtxfGjxBrCQq9",
+    "dna": "9e69911e1ed76e72fce6a1ee586cf97a10075a5e",
+    "edition": 20,
+    "date": 1642445390019,
+    "attributes": [
+        {
+            "trait_type": "Background",
+            "value": "AcidPinkBlue"
+        },
+        {
+            "trait_type": "Mona Lisa",
+            "value": "Mona"
+        },
+        {
+            "trait_type": "Cap",
+            "value": "Graduation"
+        },
+        {
+            "trait_type": "Glasses",
+            "value": "Cartoon"
+        },
+        {
+            "trait_type": "Mouth",
+            "value": "OpenWithTeeth"
+        },
+        {
+            "trait_type": "Misc",
+            "value": "Book"
+        }
+    ],
+    "compiler": "HashLips Art Engine",
+    "localImage": "/public/images/20.png"
+}

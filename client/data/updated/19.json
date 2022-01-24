@@ -1,0 +1,36 @@
+{
+    "name": "Mona Lisa #19",
+    "description": "Why not Mint a Lisa",
+    "image": "https://gateway.pinata.cloud/ipfs/QmWRyxDUabk75MJyYqVnEwKEZTcjSR7tcvcSGZBo4xL3DJ",
+    "dna": "dba688b481ca0c31f6d3b9d4b0949e063ad8368b",
+    "edition": 19,
+    "date": 1642445389453,
+    "attributes": [
+        {
+            "trait_type": "Background",
+            "value": "AcidPinkBlue"
+        },
+        {
+            "trait_type": "Mona Lisa",
+            "value": "Mona"
+        },
+        {
+            "trait_type": "Cap",
+            "value": "Graduation"
+        },
+        {
+            "trait_type": "Glasses",
+            "value": "Round"
+        },
+        {
+            "trait_type": "Mouth",
+            "value": "OpenWithTeeth"
+        },
+        {
+            "trait_type": "Misc",
+            "value": "Pipe"
+        }
+    ],
+    "compiler": "HashLips Art Engine",
+    "localImage": "/public/images/19.png"
+}
