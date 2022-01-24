@@ -15,8 +15,9 @@ import {
 export default function MonaNft() {
   let { id } = useParams();
   const [status, setStatus] = useState("");
-  const [popupTrigger, setPopupTrigger] = useState(false);
-  const [popupMsg, setPopupMsg] = useState('');
+  const [popupTrigger, setPopupTrigger] = useState(true);
+  const [popupContent, setPopupContent] = useState('success');
+  const [popupMsg, setPopupMsg] = useState('')
 
   const [character, setCharacter] = useState({});
   const [occurance, setOccurance] = useState({});
@@ -68,14 +69,21 @@ export default function MonaNft() {
   }, []);
 
   const onMintPressed = async () => {
-    const { status } = await mintNFT(
+    const { status, success } = await mintNFT(
       character.imgId,
       character.name,
       character.description
     );
     console.log("Status", status);
     setStatus(status);
-    changeMonaStatus();
+    setPopupTrigger(true);
+    if (success === true) {
+      changeMonaStatus();
+      setPopupContent('success');
+    } else {
+      setPopupContent('error');
+    }
+    setPopupMsg(status);
   };
 
   const changeMonaStatus = () => {
@@ -93,7 +101,7 @@ export default function MonaNft() {
 
   const [walletAddress, setWallet] = useState("");
 
-  useEffect(async () => { //TODO: implement
+  useEffect(async () => { 
     const { address } = await getCurrentWalletConnected();
     setWallet(address);
 
@@ -118,6 +126,7 @@ export default function MonaNft() {
       <Popup
         trigger={popupTrigger}
         setTrigger={setPopupTrigger}
+        content={popupContent}
         msg={popupMsg}
       />
       <div className="single-mona">
@@ -172,13 +181,13 @@ export default function MonaNft() {
               className="btn primary buy"
               onClick={() => {
                 setPopupTrigger(true);
-                setPopupMsg('no-wallet');
+                setPopupContent('no-wallet');
               }}>Buy</button>}
-          {walletAddress.length > 0 && <button
+          {walletAddress.length < 0 && <button
             className="btn primary buy"
             onClick={() => {
               setPopupTrigger(true);
-              setPopupMsg('wallet-connect');
+              setPopupContent('wallet-connect');
             }}>Buy</button>}
         </section>
       </div>
