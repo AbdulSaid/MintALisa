@@ -7,7 +7,6 @@ import "../index.css";
 import Occurance from "../components/Occurance";
 import Popup from '../components/Popup';
 import {
-  connectWallet,
   getCurrentWalletConnected,
   mintNFT,
 } from "../utils/interact";
@@ -15,8 +14,8 @@ import {
 export default function MonaNft() {
   let { id } = useParams();
   const [status, setStatus] = useState("");
-  const [popupTrigger, setPopupTrigger] = useState(true);
-  const [popupContent, setPopupContent] = useState('success');
+  const [popupTrigger, setPopupTrigger] = useState(false);
+  const [popupContent, setPopupContent] = useState('');
   const [popupMsg, setPopupMsg] = useState('')
 
   const [character, setCharacter] = useState({});
