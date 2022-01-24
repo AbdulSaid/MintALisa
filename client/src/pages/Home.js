@@ -1,8 +1,6 @@
 import { useEffect, useState } from 'react';
 import { useNavigate } from 'react-router-dom';
 import { connectWallet, getCurrentWalletConnected } from "../utils/interact";
-import { FontAwesomeIcon } from '@fortawesome/react-fontawesome';
-import { faArrowRight } from '@fortawesome/free-solid-svg-icons';
 
 export default function Home() {
   const [walletAddress, setWallet] = useState("");
@@ -56,7 +54,7 @@ export default function Home() {
           )}
         </button>}
         {!window.ethereum && <p className='mm-link-container'><a className='mm-link' target="_blank" rel="noreferrer" href={`https://metamask.io/download.html`}>
-          You must install Metamask, a virtual Ethereum wallet, in your browser <FontAwesomeIcon icon={ faArrowRight } />
+          You must install Metamask, a virtual Ethereum wallet, in your browser.
           </a></p>}
       </section>
     </div>

@@ -3,7 +3,6 @@
 
 /* Base styles */
 .App {
-  width: 100vw;
   height: 100vh;
 }
 
@@ -33,7 +32,7 @@ body {
   flex-direction: column;
 }
 
-.navBar {
+.navbar {
   display: flex;
   justify-content: space-between;
   align-items: center;
@@ -78,7 +77,7 @@ body {
   display: flex;
   flex-direction: column;
   justify-content: space-around;
-  z-index: 101;
+  z-index: 3;
 }
 
 .nav-link {
@@ -256,7 +255,7 @@ body {
 .sort-list, .filter-list {
   margin: 20px 2rem 0 0;
   position: absolute;
-  z-index: 100;
+  z-index: 2;
   background: var(--dark-glass-bg);
   backdrop-filter: blur(19px);
   list-style: none;
@@ -444,3 +443,50 @@ body {
 .buy {
   max-width: 11rem;
 }
+
+.glass-overlay {
+  position: absolute;
+  z-index: 100;
+  height: 100vh;
+  backdrop-filter: blur(50px);
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  transform: translateY(-56px);
+}
+
+.popup-container {
+  display: flex;
+  flex-direction: column;
+  justify-content: space-evenly;
+  align-items: center;
+  height: 55%;
+  width: 90%;
+  background: var(--dark-glass-bg);
+  backdrop-filter: blur(19px);
+  border-radius: 15px;
+}
+
+.popup-header {
+  margin: 0 1rem;
+  width: 90%;
+  text-align: center;
+}
+
+.close-popup {
+  font-size: 1.2rem;
+  cursor: pointer;
+  align-self: flex-end;
+  margin: 0.3rem 1rem 0 0;
+}
+
+.wallet-robot {
+  width: 10rem;
+}
+
+.popup-msg {
+  width: 90%;
+  text-align: center;
+  padding: 0 1rem 1rem 1rem;
+}
+

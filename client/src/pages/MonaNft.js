@@ -5,6 +5,7 @@ import { FontAwesomeIcon } from "@fortawesome/react-fontawesome";
 import { faArrowLeft } from "@fortawesome/free-solid-svg-icons";
 import "../index.css";
 import Occurance from "../components/Occurance";
+import Popup from '../components/Popup';
 import {
   connectWallet,
   getCurrentWalletConnected,
@@ -14,6 +15,8 @@ import {
 export default function MonaNft() {
   let { id } = useParams();
   const [status, setStatus] = useState("");
+  const [popupTrigger, setPopupTrigger] = useState(false);
+  const [popupMsg, setPopupMsg] = useState('');
 
   const [character, setCharacter] = useState({});
   const [occurance, setOccurance] = useState({});
@@ -35,7 +38,7 @@ export default function MonaNft() {
         setCharacter((prev) => ({ ...prev, imgId: api1.image }));
 
         const api2 = res[1].data[0];
-        console.log('api2',api2)
+        console.log('api2', api2)
         setCharacter((prev) => ({ ...prev, glasses: api2.glasses }));
         setCharacter((prev) => ({ ...prev, hat: api2.hat }));
         setCharacter((prev) => ({ ...prev, mouth: api2.mouth }));
@@ -59,6 +62,7 @@ export default function MonaNft() {
           ...prev,
           accessories: api2.accessories_occurance,
         }));
+        console.log(status);
       }
     );
   }, []);
@@ -87,56 +91,97 @@ export default function MonaNft() {
     });
   };
 
+  const [walletAddress, setWallet] = useState("");
+
+  useEffect(async () => { //TODO: implement
+    const { address } = await getCurrentWalletConnected();
+    setWallet(address);
+
+    addWalletListener();
+  }, []);
+
+
+  function addWalletListener() {
+    if (window.ethereum) {
+      window.ethereum.on("accountsChanged", (accounts) => {
+        if (accounts.length > 0) {
+          setWallet(accounts[0]);
+        } else {
+          setWallet("");
+        }
+      });
+    }
+  }
+
   return (
-    <div className="single-mona">
-      <section className="top">
-        <Link to={"/gallery"} className="back-arrow">
+    <>
+      <Popup
+        trigger={popupTrigger}
+        setTrigger={setPopupTrigger}
+        msg={popupMsg}
+      />
+      <div className="single-mona">
+        <section className="top">
+          <Link to={"/gallery"} className="back-arrow">
             <FontAwesomeIcon icon={faArrowLeft} />
-        </Link>
-        <img
-          className="single-mona-img"
-          src={`${character.imgId}`}
-          alt=''
-        />
-        <h3 className="single-mona-name">{character.name}</h3>
-      </section>
+          </Link>
+          <img
+            className="single-mona-img"
+            src={`${character.imgId}`}
+            alt=''
+          />
+          <h3 className="single-mona-name">{character.name}</h3>
+        </section>
 
-      <section className="rarity-view-container">
-        <Occurance
-          attribute="Hat"
-          name={character.hat}
-          occurance={occurance.hat}
-        />
-        <Occurance
-          attribute="Mouth"
-          name={character.mouth}
-          occurance={occurance.mouth}
-        />
-        <Occurance
-          attribute="Background"
-          name={character.background}
-          occurance={occurance.background}
-        />
-        <Occurance
-          attribute="Glasses"
-          name={character.glasses}
-          occurance={occurance.glasses}
-        />
-        <Occurance
-          attribute="Accessories"
-          name={character.accessories}
-          occurance={occurance.accessories}
-        />
-      </section>
+        <section className="rarity-view-container">
+          <Occurance
+            attribute="Hat"
+            name={character.hat}
+            occurance={occurance.hat}
+          />
+          <Occurance
+            attribute="Mouth"
+            name={character.mouth}
+            occurance={occurance.mouth}
+          />
+          <Occurance
+            attribute="Background"
+            name={character.background}
+            occurance={occurance.background}
+          />
+          <Occurance
+            attribute="Glasses"
+            name={character.glasses}
+            occurance={occurance.glasses}
+          />
+          <Occurance
+            attribute="Accessories"
+            name={character.accessories}
+            occurance={occurance.accessories}
+          />
+        </section>
 
-      <section className="buy-container">
-        <aside className="single-price">
-          <img className="eth-logo" src='../images/ethereum-logo.png' alt='eth'/>
-          <p>{character.price}</p>
-        </aside>
-        <button className="btn primary buy" onClick={onMintPressed}>Buy</button>
-      </section>
-      {/* <p id="status">{status}</p> */}
-    </div>
+        <section className="buy-container">
+          <aside className="single-price">
+            <img className="eth-logo" src='../images/ethereum-logo.png' alt='eth' />
+            <p>{character.price}</p>
+          </aside>
+          {window.ethereum && <button className="btn primary buy" onClick={onMintPressed}>Buy</button>}
+          {!window.ethereum &&
+            <button
+              className="btn primary buy"
+              onClick={() => {
+                setPopupTrigger(true);
+                setPopupMsg('no-wallet');
+              }}>Buy</button>}
+          {walletAddress.length > 0 && <button
+            className="btn primary buy"
+            onClick={() => {
+              setPopupTrigger(true);
+              setPopupMsg('wallet-connect');
+            }}>Buy</button>}
+        </section>
+      </div>
+    </>
   );
 }

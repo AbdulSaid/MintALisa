@@ -2,7 +2,7 @@ import { useEffect, useState } from 'react';
 import { connectWallet, getCurrentWalletConnected } from "../utils/interact";
 import { Link } from 'react-router-dom'
 import { FontAwesomeIcon } from '@fortawesome/react-fontawesome';
-import { faBars, faTimes, faArrowRight } from '@fortawesome/free-solid-svg-icons';
+import { faBars, faTimes} from '@fortawesome/free-solid-svg-icons';
 
 export default function Navbar() {
   const [navbarOpen, setNavbarOpen] = useState(false);
@@ -34,7 +34,7 @@ export default function Navbar() {
 
   return (
     <div className='navbar-container'>
-      <nav className='navBar'>
+      <nav className='navbar'>
         <Link to={'/'} className='logo'>
           <h3>MINT A LISA</h3>
         </Link>
@@ -58,8 +58,8 @@ export default function Navbar() {
               <span>Connect Wallet</span>
             )}
           </button>}
-            {!window.ethereum && <p><a target="_blank" rel="noreferrer" href={`https://metamask.io/download.html`}>
-              You must install Metamask, a virtual Ethereum wallet, in your browser <FontAwesomeIcon icon={faArrowRight} />
+            {!window.ethereum && <p><a target="_blank" rel="noreferrer" className='sort-btn' href={`https://metamask.io/download.html`}>
+              Sign up for metamask.
             </a></p>}</li>
         </ul>}
     </div>
