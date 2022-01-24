@@ -446,8 +446,9 @@ body {
 
 .glass-overlay {
   position: absolute;
-  z-index: 100;
+  z-index: 5;
   height: 100vh;
+  width: 100%;
   backdrop-filter: blur(50px);
   display: flex;
   justify-content: center;
@@ -488,5 +489,43 @@ body {
   width: 90%;
   text-align: center;
   padding: 0 1rem 1rem 1rem;
+}
+
+.minted-container {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+
+.minted-tag {
+  position: absolute;
+  padding: 1rem;
+  background: var(--dark-glass-bg);
+  backdrop-filter: blur(19px);
+  border: 1px solid var(--dark-bg);
+  width: 60%;
+  font-size: 3rem;
+  text-align: center;
+}
+
+.msg-container {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+}
+
+.success-msg {
+  padding-bottom: 0;
+  color: var(--secondary-font-color);
+}
+
+.eth-link {
+  text-decoration: none;
+  color: white;
+  font-weight: 700;
+}
+
+.error {
+  font-size: 1.2rem;
 }
 
