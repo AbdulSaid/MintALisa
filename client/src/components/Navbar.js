@@ -63,7 +63,7 @@ export default function Navbar() {
               )}
             </button>}
               {!window.ethereum && <p><a target="_blank" rel="noreferrer" className='sort-btn' href={`https://metamask.io/download.html`}>
-                Sign up for metamask.
+                Sign up for metamask
               </a></p>}
             </li>
           </ul> :
