@@ -391,16 +391,17 @@ body {
 .rarity-view-container {
   display: flex;
   flex-direction: column;
-  height: 30%;
+  height: 37%;
   width: 90%;
+  max-width: 700px;
 }
 
 .rarity-container {
   display: flex;
   justify-content: space-between;
   align-items: center;
-  height: 20%;
-  border-bottom: var(--secondary-font-color) 1px solid
+  height: 50%;
+  border-bottom: rgba(255, 255, 255, 0.25) 1px solid
 }
 
 .rarity-container:last-child {
@@ -432,6 +433,7 @@ body {
   justify-content: space-between;
   align-items: center;
   width: 90%;
+  max-width: 700px;
 }
 
 .single-price {
@@ -469,6 +471,7 @@ body {
   align-items: center;
   height: 55%;
   width: 90%;
+  max-width: 650px;
   background: var(--dark-glass-bg);
   backdrop-filter: blur(19px);
   border-radius: 15px;

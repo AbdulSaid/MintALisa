@@ -174,7 +174,7 @@ export default function MonaNft() {
 
         <section className="buy-container">
           <aside className="single-price">
-            <img className="eth-logo" src='../images/ethereum-logo.png' alt='eth' />
+            <img className="eth-logo" src='../images/ethereum-logo.svg' alt='eth' />
             <p>{character.price}</p>
           </aside>
           {isMinted ? <button className="btn primary buy disabled" >Buy</button> :
