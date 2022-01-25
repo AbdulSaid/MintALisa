@@ -79,22 +79,20 @@ export default function Popup(props) {
               <p className='minted-tag'>MINTED</p>
             </div>
             <div className='msg-container'>
-            <p className='popup-msg success-msg'>Check out your transaction on Etherscan!</p>
-            <a className='eth-link' href={props.msg} target="_blank" rel="noreferrer">Click here to view the link</a>
+              <p className='popup-msg success-msg'>Check out your transaction on Etherscan!</p>
+              <a className='eth-link' href={props.msg} target="_blank" rel="noreferrer">Click here to view the link</a>
             </div>
             <button className='btn primary' onClick={() => navigate('/gallery')}>Back to gallery</button>
           </>}
 
         {props.content === 'error' &&
           <>
-            <header className='popup-header'>
-              <h2>Something went terribly wrong</h2>
+            <header className='popup-header error-header'>
+              <h2>Oh no! Something went wrong</h2>
+              <img className='wallet-robot' src="../images/connect-wallet.png" alt="Wallet robot" />
+              <p className='popup-msg error'>{props.msg}</p>
             </header>
-            <img className='wallet-robot' src="../images/connect-wallet.png" alt="Wallet robot" />
-            <p className='popup-msg error'>{props.msg}</p>
           </>}
-
-
       </article>
     </div>
   ) : "";

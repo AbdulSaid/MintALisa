@@ -1,4 +1,4 @@
-import { React, useEffect, useRef, useState } from 'react'
+import { useEffect, useState } from 'react'
 
 export default function Occurance(props) {
   const [rarityStatus, setRarityStatus] = useState('');

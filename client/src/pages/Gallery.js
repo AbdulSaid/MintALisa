@@ -6,7 +6,6 @@ import SingleGalleryDisplay from "../components/SingleGalleryDisplay";
 
 export default function Gallery() {
   const [characters, setCharacters] = useState([]);
-  const [occurance, setOccurance] = useState([]);
   const [sortOpen, setSortOpen] = useState(false);
   const [filterOpen, setFilterOpen] = useState(false);
   const [minted, setMinted] = useState([]);
@@ -14,17 +13,15 @@ export default function Gallery() {
 
 
   const urlForCharacters = `http://localhost:8080/characters/`;
-  const urlForOccurence = `http://localhost:8080/characters/attributes/occurrence/`;
+
 
   useEffect(() => {
-    Promise.all([axios.get(urlForCharacters), axios.get(urlForOccurence)]).then(
+    Promise.all([axios.get(urlForCharacters)]).then(
       (res) => {
         const api1 = res[0].data;
-        const api2 = res[1].data;
         const unavailable = [];
         const availableTemp = [];
         setCharacters(api1);
-        setOccurance(api2);
 
         for (let val of api1) {
           (val.minted) ? unavailable.push(val) : available.push(val);
@@ -38,27 +35,12 @@ export default function Gallery() {
 
   const sortHandler = val => {
     const charactersSort = [...characters];
-    const sortedOccurence = [...occurance];
     setSortOpen(false);
     if (val === 'price-up') {
       return setCharacters(charactersSort.sort((firstEl, secondEl) => parseFloat(firstEl.price) - parseFloat(secondEl.price)));
     } else if (val === 'price-down') {
       return setCharacters(charactersSort.sort((firstEl, secondEl) => parseFloat(secondEl.price) - parseFloat(firstEl.price)));
-    } else if (val === 'rarity-up') {
-      // COME BACK TO THIS
-      const tempOccur = sortedOccurence.sort((firstEl, secondEl) => {
-        let sumFirstEl = firstEl.hat_occurance + firstEl.mouth_occurance + firstEl.background_occurance + firstEl.glasses_occurance + firstEl.accessories_occurance;
-        let sumSecondEl = secondEl.hat_occurance + secondEl.mouth_occurance + secondEl.background_occurance + secondEl.glasses_occurance + secondEl.accessories_occurance;
-        return parseFloat(sumSecondEl) - parseFloat(sumFirstEl);
-      });
-    } else if (val === 'rarity-down') {
-      setOccurance(sortedOccurence.sort((firstEl, secondEl) => {
-        let sumFirstEl = firstEl.hat_occurance + firstEl.mouth_occurance + firstEl.background_occurance + firstEl.glasses_occurance + firstEl.accessories_occurance;
-        let sumSecondEl = secondEl.hat_occurance + secondEl.mouth_occurance + secondEl.background_occurance + secondEl.glasses_occurance + secondEl.accessories_occurance;
-        return parseFloat(sumFirstEl) - parseFloat(sumSecondEl);
-      }));
     }
-    console.log(occurance)
   }
 
   const filterHandler = val => {
@@ -86,11 +68,16 @@ export default function Gallery() {
   return (
     <div className="gallery">
       <header className="header">
-        <p>{minted.length}/50 MINTED <img className='diamond' src='images/diamond.svg' alt='diamond' /></p>
         <h1>Gallery</h1>
       </header>
 
       <section className='options-container'>
+        <aside className='left'>
+        <p>{minted.length}/50 MINTED <img className='diamond' src='images/diamond.svg' alt='diamond' /></p>
+        </aside>
+
+        <aside className='right'>
+
         <button
           className='filter-btn'
           onClick={(e) => {
@@ -101,6 +88,7 @@ export default function Gallery() {
 
         {filterOpen &&
           <ul className='filter-list'>
+            <li className='filter-option' onClick={() => filterHandler('all')}>All</li>
             <li className='filter-option' onClick={() => filterHandler('available')}>Available</li>
             <li className='filter-option' onClick={() => filterHandler('unavailable')}>Minted</li>
           </ul>
@@ -118,10 +106,9 @@ export default function Gallery() {
           <ul className='sort-list'>
             <li className='sort-option' onClick={() => sortHandler('price-up')}>Price: low to high</li>
             <li className='sort-option' onClick={() => sortHandler('price-down')}>Price: high to low</li>
-            <li className='sort-option' onClick={() => sortHandler('rarity-up')}>Rarity: low to high</li>
-            <li className='sort-option' onClick={() => sortHandler('rarity-down')}>Rarity: high to low</li>
           </ul>
         }
+        </aside>
       </section>
 
       <section className='gallery-display-container'>
@@ -134,9 +121,9 @@ export default function Gallery() {
           minted={char.minted}
         />)}
       </section>
-      <section className='none-minted-container'>
+      {/* <section className='none-minted-container'>
         {characters.length === 0 && <h2 className='none-minted-msg'>All Mona Lisas are available!</h2>}
-      </section>
+      </section> */}
     </div>
   );
 }
