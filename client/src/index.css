@@ -185,6 +185,12 @@ body {
   background: none;
 }
 
+.disabled {
+  pointer-events: none;
+  background: var(--disabled-btn);
+  color: var(--disabled-btn-font);
+}
+
 
  /* Gallery Page  */
 .gallery {
@@ -205,6 +211,7 @@ body {
   font-family: var(--inter-font);
   align-self: flex-start;
   margin: 0 0 .5rem 1rem;
+  height: 10%;
 }
 
 .gallery .header h1 {
@@ -213,16 +220,9 @@ body {
   font-weight: 600;
 }
 
-.gallery .header p {
-  display: flex;
-  align-items: center;
-  font-size: 0.8rem;
-  color: rgba(255, 255, 255, 0.75);
-}
-
-.gallery .header .diamond {
+.diamond {
   height: 1rem;
-  margin-left: .5rem;
+  margin-left: .2rem;
 }
 
 .single-gallery-display:visited, .single-container:active {
@@ -232,11 +232,15 @@ body {
 /* Gallery sort and filter */
 .options-container {
   display: flex;
-  justify-content: space-evenly;
-  align-self: flex-end;
-  margin-right: 1rem;
-  padding-bottom: 1rem;
-  width: 30%;
+  justify-content: space-between;
+  align-items: center;
+  margin: 1rem 1rem 0.2rem 1rem;
+  width: 90%;
+}
+
+.options-container .left p, .diamond {
+  font-size: .9rem;
+  color: rgba(255, 255, 255, 0.75);
 }
 
 .sort-btn, .filter-btn {
@@ -246,6 +250,7 @@ body {
   font-family: var(--inter-font);
   font-size: 0.9rem;
   padding-right: .5rem;
+  cursor: pointer;
 }
 
 .filter-icon {
@@ -253,21 +258,20 @@ body {
 }
 
 .sort-list, .filter-list {
-  margin: 20px 2rem 0 0;
+  margin: 0.3rem 2rem 0 0;
   position: absolute;
   z-index: 2;
   background: var(--dark-glass-bg);
+  -webkit-backdrop-filter: blur(19px);
   backdrop-filter: blur(19px);
   list-style: none;
   width: 150px;
-  height: 20%;
+  height: 12%;
   display: flex;
   flex-direction: column;
   align-items: center;
-}
-
-.filter-list {
-  height: 10%;
+  transform: translateX(-42px);
+  border-radius: 15px;
 }
 
 .sort-option, .filter-option {
@@ -277,11 +281,11 @@ body {
 
 
 .sort-option {
-  height: 25%;
+  height: 50%;
 }
 
 .filter-option {
-  height: 50%;
+  height: 33%;
 }
 
 
@@ -341,8 +345,9 @@ body {
 }
 
 .minted-gallery {
-  font-weight: 600;
+  font-weight: 700;
   font-size: 1rem;
+  color: #E25038;
 }
 
 .none-minted-container {
@@ -510,6 +515,7 @@ body {
   border: 1px solid var(--dark-bg);
   width: 55%;
   font-size: 2.5rem;
+  font-weight: 600;
   text-align: center;
 }
 
@@ -533,4 +539,10 @@ body {
 .error {
   font-size: 1.2rem;
 }
-
+.error-header {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: space-around;
+  height: 85%;
+}
