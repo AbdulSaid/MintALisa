@@ -7,7 +7,6 @@ import { faBars, faTimes } from '@fortawesome/free-solid-svg-icons';
 export default function Navbar() {
   const [navbarOpen, setNavbarOpen] = useState(false);
   const [walletAddress, setWallet] = useState("");
-  const [windowSize, setWindowSize] = useState(null)
 
   const [size, setSize] = useState({
     x: window.innerWidth

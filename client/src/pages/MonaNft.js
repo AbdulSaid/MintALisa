@@ -1,8 +1,8 @@
 import axios from "axios";
 import { useEffect, useState } from "react";
-import { useParams, Link } from "react-router-dom";
+import { useParams, useNavigate } from "react-router-dom";
 import { FontAwesomeIcon } from "@fortawesome/react-fontawesome";
-import { faArrowLeft, faWindowRestore } from "@fortawesome/free-solid-svg-icons";
+import { faArrowLeft } from "@fortawesome/free-solid-svg-icons";
 import "../index.css";
 import Occurance from "../components/Occurance";
 import Popup from '../components/Popup';
@@ -11,7 +11,8 @@ import {
   mintNFT,
 } from "../utils/interact";
 
-export default function MonaNft() {
+export default function MonaNft(props) {
+  let navigate = useNavigate();
   let { id } = useParams();
   const [status, setStatus] = useState("");
   const [popupTrigger, setPopupTrigger] = useState(false);
@@ -24,6 +25,7 @@ export default function MonaNft() {
 
   const urlForCharacter = `http://localhost:8080/characters/${id}`;
   const urlForOccurence = `http://localhost:8080/characters/attributes/occurrence/${id}`;
+ 
 
   useEffect(() => {
     Promise.all([axios.get(urlForCharacter), axios.get(urlForOccurence)]).then(
@@ -67,6 +69,7 @@ export default function MonaNft() {
         }));
       }
     );
+    
   }, []);
 
   const onMintPressed = async () => {
@@ -133,9 +136,7 @@ export default function MonaNft() {
       />
       <div className="single-mona">
         <section className="top">
-          <Link to={"/gallery"} className="back-arrow">
-            <FontAwesomeIcon icon={faArrowLeft} />
-          </Link>
+          <FontAwesomeIcon className="back-arrow" icon={faArrowLeft} onClick={() => navigate('/gallery')}/>
           <img
             className="single-mona-img"
             src={`${character.imgId}`}
@@ -182,12 +183,12 @@ export default function MonaNft() {
               {window.ethereum &&
                 <>
                   {walletAddress.length > 0 ? <button className="btn primary buy" onClick={onMintPressed}>Buy</button> :
-                  <button
-                    className="btn primary buy connect"
-                    onClick={() => {
-                      setPopupTrigger(true);
-                      setPopupContent('wallet-connect');
-                    }}>Buy</button>}
+                    <button
+                      className="btn primary buy connect"
+                      onClick={() => {
+                        setPopupTrigger(true);
+                        setPopupContent('wallet-connect');
+                      }}>Buy</button>}
                 </>}
             </>}
 

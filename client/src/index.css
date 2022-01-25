@@ -46,6 +46,7 @@ body {
   height: 22px;
   text-decoration: none;
   font-size: 0.8rem;
+  color: var(--light-font-color);
 }
 
 .logo:visited, .logo:active {
@@ -95,6 +96,17 @@ body {
   background: none;
   border: none;
   color: black;
+}
+
+.nav-list-desktop {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  list-style: none;
+  min-width: 410px;
+  max-width: 570px;
+  font-size: 1.1rem;
+  margin-right: 2rem;
 }
 
 
@@ -200,11 +212,13 @@ body {
 }
 
 .gallery-display-container {
-  display: flex;
+  /* display: flex;
   flex-wrap: wrap;
-  gap: 0.4rem;
   justify-content: space-between; 
-  margin-top: 0.5rem;
+  margin-top: 0.5rem; */
+  display: grid;
+  grid-template-columns: 1fr;
+  grid-gap: 0.7rem;
 }
 
 .gallery .header {
@@ -289,8 +303,8 @@ body {
 
 /* Single Gallery display component */
 .single-container {
-  height: 45vh;
-  width: 42vh;
+  height: 100%;
+  width: 100%;
   border-radius: 15px;
   background-color: var(--dark-glass-bg);
   text-decoration: none;
@@ -312,12 +326,11 @@ body {
   display: flex;
   justify-content: space-between;
   align-items: center;
-  position: absolute;
   background: var(--dark-glass-bg);
   backdrop-filter: blur(19px);
   transform: translateY(-68px);
   height: 4rem;
-  width: inherit;
+  width: 100%;
   border-radius: 0px 0px 15px 15px;
 }
 
@@ -547,6 +560,13 @@ body {
 }
 
 
+@media only screen and (min-width: 600px) and (max-width: 767px){
+  .gallery-display-container {
+    grid-template-columns: 1fr 1fr;
+  }
+}
+
+
 @media only screen and (min-width: 768px) {
   .logo {
     font-size: 1.2rem;
@@ -555,18 +575,6 @@ body {
 
   .navbar {
     padding: 0;
-  }
-
-  .nav-list-desktop {
-    display: flex;
-    justify-content: space-between;
-    align-items: center;
-    list-style: none;
-    width: 33%;
-    min-width: 410px;
-    max-width: 570px;
-    font-size: 1.1rem;
-    margin-right: 2rem;
   }
 
   .nav-connect-desktop {
@@ -580,6 +588,10 @@ body {
     margin: 0 1rem 2rem 1rem;
   }
 
+  .gallery-display-container {
+    grid-template-columns: 1fr 1fr 1fr;
+  }
+
   .gallery .header {
     margin: 1rem 0;
   }
@@ -588,5 +600,16 @@ body {
     width: 35vh;
     margin-bottom: 1rem;
   }
+}
 
+ @media only screen and (min-width: 960px) {
+  .gallery-display-container {
+    grid-template-columns: 1fr 1fr 1fr 1fr ;
+  }
+}
+
+@media only screen and (min-width: 1300px) {
+  .gallery-display-container {
+    grid-template-columns: 1fr 1fr 1fr 1fr 1fr;
+  }
 }
