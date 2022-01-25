@@ -116,7 +116,7 @@ body {
 }
 
 .bg-img {
-  height: 485px;
+  height: 30.3rem;
 }
 
 .home .header {
@@ -165,14 +165,14 @@ body {
 /* Buttons */
 .btn {
   color: var(--light-font-color);
-  border: var(--border);
   padding: 9px 16px;
   width: 90%;
-  height: 50px;
+  height: 3rem;
   border-radius: 100px;
   font-size: 1.1em;
   font-weight: 600;
   cursor: pointer;
+  border: none;
 }
 
 .primary {
@@ -545,4 +545,32 @@ body {
   align-items: center;
   justify-content: space-around;
   height: 85%;
+}
+
+
+@media only screen and (min-width: 768px) {
+
+
+  .logo {
+    font-size: 1.2rem;
+    margin-left: 1.5rem;
+  }
+
+  .nav-list-desktop {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    list-style: none;
+    width: 33%;
+    min-width: 410px;
+    font-size: 1.1rem;
+    margin-right: 2rem;
+  }
+
+  .nav-connect-desktop {
+    font-size: 1rem;
+    height: 2rem;
+    width: 100%;
+    text-align: center;
+  }
 }
