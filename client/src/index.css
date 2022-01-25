@@ -515,6 +515,7 @@ body {
   border: 1px solid var(--dark-bg);
   width: 55%;
   font-size: 2.5rem;
+  font-weight: 600;
   text-align: center;
 }
 
