@@ -11,7 +11,7 @@ import {
   mintNFT,
 } from "../utils/interact";
 
-export default function MonaNft(props) {
+export default function MonaNft() {
   let navigate = useNavigate();
   let { id } = useParams();
   const [status, setStatus] = useState("");
@@ -25,7 +25,7 @@ export default function MonaNft(props) {
 
   const urlForCharacter = `http://localhost:8080/characters/${id}`;
   const urlForOccurence = `http://localhost:8080/characters/attributes/occurrence/${id}`;
- 
+
 
   useEffect(() => {
     Promise.all([axios.get(urlForCharacter), axios.get(urlForOccurence)]).then(
@@ -40,6 +40,7 @@ export default function MonaNft(props) {
         }));
         setCharacter((prev) => ({ ...prev, name: api1.name }));
         setCharacter((prev) => ({ ...prev, imgId: api1.image }));
+        setCharacter((prev) => ({ ...prev, localImg: api1.local_image.slice(7) }));
         setCharacter((prev) => ({ ...prev, minted: api1.minted }));
 
         const api2 = res[1].data[0];
@@ -69,7 +70,7 @@ export default function MonaNft(props) {
         }));
       }
     );
-    
+
   }, []);
 
   const onMintPressed = async () => {
@@ -136,13 +137,14 @@ export default function MonaNft(props) {
       />
       <div className="single-mona">
         <section className="top">
-          <FontAwesomeIcon className="back-arrow" icon={faArrowLeft} onClick={() => navigate('/gallery')}/>
+          <img src="../images/back-arrow.svg" alt="back" className="back-arrow" onClick={() => navigate('/gallery')} />
           <img
             className="single-mona-img"
-            src={`${character.imgId}`}
+            src={`..${character.localImg}`}
             alt=''
           />
           <h3 className="single-mona-name">{character.name}</h3>
+          <p className="price-block"><img className="eth-logo-alt" src='../images/eth-logo-alt.svg' alt='eth' />{character.price}</p>
         </section>
 
         <section className="rarity-view-container">
@@ -171,38 +173,40 @@ export default function MonaNft(props) {
             name={character.accessories}
             occurance={occurance.accessories}
           />
-        </section>
 
-        <section className="buy-container">
-          <aside className="single-price">
-            <img className="eth-logo" src='../images/ethereum-logo.svg' alt='eth' />
-            <p>{character.price}</p>
+          <aside className="rarity-legend">
+            <p className="common-legend"><img className="legend-icon" src="../images/common.svg"/> Common</p>
+            <p className="rare-legend"><img className="legend-icon" src="../images/rare.svg"/> Rare</p>
+            <p className="super-rare-legend"><img className="legend-icon" src="../images/super-rare.svg"/>Super rare</p>
           </aside>
-          {isMinted ? <button className="btn primary buy disabled" >Buy</button> :
-            <>
-              {window.ethereum &&
-                <>
-                  {walletAddress.length > 0 ? <button className="btn primary buy" onClick={onMintPressed}>Buy</button> :
-                    <button
-                      className="btn primary buy connect"
-                      onClick={() => {
-                        setPopupTrigger(true);
-                        setPopupContent('wallet-connect');
-                      }}>Buy</button>}
-                </>}
-            </>}
-
-
-          {!window.ethereum &&
-            <>
-              {!isMinted && <button
-                className="btn primary buy"
-                onClick={() => {
-                  setPopupTrigger(true);
-                  setPopupContent('no-wallet');
-                }}>Buy</button>}
-            </>}
         </section>
+        {isMinted ? <button className="btn primary buy disabled" >Buy</button> :
+          <>
+            {window.ethereum &&
+              <>
+                {walletAddress.length > 0 ? <button className="btn primary buy" onClick={onMintPressed}>Buy</button> :
+                  <button
+                    className="btn primary buy connect"
+                    onClick={() => {
+                      setPopupTrigger(true);
+                      setPopupContent('wallet-connect');
+                    }}>Buy</button>}
+              </>}
+          </>}
+
+
+        {!window.ethereum &&
+          <>
+            {!isMinted && <button
+              className="btn primary buy"
+              onClick={() => {
+                setPopupTrigger(true);
+                setPopupContent('no-wallet');
+              }}>Buy</button>}
+          </>}
+
+
+
       </div>
     </>
   );

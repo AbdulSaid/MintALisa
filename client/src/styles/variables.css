@@ -1,6 +1,7 @@
 :root {
   /* Base */
   --primary-color: linear-gradient(180deg, #B286EC 0%, #594DAD 100%);
+  --secondary-color: #00DFBA;
   --disabled-btn: linear-gradient(180deg, rgba(178, 134, 236, 18%) 0%, rgba(89, 77, 173, 18%) 100%);
   --inter-font: 'Inter', Arial, Helvetica, sans-serif;
   --libre-font: 'Libre Baskerville', 'Times New Roman', Times, serif;

@@ -371,24 +371,30 @@ body {
 .single-mona {
   display: flex;
   flex-direction: column;
-  justify-content: space-between;
   align-items: center;
-  height: 90%;
+  height: 93%;
+  width: 99%;
 }
 
 .single-mona .top {
   display: flex;
   flex-direction: column;
   align-items: center;
-  height: 360px;
+  height: 370px;
   width: 90%;
+}
+
+.single-mona .bottom {
+  display: flex;
+  flex-direction: column;
+  width: 90%;
+  height: 442px;
 }
 
 .back-arrow {
   align-self: flex-start;
-  color: var(--light-font-color);
-  font-size: 2rem;
-  margin-bottom: 1.2rem;
+  margin: .5rem 0 0 0;
+  cursor: pointer;
 }
 
 .single-mona-img {
@@ -398,7 +404,7 @@ body {
 
 .single-mona-name {
   font-size: 20px;
-  margin-top: 1rem;
+  margin-top: .5rem;
 }
 
 .rarity-view-container {
@@ -407,18 +413,16 @@ body {
   height: 37%;
   width: 90%;
   max-width: 700px;
+  margin-bottom: 2.5rem;
 }
 
 .rarity-container {
   display: flex;
   justify-content: space-between;
-  align-items: center;
-  height: 50%;
-  border-bottom: rgba(255, 255, 255, 0.25) 1px solid
-}
-
-.rarity-container:last-child {
-  border-bottom: none;
+  align-items: flex-end;
+  height: 50px;
+  padding-bottom: 0.5rem;
+  border-bottom: rgba(255, 255, 255, 0.25) 1px solid;
 }
 
 .rarity-container .left {
@@ -427,8 +431,22 @@ body {
 }
 
 .rarity-icon {
-  height: 1.7rem;
-  margin-right: .5rem;
+  height: 24px;
+  margin-right: 1rem;
+}
+
+.rarity-legend {
+  display: flex;
+  justify-content: space-between;
+  align-self: center;
+  padding-top: 11px;
+  width: 250px;
+  font-size: 12px;
+}
+
+.legend-icon {
+  transform: translateY(3px);
+  margin-right: .25rem
 }
 
 .attribute {
@@ -438,32 +456,43 @@ body {
 }
 
 .attribute-name {
-  font-size: 1.2rem;
+  font-size: 0.9rem;
+}
+
+.attribute-percent {
+  font-size: .9rem;
 }
 
 .buy-container {
   display: flex;
   justify-content: space-between;
   align-items: center;
-  width: 90%;
   max-width: 700px;
 }
 
-.single-price {
+.price-block {
   display: flex;
   align-items: center;
-  font-size: var(--light-font-color);
-  font-size: 1.3rem;
-  font-weight: 600;
+  font-size: .9rem;
+  font-weight: 500;
+  color: var(--secondary-color);
 }
+
+.eth-logo-alt {
+  height: 2rem;
+  transform: translateY(3px);
+}
+
 .eth-logo {
   height: 2rem;
   margin-right: 0.2rem;
 }
 
 .buy {
-  max-width: 11rem;
+  max-width: 700px;
+  margin-bottom: 1rem;
 }
+
 
 .glass-overlay {
   position: absolute;
@@ -611,5 +640,11 @@ body {
 @media only screen and (min-width: 1300px) {
   .gallery-display-container {
     grid-template-columns: 1fr 1fr 1fr 1fr 1fr;
+  }
+}
+
+@media only screen and (max-height: 810px) {
+  .single-mona {
+    height: 83%;
   }
 }

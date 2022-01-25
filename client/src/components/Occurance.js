@@ -10,9 +10,9 @@ export default function Occurance(props) {
   const checkRarity = percent => {
     if (percent <= 14) {
       setRarityStatus('super-rare');
-    } else if (percent >= 15 && percent <= 22) {
+    } else if (percent >= 15 && percent <= 20) {
       setRarityStatus('rare');
-    } else if (percent > 23) {
+    } else if (percent > 21) {
       setRarityStatus('common');
     }
   }
