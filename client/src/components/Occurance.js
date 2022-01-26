@@ -10,9 +10,9 @@ export default function Occurance(props) {
   const checkRarity = percent => {
     if (percent <= 14) {
       setRarityStatus('super-rare');
-    } else if (percent >= 15 && percent <= 22) {
+    } else if (percent >= 15 && percent <= 20) {
       setRarityStatus('rare');
-    } else if (percent > 23) {
+    } else if (percent > 21) {
       setRarityStatus('common');
     }
   }
@@ -21,8 +21,8 @@ export default function Occurance(props) {
   return (
     <article className='rarity-container'>
       <aside className='left'>
-        <img className='rarity-icon' src={`../images/${rarityStatus}.png`} alt={rarityStatus} />
-        <div className="rarity-category">
+        <img className={`rarity-icon ${rarityStatus}`} src={`../images/${rarityStatus}.svg`} alt={rarityStatus} />
+        <div className={`rarity-category ${rarityStatus}`}>
           <h3 className='attribute'>{props.attribute}</h3>
           <p className='attribute-name'>{props.name}</p>
         </div>

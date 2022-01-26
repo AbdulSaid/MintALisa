@@ -88,7 +88,7 @@ export default function Gallery() {
 
         {filterOpen &&
           <ul className='filter-list'>
-            <li className='filter-option' onClick={() => filterHandler('all')}>All</li>
+            {/* <li className='filter-option' onClick={() => filterHandler('all')}>All</li> */}
             <li className='filter-option' onClick={() => filterHandler('available')}>Available</li>
             <li className='filter-option' onClick={() => filterHandler('unavailable')}>Minted</li>
           </ul>
@@ -121,9 +121,6 @@ export default function Gallery() {
           minted={char.minted}
         />)}
       </section>
-      {/* <section className='none-minted-container'>
-        {characters.length === 0 && <h2 className='none-minted-msg'>All Mona Lisas are available!</h2>}
-      </section> */}
     </div>
   );
 }
