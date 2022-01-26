@@ -72,17 +72,10 @@ export default function PopupContent(props) {
 
       {props.content === 'success' &&
         <>
-          <header className='popup-header'>
-            <h2>Payment Succesful</h2>
-          </header>
-          <div className='single-container minted-container'>
-            <img className='gallery-img' src="../images/1.png" alt="" />
-            <p className='minted-tag'>MINTED</p>
-          </div>
-          <div className='msg-container'>
-            <p className='popup-msg success-msg'>Check out your transaction on Etherscan!</p>
-            <a className='eth-link' href={props.msg} target="_blank" rel="noreferrer">Click here to view the link</a>
-          </div>
+            <h2 className='success-header'>Payment Succesful</h2>
+            <img className='success-img' src="../images/1.png" alt="" />
+            <p className='popup-msg success-msg'><a className='eth-link' href={props.msg} target="_blank" rel="noreferrer">Click here</a> to check out your transaction on Etherscan!</p>
+          
           <button className='btn primary' onClick={() => navigate('/gallery')}>Back to gallery</button>
         </>}
 

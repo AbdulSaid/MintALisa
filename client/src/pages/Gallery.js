@@ -88,7 +88,7 @@ export default function Gallery() {
 
         {filterOpen &&
           <ul className='filter-list'>
-            <li className='filter-option' onClick={() => filterHandler('all')}>All</li>
+            {/* <li className='filter-option' onClick={() => filterHandler('all')}>All</li> */}
             <li className='filter-option' onClick={() => filterHandler('available')}>Available</li>
             <li className='filter-option' onClick={() => filterHandler('unavailable')}>Minted</li>
           </ul>

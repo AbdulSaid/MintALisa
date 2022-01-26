@@ -21,8 +21,8 @@ export default function Occurance(props) {
   return (
     <article className='rarity-container'>
       <aside className='left'>
-        <img className='rarity-icon' src={`../images/${rarityStatus}.svg`} alt={rarityStatus} />
-        <div className="rarity-category">
+        <img className={`rarity-icon ${rarityStatus}`} src={`../images/${rarityStatus}.svg`} alt={rarityStatus} />
+        <div className={`rarity-category ${rarityStatus}`}>
           <h3 className='attribute'>{props.attribute}</h3>
           <p className='attribute-name'>{props.name}</p>
         </div>
