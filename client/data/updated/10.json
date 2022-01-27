@@ -1,14 +1,14 @@
 {
     "name": "Mona Lisa #10",
     "description": "Why not Mint a Lisa",
-    "image": "https://gateway.pinata.cloud/ipfs/QmYK7hkHwh7LQnEjnkZB4p5pg9hFV9WktYKwRt8YDdT6kk",
-    "dna": "e9ce24f3043e0da7326618f0791554847353b328",
+    "image": "https://gateway.pinata.cloud/ipfs/QmR574dBCiz7G9hiTKA3vq2CJjwwuwy9Bv9CZricEJb1B5/10.png",
+    "dna": "6eb86647060aff57ead8b118ccb71190f7bd522d",
     "edition": 10,
-    "date": 1642445384284,
+    "date": 1643234322217,
     "attributes": [
         {
             "trait_type": "Background",
-            "value": "Monet"
+            "value": "Bed"
         },
         {
             "trait_type": "Mona Lisa",
@@ -16,7 +16,7 @@
         },
         {
             "trait_type": "Cap",
-            "value": "Beret"
+            "value": "Toque"
         },
         {
             "trait_type": "Glasses",
@@ -24,7 +24,7 @@
         },
         {
             "trait_type": "Mouth",
-            "value": "TongueOut"
+            "value": "RealSmile"
         },
         {
             "trait_type": "Misc",

@@ -1,0 +1,35 @@
+{
+  "name": "Mona Lisa #96",
+  "description": "Why not Mint a Lisa",
+  "image": "https://gateway.pinata.cloud/ipfs/QmR574dBCiz7G9hiTKA3vq2CJjwwuwy9Bv9CZricEJb1B5/96.png",
+  "dna": "eb36dd9a1690e01bb66dc34abe8e6a8a5c8526a9",
+  "edition": 96,
+  "date": 1643234392770,
+  "attributes": [
+    {
+      "trait_type": "Background",
+      "value": "PinkBlue"
+    },
+    {
+      "trait_type": "Mona Lisa",
+      "value": "Mona"
+    },
+    {
+      "trait_type": "Cap",
+      "value": "Cowboy"
+    },
+    {
+      "trait_type": "Glasses",
+      "value": "Round"
+    },
+    {
+      "trait_type": "Mouth",
+      "value": "Fangs"
+    },
+    {
+      "trait_type": "Misc",
+      "value": "Reporter"
+    }
+  ],
+  "compiler": "HashLips Art Engine"
+}

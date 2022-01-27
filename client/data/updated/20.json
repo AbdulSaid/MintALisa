@@ -1,14 +1,14 @@
 {
     "name": "Mona Lisa #20",
     "description": "Why not Mint a Lisa",
-    "image": "https://gateway.pinata.cloud/ipfs/QmXWoRBquML7DqxumJV33uZAmpUpd7XNGqtxfGjxBrCQq9",
-    "dna": "9e69911e1ed76e72fce6a1ee586cf97a10075a5e",
+    "image": "https://gateway.pinata.cloud/ipfs/QmR574dBCiz7G9hiTKA3vq2CJjwwuwy9Bv9CZricEJb1B5/20.png",
+    "dna": "aecbc505e8288b5cd9dcda0f61487239ef093563",
     "edition": 20,
-    "date": 1642445390019,
+    "date": 1643234329262,
     "attributes": [
         {
             "trait_type": "Background",
-            "value": "AcidPinkBlue"
+            "value": "Montreal"
         },
         {
             "trait_type": "Mona Lisa",
@@ -16,19 +16,19 @@
         },
         {
             "trait_type": "Cap",
-            "value": "Graduation"
+            "value": "BackwardsCap"
         },
         {
             "trait_type": "Glasses",
-            "value": "Cartoon"
+            "value": "Round"
         },
         {
             "trait_type": "Mouth",
-            "value": "OpenWithTeeth"
+            "value": "TonguOut"
         },
         {
             "trait_type": "Misc",
-            "value": "Book"
+            "value": "Reporter"
         }
     ],
     "compiler": "HashLips Art Engine",

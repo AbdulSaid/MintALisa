@@ -1,0 +1,35 @@
+{
+  "name": "Mona Lisa #58",
+  "description": "Why not Mint a Lisa",
+  "image": "https://gateway.pinata.cloud/ipfs/QmR574dBCiz7G9hiTKA3vq2CJjwwuwy9Bv9CZricEJb1B5/58.png",
+  "dna": "272fb4d24a37a77e38ec8fa24f24f8f4bfea615b",
+  "edition": 58,
+  "date": 1643234363754,
+  "attributes": [
+    {
+      "trait_type": "Background",
+      "value": "Bed"
+    },
+    {
+      "trait_type": "Mona Lisa",
+      "value": "Mona"
+    },
+    {
+      "trait_type": "Cap",
+      "value": "Toque"
+    },
+    {
+      "trait_type": "Glasses",
+      "value": "Flared"
+    },
+    {
+      "trait_type": "Mouth",
+      "value": "DeviousSmile"
+    },
+    {
+      "trait_type": "Misc",
+      "value": "Wine"
+    }
+  ],
+  "compiler": "HashLips Art Engine"
+}

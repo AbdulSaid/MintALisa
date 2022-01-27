@@ -1,14 +1,14 @@
 {
     "name": "Mona Lisa #21",
     "description": "Why not Mint a Lisa",
-    "image": "https://gateway.pinata.cloud/ipfs/Qme4syQQUK4aMBpCviCi3RBkbkJNArXHbvRkxVthWQXHzk",
-    "dna": "04c32ec597fd422be363c547cc1a6ca4dec7e72f",
+    "image": "https://gateway.pinata.cloud/ipfs/QmR574dBCiz7G9hiTKA3vq2CJjwwuwy9Bv9CZricEJb1B5/21.png",
+    "dna": "87225141758d1d4f71e5fa5dec719a0a6490878a",
     "edition": 21,
-    "date": 1642445390507,
+    "date": 1643234330031,
     "attributes": [
         {
             "trait_type": "Background",
-            "value": "Monet"
+            "value": "PinkBlue"
         },
         {
             "trait_type": "Mona Lisa",
@@ -16,15 +16,15 @@
         },
         {
             "trait_type": "Cap",
-            "value": "Fedora"
+            "value": "Toque"
         },
         {
             "trait_type": "Glasses",
-            "value": "YellowStriped"
+            "value": "Goggles"
         },
         {
             "trait_type": "Mouth",
-            "value": "TongueOut"
+            "value": "OpenSmile"
         },
         {
             "trait_type": "Misc",

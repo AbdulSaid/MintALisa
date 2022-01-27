@@ -1,0 +1,35 @@
+{
+  "name": "Mona Lisa #80",
+  "description": "Why not Mint a Lisa",
+  "image": "https://gateway.pinata.cloud/ipfs/QmR574dBCiz7G9hiTKA3vq2CJjwwuwy9Bv9CZricEJb1B5/80.png",
+  "dna": "77655d30917101697edb27bfa9c4f01b54acd6c5",
+  "edition": 80,
+  "date": 1643234381189,
+  "attributes": [
+    {
+      "trait_type": "Background",
+      "value": "RustedMetal"
+    },
+    {
+      "trait_type": "Mona Lisa",
+      "value": "Mona"
+    },
+    {
+      "trait_type": "Cap",
+      "value": "Graduation"
+    },
+    {
+      "trait_type": "Glasses",
+      "value": "GoldRim"
+    },
+    {
+      "trait_type": "Mouth",
+      "value": "RealSmile"
+    },
+    {
+      "trait_type": "Misc",
+      "value": "Tattoo"
+    }
+  ],
+  "compiler": "HashLips Art Engine"
+}

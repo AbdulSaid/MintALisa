@@ -1,36 +1,35 @@
 {
-    "name": "Mona Lisa #25",
-    "description": "Why not Mint a Lisa",
-    "image": "https://gateway.pinata.cloud/ipfs/QmbQt2kEqzpyTPG3Kgac96fQ1qYvFkqNq94Azyyfyb61bi",
-    "dna": "ac77e57339b838ddeb17fc5c477803cc7e09b8e6",
-    "edition": 25,
-    "date": 1642445392730,
-    "attributes": [
-        {
-            "trait_type": "Background",
-            "value": "Bed"
-        },
-        {
-            "trait_type": "Mona Lisa",
-            "value": "Mona"
-        },
-        {
-            "trait_type": "Cap",
-            "value": "Fedora"
-        },
-        {
-            "trait_type": "Glasses",
-            "value": "3DGoggles"
-        },
-        {
-            "trait_type": "Mouth",
-            "value": "OpenSmile"
-        },
-        {
-            "trait_type": "Misc",
-            "value": "Pipe"
-        }
-    ],
-    "compiler": "HashLips Art Engine",
-    "localImage": "/public/images/25.png"
+  "name": "Mona Lisa #25",
+  "description": "Why not Mint a Lisa",
+  "image": "https://gateway.pinata.cloud/ipfs/QmR574dBCiz7G9hiTKA3vq2CJjwwuwy9Bv9CZricEJb1B5/25.png",
+  "dna": "f7bad410efb0d12f5840d5cc0821fe57c4cd68e2",
+  "edition": 25,
+  "date": 1643234333699,
+  "attributes": [
+    {
+      "trait_type": "Background",
+      "value": "Cloud"
+    },
+    {
+      "trait_type": "Mona Lisa",
+      "value": "Mona"
+    },
+    {
+      "trait_type": "Cap",
+      "value": "PrettyHeadband"
+    },
+    {
+      "trait_type": "Glasses",
+      "value": "Cartoon"
+    },
+    {
+      "trait_type": "Mouth",
+      "value": "RealSmile"
+    },
+    {
+      "trait_type": "Misc",
+      "value": "Flowers"
+    }
+  ],
+  "compiler": "HashLips Art Engine"
 }

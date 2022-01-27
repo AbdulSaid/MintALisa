@@ -1,36 +1,35 @@
 {
-    "name": "Mona Lisa #7",
-    "description": "Why not Mint a Lisa",
-    "image": "https://gateway.pinata.cloud/ipfs/Qma52XWsygypSvGZiHGG7hAEuwofqNS4D7XwNr7YN5adrw",
-    "dna": "c72a2ae1355b0f7f2f3af78022adef8970421d77",
-    "edition": 7,
-    "date": 1642445382679,
-    "attributes": [
-        {
-            "trait_type": "Background",
-            "value": "AcidPinkBlue"
-        },
-        {
-            "trait_type": "Mona Lisa",
-            "value": "Mona"
-        },
-        {
-            "trait_type": "Cap",
-            "value": "HardHat"
-        },
-        {
-            "trait_type": "Glasses",
-            "value": "3DGoggles"
-        },
-        {
-            "trait_type": "Mouth",
-            "value": "RedLipsSmile"
-        },
-        {
-            "trait_type": "Misc",
-            "value": "Money"
-        }
-    ],
-    "compiler": "HashLips Art Engine",
-    "localImage": "/public/images/7.png"
+  "name": "Mona Lisa #7",
+  "description": "Why not Mint a Lisa",
+  "image": "https://gateway.pinata.cloud/ipfs/QmR574dBCiz7G9hiTKA3vq2CJjwwuwy9Bv9CZricEJb1B5/7.png",
+  "dna": "314a7ba16f48356cfb245f3e326eeb85cce4f79c",
+  "edition": 7,
+  "date": 1643234320329,
+  "attributes": [
+    {
+      "trait_type": "Background",
+      "value": "PinkBlue"
+    },
+    {
+      "trait_type": "Mona Lisa",
+      "value": "Mona"
+    },
+    {
+      "trait_type": "Cap",
+      "value": "PrettyHeadband"
+    },
+    {
+      "trait_type": "Glasses",
+      "value": "Monocle"
+    },
+    {
+      "trait_type": "Mouth",
+      "value": "Underbite"
+    },
+    {
+      "trait_type": "Misc",
+      "value": "Flowers"
+    }
+  ],
+  "compiler": "HashLips Art Engine"
 }

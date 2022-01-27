@@ -1,36 +1,35 @@
 {
-    "name": "Mona Lisa #31",
-    "description": "Why not Mint a Lisa",
-    "image": "https://gateway.pinata.cloud/ipfs/QmUMZoifbG9zmVNBrTGmmH7H2smg3wHTHRhajAo6F5wPQP",
-    "dna": "7cb7e5e1fd412abedcae9c341d9604ad1d66bdf7",
-    "edition": 31,
-    "date": 1642445395706,
-    "attributes": [
-        {
-            "trait_type": "Background",
-            "value": "Monet"
-        },
-        {
-            "trait_type": "Mona Lisa",
-            "value": "Mona"
-        },
-        {
-            "trait_type": "Cap",
-            "value": "Graduation"
-        },
-        {
-            "trait_type": "Glasses",
-            "value": "Aviator"
-        },
-        {
-            "trait_type": "Mouth",
-            "value": "OpenWithTeeth"
-        },
-        {
-            "trait_type": "Misc",
-            "value": "Flowers"
-        }
-    ],
-    "compiler": "HashLips Art Engine",
-    "localImage": "/public/images/31.png"
+  "name": "Mona Lisa #31",
+  "description": "Why not Mint a Lisa",
+  "image": "https://gateway.pinata.cloud/ipfs/QmR574dBCiz7G9hiTKA3vq2CJjwwuwy9Bv9CZricEJb1B5/31.png",
+  "dna": "808450d3913d1b3b01cb3685d1feb932e1ed9668",
+  "edition": 31,
+  "date": 1643234339774,
+  "attributes": [
+    {
+      "trait_type": "Background",
+      "value": "RustedMetal"
+    },
+    {
+      "trait_type": "Mona Lisa",
+      "value": "Mona"
+    },
+    {
+      "trait_type": "Cap",
+      "value": "Beret"
+    },
+    {
+      "trait_type": "Glasses",
+      "value": "GoldRim"
+    },
+    {
+      "trait_type": "Mouth",
+      "value": "Fangs"
+    },
+    {
+      "trait_type": "Misc",
+      "value": "Reporter"
+    }
+  ],
+  "compiler": "HashLips Art Engine"
 }
