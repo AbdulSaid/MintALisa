@@ -4,37 +4,53 @@ VALUES (1, 'special edition', 'The first monalisa special edition.');
 INSERT INTO collections (id, name, description)
 VALUES (2, 'regular edition', 'The monalisa regular edition.');
 
-INSERT INTO hats (id, name, rarity, price)
-VALUES (1, 'Cowboy', 30, 0.0015),
-       (2, 'Beret', 40, 0.001),
-       (3, 'Fedora', 35, 0.0013),
-       (4, 'HardHat', 25, 0.0017),
-       (5, 'Graduation', 20, 0.0021);
-
 INSERT INTO mouths (id, name, rarity, price)
-VALUES (1, 'RedLipsSmile', 40, 0.001),
-       (2, 'SideSmile', 25, 0.0017),
-       (3, 'OpenWithTeeth', 35, 0.0013),
-       (4, 'TongueOut', 30, 0.0015),
-       (5, 'OpenSmile', 20, 0.0021);
-
-INSERT INTO glasses (id, name, rarity, price)
-VALUES (1, 'Round', 40, 0.001),
-       (2, 'YellowStriped', 20, 0.0021),
-       (3, '3DGoggles', 35, 0.0013),
-       (4, 'Aviator', 30, 0.0015),
-       (5, 'Cartoon', 25, 0.017);
+VALUES (1, 'Angela-mouth', 20, 0.001),
+       (2, 'Real-smile', 23, 0.001),
+       (3, 'Devious-smile-', 7, 0.0017),
+       (4, 'Fangs', 13, 0.0015),
+       (5, 'Side-smile', 7, 0.0017),
+       (6, 'Underbite', 12, 0.0015),
+       (7, 'Tongue-out', 9, 0.0017),
+       (8, 'Open-smile', 9, 0.0017);
 
 INSERT INTO backgrounds (id, name, rarity, price)
-VALUES (1, 'Monet', 25, 0.0017),
-       (2, 'AcidPinkBlue', 40, 0.001),
-       (3, 'RustedMetal', 35, 0.0013),
-       (4, 'Bed', 30, 0.0015),
-       (5, 'LouvreWithMona', 20, 0.0021);
+VALUES (1, 'Montreal', 4, 0.0021),
+       (2, 'Blue-art', 9, 0.0017),
+       (3, 'Monet', 6, 0.0017),
+       (4, 'Cloud', 20, 0.001),
+       (5, 'Pink-blue', 7, 0.0017),
+       (6, 'Rusted-metal', 16, 0.0015),
+       (7, 'Palms', 20, 0.001),
+       (8, 'Bed', 14, 0.0015),
+       (8, 'Louvre', 4, 0.0021);
+
+INSERT INTO hats (id, name, rarity, price)
+VALUES (1, 'Cowboy', 18, 0.0015),
+       (2, 'Toque', 16, 0.0015),
+       (3, 'Pretty-headband', 11, 0.0015),
+       (4, 'Alien', 3, 0.0021),
+       (5, 'Backwards-cap', 23, 0.001),
+       (5, 'Beret', 16, 0.0015),
+       (5, 'Crown', 10, 0.0021),
+       (5, 'Graduation', 10, 0.0017);
+
+INSERT INTO glasses (id, name, rarity, price)
+VALUES (1, 'Round', 14, 0.0015),
+       (2, 'Monocle', 6, 0.0017),
+       (3, 'Cartoon', 21, 0.001),
+       (4, 'Goggles', 8, 0.0017),
+       (5, 'Gold-rim', 22, 0.001),
+       (5, 'Flared', 6, 0.0017),
+       (5, 'Aviator', 17, 0.0015),
+       (5, 'Thug-life', 6, 0.0017);
 
 INSERT INTO accessories (id, name, rarity, price)
-VALUES (1, 'Pipe', 25, 0.0017),
-       (2, 'Money', 20, 0.0021),
-       (3, 'Flowers', 35, 0.0013),
-       (4, 'Book', 30, 0.0015),
-       (5, 'Tattoo', 30, 0.0015);
+VALUES (1, 'Reporter', 17, 0.0015),
+       (2, 'Money', 4, 0.0021),
+       (3, 'Flowers', 23, 0.001),
+       (4, 'Book', 3, 0.0021),
+       (5, 'Tattoo', 8, 0.0017),
+       (5, 'Cozy-cat', 27, 0.001),
+       (5, 'Wine', 16, 0.0015),
+       (5, 'Alien-sidekick', 2, 0.0021);
