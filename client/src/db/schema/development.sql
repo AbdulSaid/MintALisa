@@ -23,7 +23,7 @@ VALUES (1, 'Montreal', 4, 0.0021),
        (6, 'Rusted-metal', 16, 0.0015),
        (7, 'Palms', 20, 0.001),
        (8, 'Bed', 14, 0.0015),
-       (8, 'Louvre', 4, 0.0021);
+       (9, 'Louvre', 4, 0.0021);
 
 INSERT INTO hats (id, name, rarity, price)
 VALUES (1, 'Cowboy', 18, 0.0015),
@@ -31,9 +31,9 @@ VALUES (1, 'Cowboy', 18, 0.0015),
        (3, 'Pretty-headband', 11, 0.0015),
        (4, 'Alien', 3, 0.0021),
        (5, 'Backwards-cap', 23, 0.001),
-       (5, 'Beret', 16, 0.0015),
-       (5, 'Crown', 10, 0.0021),
-       (5, 'Graduation', 10, 0.0017);
+       (6, 'Beret', 16, 0.0015),
+       (7, 'Crown', 10, 0.0021),
+       (8, 'Graduation', 10, 0.0017);
 
 INSERT INTO glasses (id, name, rarity, price)
 VALUES (1, 'Round', 14, 0.0015),
@@ -41,9 +41,9 @@ VALUES (1, 'Round', 14, 0.0015),
        (3, 'Cartoon', 21, 0.001),
        (4, 'Goggles', 8, 0.0017),
        (5, 'Gold-rim', 22, 0.001),
-       (5, 'Flared', 6, 0.0017),
-       (5, 'Aviator', 17, 0.0015),
-       (5, 'Thug-life', 6, 0.0017);
+       (6, 'Flared', 6, 0.0017),
+       (7, 'Aviator', 17, 0.0015),
+       (8, 'Thug-life', 6, 0.0017);
 
 INSERT INTO accessories (id, name, rarity, price)
 VALUES (1, 'Reporter', 17, 0.0015),
@@ -51,6 +51,6 @@ VALUES (1, 'Reporter', 17, 0.0015),
        (3, 'Flowers', 23, 0.001),
        (4, 'Book', 3, 0.0021),
        (5, 'Tattoo', 8, 0.0017),
-       (5, 'Cozy-cat', 27, 0.001),
-       (5, 'Wine', 16, 0.0015),
-       (5, 'Alien-sidekick', 2, 0.0021);
+       (6, 'Cozy-cat', 27, 0.001),
+       (7, 'Wine', 16, 0.0015),
+       (8, 'Alien-sidekick', 2, 0.0021);
