@@ -266,7 +266,7 @@ body {
   border: none;
   color: rgba(255, 255, 255, 0.75);
   font-family: var(--inter-font);
-  font-size: 0.9rem;
+  font-size: 1rem;
   padding-right: .5rem;
   cursor: pointer;
 }
