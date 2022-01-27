@@ -63,11 +63,19 @@ export default function Gallery() {
       (char.minted) ? unavailable.push(char) : available.push(char);
     }
 
+    const all = charsToFilter.sort((a, b) => {
+      let numA = Number(a.name.slice(11));
+      let numB = Number(b.name.slice(11));
+      return numA - numB;
+    });
+
     setFilterOpen(false);
     if (val === 'available') {
       return setCharacters(available);
     } else if (val === 'unavailable') {
       return setCharacters(unavailable);
+    } else if (val === 'all') {
+      return setCharacters(all);
     }
   }
 
@@ -96,7 +104,7 @@ export default function Gallery() {
 
           {filterOpen &&
             <ul className='filter-list'>
-              {/* <li className='filter-option' onClick={() => filterHandler('all')}>All</li> */}
+              <li className='filter-option' onClick={() => filterHandler('all')}>All</li>
               <li className='filter-option' onClick={() => filterHandler('available')}>Available</li>
               <li className='filter-option' onClick={() => filterHandler('unavailable')}>Minted</li>
             </ul>
