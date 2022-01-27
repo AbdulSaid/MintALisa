@@ -19,6 +19,7 @@ export default function MonaNft() {
   const [popupContent, setPopupContent] = useState('');
   const [popupMsg, setPopupMsg] = useState('');
   const [isMinted, setIsMinted] = useState(true);
+  const [showLoader, setShowLoader] = useState(false);
 
   const [character, setCharacter] = useState({});
   const [occurance, setOccurance] = useState({});
@@ -86,6 +87,7 @@ export default function MonaNft() {
       changeMonaStatus();
       setPopupContent('success');
       setIsMinted(true);
+      setShowLoader(true);
     } else {
       setPopupContent('error');
     }
@@ -134,6 +136,8 @@ export default function MonaNft() {
         setTrigger={setPopupTrigger}
         content={popupContent}
         msg={popupMsg}
+        show={showLoader}
+        setShow={setShowLoader}
       />
       <div className="single-mona">
         <section className="top">
