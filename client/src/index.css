@@ -29,13 +29,14 @@ body {
 .navbar-container {
   display: flex;
   flex-direction: column;
+  height: 6.8%;
 }
 
 .navbar {
   display: flex;
   justify-content: space-between;
   align-items: center;
-  height: 56px;
+  height: 100%;
   padding: 0 1rem;
 }
 
@@ -284,7 +285,7 @@ body {
   z-index: 2;
   background: var(--dark-glass-bg);
   -webkit-backdrop-filter: blur(19px);
-  backdrop-filter: blur(19px);
+  backdrop-filter: blur(40px);
   list-style: none;
   width: 150px;
   height: 12%;
@@ -297,8 +298,15 @@ body {
 
 .sort-option, .filter-option {
   display: flex;
+  justify-content: center;
   align-items: center;
   cursor: pointer;
+  width: 100%;
+  border-radius: 15px;
+}
+
+.sort-option:hover, .filter-option:hover {
+  backdrop-filter: blur(30px);
 }
 
 
@@ -390,25 +398,35 @@ body {
   display: flex;
   flex-direction: column;
   align-items: center;
-  height: 360px;
+  height: 50%;
   width: 90%;
 }
 
 .single-mona .bottom {
   display: flex;
   flex-direction: column;
+  justify-content: space-between;
+  align-items: center;
   width: 90%;
-  height: 442px;
+  height: 54%;
+}
+
+.buy-container {
+  width: 90%;
+  max-width: 535px;
+  display: flex;
+  align-items: center;
+  justify-content: center;
 }
 
 .back-arrow {
   align-self: flex-start;
-  margin: .5rem 0 0 0;
+  margin-top: .3srem;
   cursor: pointer;
 }
 
 .single-mona-img {
-  height: 265px;
+  height: 264px;
   border-radius: 15px;
 }
 
@@ -420,10 +438,10 @@ body {
 .rarity-view-container {
   display: flex;
   flex-direction: column;
-  height: 37%;
+  height: 75%;
   width: 90%;
-  max-width: 700px;
-  margin-bottom: 3.5rem;
+  max-width: 535px;
+  justify-content: flex-end;
 }
 
 .rarity-container {
@@ -432,6 +450,7 @@ body {
   align-items: flex-end;
   padding: 0.5rem 0;
   border-bottom: rgba(255, 255, 255, 0.25) 1px solid;
+  height: 50px;
 }
 
 .rarity-container .left {
@@ -446,6 +465,10 @@ body {
 
 .rarity-category {
   align-self: flex-end;
+}
+
+.rarity-category.common {
+  transform: translateX(-2px);
 }
 
 .rare {
@@ -480,13 +503,6 @@ body {
   font-size: .9rem;
 }
 
-.buy-container {
-  display: flex;
-  justify-content: space-between;
-  align-items: center;
-  max-width: 700px;
-}
-
 .price-block {
   display: flex;
   align-items: center;
@@ -506,7 +522,8 @@ body {
 }
 
 .buy {
-  max-width: 700px;
+  width: 100%;
+  max-width: 535px;
   margin-bottom: 1rem;
 }
 
@@ -540,7 +557,7 @@ body {
   height: 84%;
   display: flex;
   flex-direction: column;
-  justify-content: space-evenly;
+  justify-content: space-between;
   align-items: center;
 }
 
@@ -619,8 +636,7 @@ body {
   height: 85%;
 }
 
-
-.one{
+.one {
   width: 100px;
   height: 100px;
   position: absolute;
@@ -629,7 +645,8 @@ body {
   transform: translate(calc(-50% - 50px), calc(-50% - 50px));
   animation: rotate2 2s infinite linear;
 }
-.two{
+
+.two {
   width: 60px;
   height: 60px;
   position: absolute;
@@ -638,7 +655,8 @@ body {
   transform: translate(calc(-50% - 30px), calc(-50% - 30px));
   animation: rotate1 2s infinite linear;
 }
-.three{
+
+.three {
   width: 30px;
   height: 30px;
   position: absolute;
@@ -647,12 +665,14 @@ body {
   transform: translate(calc(-50% - 15px), calc(-50% - 15px));
   animation: rotate2 2s infinite linear;
 }
-.loader{
+
+.loader {
   margin: 0;
   border-radius: 50%;
   border: 10px solid #009688;
   border-top: 10px solid #0000ff00;
 }
+
 @keyframes rotate1{
   0%{
     transform: none;
@@ -671,7 +691,6 @@ body {
 }
 
 
-
 @media only screen and (min-width: 600px) and (max-width: 767px){
   .gallery-display-container {
     grid-template-columns: 1fr 1fr;
@@ -679,13 +698,14 @@ body {
 }
 
 
-@media only screen and (min-width: 768px) {
+@media only screen and (min-width: 768px) and  (max-height: 810px){
   .logo {
     font-size: 1.2rem;
     margin-left: 2rem;
   }
 
   .navbar {
+    margin-top: 1rem;
     padding: 0;
   }
 
@@ -712,6 +732,42 @@ body {
     width: 33vh;
     margin-bottom: 1rem;
   }
+
+  .single-mona {
+    flex-direction: row;
+    /* justify-content: center; */
+    width: 100%;
+  }
+
+  .single-mona .top {
+    height: 100%;
+
+  }
+
+  .single-mona-img {
+    height: 550px;
+    margin: 1rem 0 0 3rem;
+  }
+
+  .back-arrow {
+    margin: 1rem 0 0 2rem;
+  }
+
+  .filter-icon {
+    font-size: 1rem;
+  }
+
+  .filter-btn, .sort-btn {
+    font-size: 1.2rem;
+    margin-bottom: 0.2rem;
+  }
+
+  .sort-list, .filter-list {
+    height: 18%;
+    width: 185px;
+    font-size: 1.2rem;
+  }
+  
 }
 
  @media only screen and (min-width: 960px) {
@@ -726,8 +782,3 @@ body {
   }
 }
 
-@media only screen and (max-height: 810px) {
-  .single-mona {
-    height: 83%;
-  }
-}

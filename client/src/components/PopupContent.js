@@ -8,7 +8,6 @@ import useOnClickOutside from '../hooks/useOnClickOutside';
 export default function PopupContent(props) {
   const ref = useRef();
   const [walletAddress, setWallet] = useState("");
-  const [show, setShow] = useState(false);
   let navigate = useNavigate();
   useOnClickOutside(ref, () => props.setTrigger(false));
 
@@ -16,8 +15,13 @@ export default function PopupContent(props) {
     const { address } = await getCurrentWalletConnected();
     setWallet(address);
     addWalletListener();
-    loadOnSuccess();
   }, []);
+
+  useEffect(() => {
+    if (props.show) {
+      setTimeout(() => props.setShow(false), 4000);
+    }
+  }, [props]);
 
   const connectWalletPressed = async () => {
     const walletResponse = await connectWallet();
@@ -36,16 +40,7 @@ export default function PopupContent(props) {
     }
   }
 
-  const loadOnSuccess = () => {
-    if (props.content === 'success') {
-      setShow(true);
-      setTimeout(() => {
-        setShow(false);
-      }, 4000);
-    }
-  }
-  
-  
+
   return (
     <article className="popup-container" ref={ref}>
       <FontAwesomeIcon icon={faTimes} className='close-popup' onClick={() => props.setTrigger(false)} />
@@ -83,7 +78,7 @@ export default function PopupContent(props) {
 
       {props.content === 'success' &&
         <div className="popup-content-container">
-          {show ?
+          {props.show ?
             <div className='loader-container'>
               <div className="loader one"></div>
               <div className="loader two"></div>
@@ -92,7 +87,7 @@ export default function PopupContent(props) {
             :
             <>
               <h2 className='success-header'>Payment Succesful</h2>
-              <img className='success-img' src="../images/1.png" alt="" />
+              <img className='success-img' src={`..${props.img.slice(7)}`} alt="" />
               <p className='popup-msg success-msg'><a className='eth-link' href={props.msg} target="_blank" rel="noreferrer">Click here</a> to check out your transaction on Etherscan!</p>
 
               <button className='btn primary' onClick={() => navigate('/gallery')}>Back to gallery</button>

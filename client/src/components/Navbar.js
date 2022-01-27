@@ -1,12 +1,15 @@
-import { useEffect, useState } from 'react';
+import { useEffect, useState, useRef } from 'react';
 import { connectWallet, getCurrentWalletConnected } from "../utils/interact";
 import { Link } from 'react-router-dom'
 import { FontAwesomeIcon } from '@fortawesome/react-fontawesome';
 import { faBars, faTimes } from '@fortawesome/free-solid-svg-icons';
+import useOnClickOutside from '../hooks/useOnClickOutside';
 
 export default function Navbar() {
+  const ref = useRef();
   const [navbarOpen, setNavbarOpen] = useState(false);
   const [walletAddress, setWallet] = useState("");
+  useOnClickOutside(ref, () => setNavbarOpen(false));
 
   const [size, setSize] = useState({
     x: window.innerWidth
@@ -15,6 +18,8 @@ export default function Navbar() {
     setSize({
       x: window.innerWidth
     });
+
+
   useEffect(() => (window.onresize = updateSize), []);
 
   useEffect(async () => {
@@ -67,6 +72,7 @@ export default function Navbar() {
             </li>
           </ul> :
           <button
+            ref={ref}
             className='hamburger'
             onClick={() => setNavbarOpen(!navbarOpen)}>
             {navbarOpen ? <FontAwesomeIcon icon={faTimes} /> : <FontAwesomeIcon icon={faBars} />}

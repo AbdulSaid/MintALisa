@@ -11,7 +11,7 @@
   --dark-glass-border:  1px solid rgba(255, 255, 255, 0.2);
 
   /* Dark mode */
-  --dark-bg: linear-gradient(12.04deg, #361F43 0%, #181529 50%, #222F41 100%);
+  --dark-bg: linear-gradient(12.04deg, #361F43 0%, #181529 46.87%, #222F41 100%);
   --light-font-color: #FFF;
   --secondary-font-color: rgba(255,255,255, 0.75);
   --disabled-btn-font: rgba(255,255,255, 0.18)
