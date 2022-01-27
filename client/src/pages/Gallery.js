@@ -1,15 +1,19 @@
-import { useState, useEffect } from 'react';
+import { useState, useEffect, useRef } from 'react';
 import axios from 'axios';
 import { FontAwesomeIcon } from '@fortawesome/react-fontawesome';
 import { faFilter, faSort } from '@fortawesome/free-solid-svg-icons';
 import SingleGalleryDisplay from "../components/SingleGalleryDisplay";
+import useOnClickOutside from '../hooks/useOnClickOutside';
 
 export default function Gallery() {
+  const ref = useRef();
   const [charData, setCharData] = useState([]);
   const [characters, setCharacters] = useState([]);
   const [sortOpen, setSortOpen] = useState(false);
   const [filterOpen, setFilterOpen] = useState(false);
   const [minted, setMinted] = useState([]);
+  useOnClickOutside(ref, () => setFilterOpen(false));
+  useOnClickOutside(ref, () => setSortOpen(false));
 
 
   const urlForCharacters = `http://localhost:8080/characters/`;
@@ -103,7 +107,7 @@ export default function Gallery() {
             }}><FontAwesomeIcon className='filter-icon' icon={faFilter} /> Filter</button>
 
           {filterOpen &&
-            <ul className='filter-list'>
+            <ul className='filter-list' ref={ref}>
               <li className='filter-option' onClick={() => filterHandler('all')}>All</li>
               <li className='filter-option' onClick={() => filterHandler('available')}>Available</li>
               <li className='filter-option' onClick={() => filterHandler('unavailable')}>Minted</li>
@@ -119,7 +123,7 @@ export default function Gallery() {
             }}><FontAwesomeIcon className='sort-icon' icon={faSort} /> Sort</button>
 
           {sortOpen &&
-            <ul className='sort-list'>
+            <ul className='sort-list' ref={ref}>
               <li className='sort-option' onClick={() => sortHandler('price-up')}>Price: low to high</li>
               <li className='sort-option' onClick={() => sortHandler('price-down')}>Price: high to low</li>
             </ul>
