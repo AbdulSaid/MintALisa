@@ -5,7 +5,7 @@ export default function Occurance(props) {
 
   useEffect(() => checkRarity(occurancePercentage), [props]);
 
-  const occurancePercentage = Number((props.occurance * 100) / 50).toFixed(0);
+  const occurancePercentage = Number((props.occurance * 100) / 100).toFixed(0);
 
   const checkRarity = percent => {
     if (percent <= 14) {
