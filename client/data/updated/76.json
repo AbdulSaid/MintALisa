@@ -1,0 +1,36 @@
+{
+    "name": "Mona Lisa #76",
+    "description": "Why not Mint a Lisa",
+    "image": "https://gateway.pinata.cloud/ipfs/QmR574dBCiz7G9hiTKA3vq2CJjwwuwy9Bv9CZricEJb1B5/76.png",
+    "dna": "fac10f1dcb72d7887c33f5135499addd5d5fd585",
+    "edition": 76,
+    "date": 1643234378119,
+    "attributes": [
+        {
+            "trait_type": "Background",
+            "value": "BlueArt"
+        },
+        {
+            "trait_type": "Mona Lisa",
+            "value": "Mona"
+        },
+        {
+            "trait_type": "Cap",
+            "value": "BackwardsCap"
+        },
+        {
+            "trait_type": "Glasses",
+            "value": "ThugLife"
+        },
+        {
+            "trait_type": "Mouth",
+            "value": "RealSmile"
+        },
+        {
+            "trait_type": "Misc",
+            "value": "Reporter"
+        }
+    ],
+    "compiler": "HashLips Art Engine",
+    "localImage": "/public/images/76.png"
+}

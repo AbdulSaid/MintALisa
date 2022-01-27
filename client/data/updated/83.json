@@ -1,0 +1,36 @@
+{
+    "name": "Mona Lisa #83",
+    "description": "Why not Mint a Lisa",
+    "image": "https://gateway.pinata.cloud/ipfs/QmR574dBCiz7G9hiTKA3vq2CJjwwuwy9Bv9CZricEJb1B5/83.png",
+    "dna": "b5154394475cfc0cdea4d5998559b7199e82c14c",
+    "edition": 83,
+    "date": 1643234383314,
+    "attributes": [
+        {
+            "trait_type": "Background",
+            "value": "Montreal"
+        },
+        {
+            "trait_type": "Mona Lisa",
+            "value": "Mona"
+        },
+        {
+            "trait_type": "Cap",
+            "value": "Alien"
+        },
+        {
+            "trait_type": "Glasses",
+            "value": "Goggles"
+        },
+        {
+            "trait_type": "Mouth",
+            "value": "AngelaMouth"
+        },
+        {
+            "trait_type": "Misc",
+            "value": "CozyCat"
+        }
+    ],
+    "compiler": "HashLips Art Engine",
+    "localImage": "/public/images/83.png"
+}

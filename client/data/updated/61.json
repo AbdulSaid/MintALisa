@@ -1,0 +1,36 @@
+{
+    "name": "Mona Lisa #61",
+    "description": "Why not Mint a Lisa",
+    "image": "https://gateway.pinata.cloud/ipfs/QmR574dBCiz7G9hiTKA3vq2CJjwwuwy9Bv9CZricEJb1B5/61.png",
+    "dna": "6652e69442cb454fe64973ac4d10d780503543a6",
+    "edition": 61,
+    "date": 1643234366038,
+    "attributes": [
+        {
+            "trait_type": "Background",
+            "value": "Monet"
+        },
+        {
+            "trait_type": "Mona Lisa",
+            "value": "Mona"
+        },
+        {
+            "trait_type": "Cap",
+            "value": "Graduation"
+        },
+        {
+            "trait_type": "Glasses",
+            "value": "Cartoon"
+        },
+        {
+            "trait_type": "Mouth",
+            "value": "RealSmile"
+        },
+        {
+            "trait_type": "Misc",
+            "value": "Wine"
+        }
+    ],
+    "compiler": "HashLips Art Engine",
+    "localImage": "/public/images/61.png"
+}

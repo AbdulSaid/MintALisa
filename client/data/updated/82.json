@@ -1,0 +1,36 @@
+{
+    "name": "Mona Lisa #82",
+    "description": "Why not Mint a Lisa",
+    "image": "https://gateway.pinata.cloud/ipfs/QmR574dBCiz7G9hiTKA3vq2CJjwwuwy9Bv9CZricEJb1B5/82.png",
+    "dna": "e82da692fe344559915ff25928c5c7f2cca01773",
+    "edition": 82,
+    "date": 1643234382505,
+    "attributes": [
+        {
+            "trait_type": "Background",
+            "value": "PinkBlue"
+        },
+        {
+            "trait_type": "Mona Lisa",
+            "value": "Mona"
+        },
+        {
+            "trait_type": "Cap",
+            "value": "Cowboy"
+        },
+        {
+            "trait_type": "Glasses",
+            "value": "Aviator"
+        },
+        {
+            "trait_type": "Mouth",
+            "value": "AngelaMouth"
+        },
+        {
+            "trait_type": "Misc",
+            "value": "Wine"
+        }
+    ],
+    "compiler": "HashLips Art Engine",
+    "localImage": "/public/images/82.png"
+}
