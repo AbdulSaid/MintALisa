@@ -81,7 +81,9 @@ export default function Gallery() {
 
       <section className='options-container'>
         <aside className='left'>
-          <p>{minted}/50 MINTED <img className='diamond' src='images/diamond.svg' alt='diamond' /></p>
+
+        <p>{minted}/100 MINTED <img className='diamond' src='images/diamond.svg' alt='diamond' /></p>
+
         </aside>
 
         <aside className='right'>
