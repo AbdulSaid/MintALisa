@@ -1,36 +1,35 @@
 {
-    "name": "Mona Lisa #9",
-    "description": "Why not Mint a Lisa",
-    "image": "https://gateway.pinata.cloud/ipfs/QmWuwJg8owGvvBXHquFdhQg79PcCkDGnSpooNRzPoxn1kT",
-    "dna": "7ad999e50646f6417005996b2997db818ba2a428",
-    "edition": 9,
-    "date": 1642445383710,
-    "attributes": [
-        {
-            "trait_type": "Background",
-            "value": "Bed"
-        },
-        {
-            "trait_type": "Mona Lisa",
-            "value": "Mona"
-        },
-        {
-            "trait_type": "Cap",
-            "value": "Beret"
-        },
-        {
-            "trait_type": "Glasses",
-            "value": "Round"
-        },
-        {
-            "trait_type": "Mouth",
-            "value": "RedLipsSmile"
-        },
-        {
-            "trait_type": "Misc",
-            "value": "Pipe"
-        }
-    ],
-    "compiler": "HashLips Art Engine",
-    "localImage": "/public/images/9.png"
+  "name": "Mona Lisa #9",
+  "description": "Why not Mint a Lisa",
+  "image": "https://gateway.pinata.cloud/ipfs/QmR574dBCiz7G9hiTKA3vq2CJjwwuwy9Bv9CZricEJb1B5/9.png",
+  "dna": "8264fc03c02b2071e420e2bef2885c82c14ef1ab",
+  "edition": 9,
+  "date": 1643234321603,
+  "attributes": [
+    {
+      "trait_type": "Background",
+      "value": "Palms"
+    },
+    {
+      "trait_type": "Mona Lisa",
+      "value": "Mona"
+    },
+    {
+      "trait_type": "Cap",
+      "value": "BackwardsCap"
+    },
+    {
+      "trait_type": "Glasses",
+      "value": "GoldRim"
+    },
+    {
+      "trait_type": "Mouth",
+      "value": "Underbite"
+    },
+    {
+      "trait_type": "Misc",
+      "value": "Tattoo"
+    }
+  ],
+  "compiler": "HashLips Art Engine"
 }

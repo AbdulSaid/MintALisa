@@ -1,10 +1,10 @@
 {
     "name": "Mona Lisa #23",
     "description": "Why not Mint a Lisa",
-    "image": "https://gateway.pinata.cloud/ipfs/QmRzQ9rxT4KKF3AgwHXHd9YVWmYAvH1zKyiDmia4fDiY86",
-    "dna": "73bbd0760c7d3edcca744bc5be39a923d0017438",
+    "image": "https://gateway.pinata.cloud/ipfs/QmR574dBCiz7G9hiTKA3vq2CJjwwuwy9Bv9CZricEJb1B5/23.png",
+    "dna": "f67719fed28ef83eed65e63d796308d79ee5b68f",
     "edition": 23,
-    "date": 1642445391528,
+    "date": 1643234331612,
     "attributes": [
         {
             "trait_type": "Background",
@@ -16,7 +16,7 @@
         },
         {
             "trait_type": "Cap",
-            "value": "HardHat"
+            "value": "BackwardsCap"
         },
         {
             "trait_type": "Glasses",
@@ -24,11 +24,11 @@
         },
         {
             "trait_type": "Mouth",
-            "value": "TongueOut"
+            "value": "OpenSmile"
         },
         {
             "trait_type": "Misc",
-            "value": "Pipe"
+            "value": "Tattoo"
         }
     ],
     "compiler": "HashLips Art Engine",

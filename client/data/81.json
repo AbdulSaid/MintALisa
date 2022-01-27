@@ -1,0 +1,35 @@
+{
+  "name": "Mona Lisa #81",
+  "description": "Why not Mint a Lisa",
+  "image": "https://gateway.pinata.cloud/ipfs/QmR574dBCiz7G9hiTKA3vq2CJjwwuwy9Bv9CZricEJb1B5/81.png",
+  "dna": "129d67aa6f9675e08b2acad0232abe704f36b99b",
+  "edition": 81,
+  "date": 1643234381866,
+  "attributes": [
+    {
+      "trait_type": "Background",
+      "value": "BlueArt"
+    },
+    {
+      "trait_type": "Mona Lisa",
+      "value": "Mona"
+    },
+    {
+      "trait_type": "Cap",
+      "value": "PrettyHeadband"
+    },
+    {
+      "trait_type": "Glasses",
+      "value": "Aviator"
+    },
+    {
+      "trait_type": "Mouth",
+      "value": "RealSmile"
+    },
+    {
+      "trait_type": "Misc",
+      "value": "Flowers"
+    }
+  ],
+  "compiler": "HashLips Art Engine"
+}

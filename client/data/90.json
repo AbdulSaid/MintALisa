@@ -1,0 +1,35 @@
+{
+  "name": "Mona Lisa #90",
+  "description": "Why not Mint a Lisa",
+  "image": "https://gateway.pinata.cloud/ipfs/QmR574dBCiz7G9hiTKA3vq2CJjwwuwy9Bv9CZricEJb1B5/90.png",
+  "dna": "11311ade899c26bdd1e035e27ac660cdce3a1df9",
+  "edition": 90,
+  "date": 1643234388379,
+  "attributes": [
+    {
+      "trait_type": "Background",
+      "value": "Cloud"
+    },
+    {
+      "trait_type": "Mona Lisa",
+      "value": "Mona"
+    },
+    {
+      "trait_type": "Cap",
+      "value": "BackwardsCap"
+    },
+    {
+      "trait_type": "Glasses",
+      "value": "Monocle"
+    },
+    {
+      "trait_type": "Mouth",
+      "value": "TonguOut"
+    },
+    {
+      "trait_type": "Misc",
+      "value": "Money"
+    }
+  ],
+  "compiler": "HashLips Art Engine"
+}

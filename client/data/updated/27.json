@@ -1,10 +1,10 @@
 {
     "name": "Mona Lisa #27",
     "description": "Why not Mint a Lisa",
-    "image": "https://gateway.pinata.cloud/ipfs/QmXmLebD6xzZtBjAxVywtE5uDapHEJWrRuH3SycoBHaoKL",
-    "dna": "6279830fc357598233c6a826dfcedf219efdc173",
+    "image": "https://gateway.pinata.cloud/ipfs/QmR574dBCiz7G9hiTKA3vq2CJjwwuwy9Bv9CZricEJb1B5/27.png",
+    "dna": "895a7f50cd7b806e43377723003c1f9a6831fe0d",
     "edition": 27,
-    "date": 1642445393759,
+    "date": 1643234335821,
     "attributes": [
         {
             "trait_type": "Background",
@@ -16,19 +16,19 @@
         },
         {
             "trait_type": "Cap",
-            "value": "Cowboy"
+            "value": "Toque"
         },
         {
             "trait_type": "Glasses",
-            "value": "Cartoon"
+            "value": "ThugLife"
         },
         {
             "trait_type": "Mouth",
-            "value": "TongueOut"
+            "value": "AngelaMouth"
         },
         {
             "trait_type": "Misc",
-            "value": "Book"
+            "value": "Reporter"
         }
     ],
     "compiler": "HashLips Art Engine",

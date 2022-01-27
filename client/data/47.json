@@ -1,36 +1,35 @@
 {
-    "name": "Mona Lisa #47",
-    "description": "Why not Mint a Lisa",
-    "image": "https://gateway.pinata.cloud/ipfs/QmT4kzS9yFQkY48pp5VHhxMmUZz14JYUiZxwfhVB3mKvgN",
-    "dna": "9e80ec71d4da85b8e9867ee8c1aa18ceaf3c8c17",
-    "edition": 47,
-    "date": 1642445404907,
-    "attributes": [
-        {
-            "trait_type": "Background",
-            "value": "AcidPinkBlue"
-        },
-        {
-            "trait_type": "Mona Lisa",
-            "value": "Mona"
-        },
-        {
-            "trait_type": "Cap",
-            "value": "Fedora"
-        },
-        {
-            "trait_type": "Glasses",
-            "value": "Cartoon"
-        },
-        {
-            "trait_type": "Mouth",
-            "value": "OpenWithTeeth"
-        },
-        {
-            "trait_type": "Misc",
-            "value": "Flowers"
-        }
-    ],
-    "compiler": "HashLips Art Engine",
-    "localImage": "/public/images/47.png"
+  "name": "Mona Lisa #47",
+  "description": "Why not Mint a Lisa",
+  "image": "https://gateway.pinata.cloud/ipfs/QmR574dBCiz7G9hiTKA3vq2CJjwwuwy9Bv9CZricEJb1B5/47.png",
+  "dna": "ddb4c2c2948dcc8385176d075fbed3f13d4f7987",
+  "edition": 47,
+  "date": 1643234354543,
+  "attributes": [
+    {
+      "trait_type": "Background",
+      "value": "Louvre"
+    },
+    {
+      "trait_type": "Mona Lisa",
+      "value": "Mona"
+    },
+    {
+      "trait_type": "Cap",
+      "value": "Cowboy"
+    },
+    {
+      "trait_type": "Glasses",
+      "value": "Cartoon"
+    },
+    {
+      "trait_type": "Mouth",
+      "value": "RealSmile"
+    },
+    {
+      "trait_type": "Misc",
+      "value": "Tattoo"
+    }
+  ],
+  "compiler": "HashLips Art Engine"
 }

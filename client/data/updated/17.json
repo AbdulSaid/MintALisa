@@ -1,14 +1,14 @@
 {
     "name": "Mona Lisa #17",
     "description": "Why not Mint a Lisa",
-    "image": "https://gateway.pinata.cloud/ipfs/QmNngh4Yp8qWf1Dxgvknb3zpinYU73aUza2WV9VbpbhU6y",
-    "dna": "8812d187febc750b0234c7ba13c6fb24552bf8b4",
+    "image": "https://gateway.pinata.cloud/ipfs/QmR574dBCiz7G9hiTKA3vq2CJjwwuwy9Bv9CZricEJb1B5/17.png",
+    "dna": "c6b7fd4ce31cb060e78f013ffd68c529339f5596",
     "edition": 17,
-    "date": 1642445388372,
+    "date": 1643234326983,
     "attributes": [
         {
             "trait_type": "Background",
-            "value": "AcidPinkBlue"
+            "value": "Monet"
         },
         {
             "trait_type": "Mona Lisa",
@@ -16,19 +16,19 @@
         },
         {
             "trait_type": "Cap",
-            "value": "Fedora"
+            "value": "Beret"
         },
         {
             "trait_type": "Glasses",
-            "value": "YellowStriped"
+            "value": "Cartoon"
         },
         {
             "trait_type": "Mouth",
-            "value": "SideSmile"
+            "value": "Fangs"
         },
         {
             "trait_type": "Misc",
-            "value": "Tattoo"
+            "value": "CozyCat"
         }
     ],
     "compiler": "HashLips Art Engine",

@@ -1,14 +1,14 @@
 {
     "name": "Mona Lisa #41",
     "description": "Why not Mint a Lisa",
-    "image": "https://gateway.pinata.cloud/ipfs/QmW9mYYpG1oEKoMwgih7efE6iaYF6P9y46PuXj7uvixavS",
-    "dna": "feab332c2ee62284b564aff4533ac44f207c4a8f",
+    "image": "https://gateway.pinata.cloud/ipfs/QmR574dBCiz7G9hiTKA3vq2CJjwwuwy9Bv9CZricEJb1B5/41.png",
+    "dna": "1e007cb512589085be375bcf66ba543276398cd8",
     "edition": 41,
-    "date": 1642445401193,
+    "date": 1643234348912,
     "attributes": [
         {
             "trait_type": "Background",
-            "value": "AcidPinkBlue"
+            "value": "RustedMetal"
         },
         {
             "trait_type": "Mona Lisa",
@@ -24,11 +24,11 @@
         },
         {
             "trait_type": "Mouth",
-            "value": "RedLipsSmile"
+            "value": "SideSmile"
         },
         {
             "trait_type": "Misc",
-            "value": "Flowers"
+            "value": "Wine"
         }
     ],
     "compiler": "HashLips Art Engine",

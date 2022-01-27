@@ -1,0 +1,35 @@
+{
+  "name": "Mona Lisa #51",
+  "description": "Why not Mint a Lisa",
+  "image": "https://gateway.pinata.cloud/ipfs/QmR574dBCiz7G9hiTKA3vq2CJjwwuwy9Bv9CZricEJb1B5/51.png",
+  "dna": "b796d46dbd7be3cfdd1c1846660659566a17a33b",
+  "edition": 51,
+  "date": 1643234358068,
+  "attributes": [
+    {
+      "trait_type": "Background",
+      "value": "Cloud"
+    },
+    {
+      "trait_type": "Mona Lisa",
+      "value": "Mona"
+    },
+    {
+      "trait_type": "Cap",
+      "value": "Graduation"
+    },
+    {
+      "trait_type": "Glasses",
+      "value": "Round"
+    },
+    {
+      "trait_type": "Mouth",
+      "value": "AngelaMouth"
+    },
+    {
+      "trait_type": "Misc",
+      "value": "Flowers"
+    }
+  ],
+  "compiler": "HashLips Art Engine"
+}

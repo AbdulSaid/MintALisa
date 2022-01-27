@@ -1,36 +1,35 @@
 {
-    "name": "Mona Lisa #4",
-    "description": "Why not Mint a Lisa",
-    "image": "https://gateway.pinata.cloud/ipfs/Qmask4uN6xKPUQRrGT9CD2TfMyexra61FwyuTb2kaUGtXH",
-    "dna": "9ee071dbeb77430fa79db76db6feb398a5b5c05f",
-    "edition": 4,
-    "date": 1642445381212,
-    "attributes": [
-        {
-            "trait_type": "Background",
-            "value": "AcidPinkBlue"
-        },
-        {
-            "trait_type": "Mona Lisa",
-            "value": "Mona"
-        },
-        {
-            "trait_type": "Cap",
-            "value": "HardHat"
-        },
-        {
-            "trait_type": "Glasses",
-            "value": "3DGoggles"
-        },
-        {
-            "trait_type": "Mouth",
-            "value": "TongueOut"
-        },
-        {
-            "trait_type": "Misc",
-            "value": "Book"
-        }
-    ],
-    "compiler": "HashLips Art Engine",
-    "localImage": "/public/images/4.png"
+  "name": "Mona Lisa #4",
+  "description": "Why not Mint a Lisa",
+  "image": "https://gateway.pinata.cloud/ipfs/QmR574dBCiz7G9hiTKA3vq2CJjwwuwy9Bv9CZricEJb1B5/4.png",
+  "dna": "251e6fc393c3f667a6e61768fdd529a2bc517370",
+  "edition": 4,
+  "date": 1643234318406,
+  "attributes": [
+    {
+      "trait_type": "Background",
+      "value": "BlueArt"
+    },
+    {
+      "trait_type": "Mona Lisa",
+      "value": "Mona"
+    },
+    {
+      "trait_type": "Cap",
+      "value": "BackwardsCap"
+    },
+    {
+      "trait_type": "Glasses",
+      "value": "Cartoon"
+    },
+    {
+      "trait_type": "Mouth",
+      "value": "OpenSmile"
+    },
+    {
+      "trait_type": "Misc",
+      "value": "Book"
+    }
+  ],
+  "compiler": "HashLips Art Engine"
 }

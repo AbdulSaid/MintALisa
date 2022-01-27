@@ -1,14 +1,14 @@
 {
     "name": "Mona Lisa #16",
     "description": "Why not Mint a Lisa",
-    "image": "https://gateway.pinata.cloud/ipfs/QmU7uzEY3GTcxuxzj15uGbrZYQGq45kh3F4RLHYs4VtDkG",
-    "dna": "05dcbb73386164794f3e784e705de0a0823bd172",
+    "image": "https://gateway.pinata.cloud/ipfs/QmR574dBCiz7G9hiTKA3vq2CJjwwuwy9Bv9CZricEJb1B5/16.png",
+    "dna": "4bef4975134692187436d929ecb720f82aee85c6",
     "edition": 16,
-    "date": 1642445387774,
+    "date": 1643234326028,
     "attributes": [
         {
             "trait_type": "Background",
-            "value": "Bed"
+            "value": "Palms"
         },
         {
             "trait_type": "Mona Lisa",
@@ -16,19 +16,19 @@
         },
         {
             "trait_type": "Cap",
-            "value": "Beret"
+            "value": "Graduation"
         },
         {
             "trait_type": "Glasses",
-            "value": "Round"
+            "value": "Monocle"
         },
         {
             "trait_type": "Mouth",
-            "value": "SideSmile"
+            "value": "OpenSmile"
         },
         {
             "trait_type": "Misc",
-            "value": "Book"
+            "value": "CozyCat"
         }
     ],
     "compiler": "HashLips Art Engine",

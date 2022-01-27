@@ -1,36 +1,35 @@
 {
-    "name": "Mona Lisa #50",
-    "description": "Why not Mint a Lisa",
-    "image": "https://gateway.pinata.cloud/ipfs/QmYGXGL1xS1RkeSSM9nuvQaCWbseRRxo8hXeSJhKmZEKSP",
-    "dna": "15aafec0cbd98e72c050a8eb62e0ab1387dbb4df",
-    "edition": 50,
-    "date": 1642445406582,
-    "attributes": [
-        {
-            "trait_type": "Background",
-            "value": "RustedMetal"
-        },
-        {
-            "trait_type": "Mona Lisa",
-            "value": "Mona"
-        },
-        {
-            "trait_type": "Cap",
-            "value": "HardHat"
-        },
-        {
-            "trait_type": "Glasses",
-            "value": "Round"
-        },
-        {
-            "trait_type": "Mouth",
-            "value": "SideSmile"
-        },
-        {
-            "trait_type": "Misc",
-            "value": "Tattoo"
-        }
-    ],
-    "compiler": "HashLips Art Engine",
-    "localImage": "/public/images/50.png"
+  "name": "Mona Lisa #50",
+  "description": "Why not Mint a Lisa",
+  "image": "https://gateway.pinata.cloud/ipfs/QmR574dBCiz7G9hiTKA3vq2CJjwwuwy9Bv9CZricEJb1B5/50.png",
+  "dna": "3fef3f6d9d9ce0ba1f82119532702ba5d75e86e1",
+  "edition": 50,
+  "date": 1643234357059,
+  "attributes": [
+    {
+      "trait_type": "Background",
+      "value": "Cloud"
+    },
+    {
+      "trait_type": "Mona Lisa",
+      "value": "Mona"
+    },
+    {
+      "trait_type": "Cap",
+      "value": "Toque"
+    },
+    {
+      "trait_type": "Glasses",
+      "value": "Aviator"
+    },
+    {
+      "trait_type": "Mouth",
+      "value": "RealSmile"
+    },
+    {
+      "trait_type": "Misc",
+      "value": "Wine"
+    }
+  ],
+  "compiler": "HashLips Art Engine"
 }

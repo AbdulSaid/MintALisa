@@ -1,36 +1,35 @@
 {
-    "name": "Mona Lisa #33",
-    "description": "Why not Mint a Lisa",
-    "image": "https://gateway.pinata.cloud/ipfs/QmT7kbdqmCJPvmnaRtmx2byPi7bLpNYUrDryE5bhziCiLT",
-    "dna": "77236fb0b8e19a168ba38fbb283efd87af15cb3e",
-    "edition": 33,
-    "date": 1642445396691,
-    "attributes": [
-        {
-            "trait_type": "Background",
-            "value": "Monet"
-        },
-        {
-            "trait_type": "Mona Lisa",
-            "value": "Mona"
-        },
-        {
-            "trait_type": "Cap",
-            "value": "Graduation"
-        },
-        {
-            "trait_type": "Glasses",
-            "value": "YellowStriped"
-        },
-        {
-            "trait_type": "Mouth",
-            "value": "SideSmile"
-        },
-        {
-            "trait_type": "Misc",
-            "value": "Pipe"
-        }
-    ],
-    "compiler": "HashLips Art Engine",
-    "localImage": "/public/images/33.png"
+  "name": "Mona Lisa #33",
+  "description": "Why not Mint a Lisa",
+  "image": "https://gateway.pinata.cloud/ipfs/QmR574dBCiz7G9hiTKA3vq2CJjwwuwy9Bv9CZricEJb1B5/33.png",
+  "dna": "f955d161180ec629d96626e3d29c59351d0639ba",
+  "edition": 33,
+  "date": 1643234341613,
+  "attributes": [
+    {
+      "trait_type": "Background",
+      "value": "PinkBlue"
+    },
+    {
+      "trait_type": "Mona Lisa",
+      "value": "Mona"
+    },
+    {
+      "trait_type": "Cap",
+      "value": "Graduation"
+    },
+    {
+      "trait_type": "Glasses",
+      "value": "Aviator"
+    },
+    {
+      "trait_type": "Mouth",
+      "value": "AngelaMouth"
+    },
+    {
+      "trait_type": "Misc",
+      "value": "Money"
+    }
+  ],
+  "compiler": "HashLips Art Engine"
 }

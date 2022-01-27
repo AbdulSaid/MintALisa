@@ -1,0 +1,35 @@
+{
+  "name": "Mona Lisa #70",
+  "description": "Why not Mint a Lisa",
+  "image": "https://gateway.pinata.cloud/ipfs/QmR574dBCiz7G9hiTKA3vq2CJjwwuwy9Bv9CZricEJb1B5/70.png",
+  "dna": "21cff777112871f3f0670abc2c355cd4e68593e3",
+  "edition": 70,
+  "date": 1643234373480,
+  "attributes": [
+    {
+      "trait_type": "Background",
+      "value": "Bed"
+    },
+    {
+      "trait_type": "Mona Lisa",
+      "value": "Mona"
+    },
+    {
+      "trait_type": "Cap",
+      "value": "Toque"
+    },
+    {
+      "trait_type": "Glasses",
+      "value": "GoldRim"
+    },
+    {
+      "trait_type": "Mouth",
+      "value": "Underbite"
+    },
+    {
+      "trait_type": "Misc",
+      "value": "Money"
+    }
+  ],
+  "compiler": "HashLips Art Engine"
+}
