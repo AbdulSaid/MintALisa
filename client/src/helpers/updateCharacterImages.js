@@ -1,5 +1,6 @@
 const fs = require('fs');
 const path = require("path");
+const {CHARACTERS_NUMBER} = require("./numberOfCharacters");
 
 function checkDirectoryExistence(filePath) {
   if (!fs.existsSync(filePath)) {
@@ -8,7 +9,7 @@ function checkDirectoryExistence(filePath) {
 }
 
 const updateCharacterImages = function () {
-  const CHARACTERS_NUMBER = 50;
+
   const p = path.resolve(__dirname, '../../data/');
   const newDir = path.resolve(__dirname, '../../data/updated');
 

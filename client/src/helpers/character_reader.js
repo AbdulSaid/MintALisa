@@ -1,8 +1,8 @@
 const fs = require('fs');
 const path = require("path");
+const {CHARACTERS_NUMBER} = require("./numberOfCharacters");
 
 const readCharacterData = function () {
-  const CHARACTERS_NUMBER = 50;
   const p = path.resolve(__dirname, `../../data/updated`);
   const characterData = [];
 
