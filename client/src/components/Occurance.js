@@ -3,14 +3,11 @@ import { useEffect, useState } from 'react'
 export default function Occurance(props) {
   const [rarityStatus, setRarityStatus] = useState('');
 
-  useEffect(() => checkRarity(occurancePercentage), [props]);
-
-  const occurancePercentage = Number((props.occurance * 100) / 100).toFixed(0);
-
+  useEffect(() => checkRarity(props.occurance), [props]);
   const checkRarity = percent => {
     if (percent <= 14) {
       setRarityStatus('super-rare');
-    } else if (percent >= 15 && percent <= 20) {
+    } else if (percent >= 15 && percent <= 21) {
       setRarityStatus('rare');
     } else if (percent > 21) {
       setRarityStatus('common');
@@ -27,7 +24,7 @@ export default function Occurance(props) {
           <p className='attribute-name'>{props.name}</p>
         </div>
       </aside>
-      <p className='attribute-percent'>{occurancePercentage}%</p>
+      <p className='attribute-percent'>{props.occurance}%</p>
     </article>
   );
 }

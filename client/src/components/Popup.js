@@ -9,6 +9,9 @@ export default function Popup(props) {
         setTrigger={props.setTrigger}
         content={props.content}
         msg={props.msg}
+        show={props.show}
+        setShow={props.setShow}
+        img={props.img}
       />
     </div>
   ) : "";

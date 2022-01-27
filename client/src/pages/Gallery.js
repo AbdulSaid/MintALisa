@@ -38,7 +38,6 @@ export default function Gallery() {
     let amountMinted = 0;
     for (let val of data) {
       if (val.minted) {
-        console.log('minted')
         amountMinted++;
       }
     }

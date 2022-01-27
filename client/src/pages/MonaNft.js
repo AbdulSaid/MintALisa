@@ -19,7 +19,9 @@ export default function MonaNft() {
   const [popupContent, setPopupContent] = useState('');
   const [popupMsg, setPopupMsg] = useState('');
   const [isMinted, setIsMinted] = useState(true);
-  const [showLoader, setShowLoader] = useState(false);
+  const [show, setShow] = useState(false);
+  const [localImg, setLocalImg] = useState('');
+  const [walletAddress, setWallet] = useState("");
 
   const [character, setCharacter] = useState({});
   const [occurance, setOccurance] = useState({});
@@ -33,6 +35,8 @@ export default function MonaNft() {
       (res) => {
         const api1 = res[0].data[0];
         setIsMinted(api1.minted);
+        setLocalImg(api1.local_image);
+        
         setCharacter((prev) => ({ ...prev, dna: api1.dna }));
         setCharacter((prev) => ({ ...prev, description: api1.description }));
         setCharacter((prev) => ({
@@ -45,7 +49,6 @@ export default function MonaNft() {
         setCharacter((prev) => ({ ...prev, minted: api1.minted }));
 
         const api2 = res[1].data[0];
-        console.log('api2', api2)
         setCharacter((prev) => ({ ...prev, glasses: api2.glasses }));
         setCharacter((prev) => ({ ...prev, hat: api2.hat }));
         setCharacter((prev) => ({ ...prev, mouth: api2.mouth }));
@@ -70,8 +73,10 @@ export default function MonaNft() {
           accessories: api2.accessories_occurance,
         }));
       }
+
     );
 
+    
   }, []);
 
   const onMintPressed = async () => {
@@ -80,14 +85,13 @@ export default function MonaNft() {
       character.name,
       character.description
     );
-    console.log("Status", status);
     setStatus(status);
     setPopupTrigger(true);
     if (success === true) {
       changeMonaStatus();
       setPopupContent('success');
       setIsMinted(true);
-      setShowLoader(true);
+      setShow(true);
     } else {
       setPopupContent('error');
     }
@@ -107,7 +111,6 @@ export default function MonaNft() {
     });
   };
 
-  const [walletAddress, setWallet] = useState("");
 
   useEffect(async () => {
     const { address } = await getCurrentWalletConnected();
@@ -136,8 +139,9 @@ export default function MonaNft() {
         setTrigger={setPopupTrigger}
         content={popupContent}
         msg={popupMsg}
-        show={showLoader}
-        setShow={setShowLoader}
+        show={show}
+        setShow={setShow}
+        img={localImg}
       />
       <div className="single-mona">
         <section className="top">
