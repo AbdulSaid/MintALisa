@@ -1,7 +1,7 @@
 "use strict";
 
 // Basic express setup:
-const PORT          = 8080;
+const PORT          = 8081;
 const ENV = require("./environment");
 const app = require("./application")(ENV);
 const db = require("./db");
