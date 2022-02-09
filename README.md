@@ -9,6 +9,9 @@ Install dependencies with `npm install` in the client folder.
 This is a full stack dApp that can be used to Mint a unique 1 of 1 Mona Lisa with its twist. Each Mona Lisa has its different attributes that is created unique. User can come and connect to their Meta Mask wallet and mint their Mona Lisa with Ethereum. Currently deployed on Ropsten Test network, our next phase is to move to the main network and deploy this application. 
 
 ## Screenshots
+
+![3 Devices](https://github.com/AbdulSaid/MintALisa/blob/main/client/public/images/3Devices.png?raw=true)
+
 ### Home Page
 ![Home Page](https://github.com/AbdulSaid/MintALisa/blob/main/client/public/images/Homepage.png?raw=true)
 
